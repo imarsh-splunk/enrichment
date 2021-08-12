@@ -1,0 +1,99 @@
+
+---
+- name: Setup AWS components for Phantom infrastructure
+  hosts: localhost
+  connection: local
+  tasks:
+
+  - name: Provision VPC for Phantom 
+    ec2_vpc_net:
+      name: "{{ phantom_vpc_name }}"
+      state: present
+      cidr_block: "{{ phantom_vpc_cidr_block }}"
+      region: "{{ aws_region }}"
+    register: vpc
+
+  - name: Debug - vpc_id
+    debug: var=vpc['vpc']['id'] verbosity=2
+
+  - name: Provision Internet Gateway for VPC
+    ec2_vpc_igw:
+      vpc_id: "{{ vpc['vpc']['id'] }}"
+      state: present
+      region: "{{ aws_region }}"
+    register: igw
+
+  - name: Debug - igw_id
+    debug: var=igw['gateway_id'] verbosity=2
+
+  - name: Create subnet for Phantom
+    ec2_vpc_subnet:
+      state: present
+      vpc_id: "{{ vpc['vpc']['id'] }}"
+      region: "{{ aws_region }}"
+      cidr: "{{ phantom_cidr }}"
+      resource_tags:
+        Name: "{{ phantom_subnet_name }}"
+    register: subnet 
+
+  - name: Debug - subnet_id 
+    debug: var=subnet['subnet']['id'] verbosity=2
+
+  - name: Configure public route table for VPC
+    ec2_vpc_route_table:
+      vpc_id: "{{ vpc['vpc']['id'] }}"
+      region: "{{ aws_region }}"
+      tags:
+        Name: "{{ phantom_route_table_name }}" 
+      subnets:
+        - "{{ subnet['subnet']['id'] }}"
+      routes:
+        - dest: 0.0.0.0/0
+          gateway_id: "{{ igw['gateway_id'] }}"
+
+  - name: Configure security group for server
+    ec2_group:
+      name: "{{ phantom_security_group }}"
+      description: Security rules for Phantom
+      vpc_id: "{{ vpc['vpc']['id'] }}"
+      region: "{{ aws_region }}"
+      rules:
+        - proto: tcp
+          from_port: 22 
+          to_port:  22
+          cidr_ip: 0.0.0.0/0
+        - proto: tcp
+          from_port: 80
+          to_port: 80
+          cidr_ip: 0.0.0.0/0
+        - proto: tcp
+          from_port: 443 
+          to_port:   443
+          cidr_ip: 0.0.0.0/0
+
+  - name: Create key pair from local file
+    ec2_key:
+      name: "{{ phantom_key_name }}"
+      key_material: "{{ item }}"
+      region: "{{ aws_region }}"
+    with_file: "{{ phantom_key_path }}"
+
+  - name: Provision EC2 container instance for Phantom
+    ec2:
+      instance_type: "{{ phantom_instance_type }}"
+      image: "{{ phantom_ami_id }}"
+      key_name: "{{ phantom_key_name }}"
+      wait: true
+      exact_count: "{{ phantom_count }}"
+      count_tag:
+        Name: "{{ phantom_name }}"
+      instance_tags:
+        Name: "{{ phantom_name }}"
+      vpc_subnet_id: "{{ subnet['subnet']['id'] }}"
+      region: "{{ aws_region }}"
+      group: "{{ phantom_security_group }}"
+      assign_public_ip: yes
+    register: phantom
+  
+  - name: Debug - Print all variables
+    debug: var=hostvars[inventory_hostname] verbosity=4
