@@ -1,0 +1,2864 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "clean": true,
+            "code_block": "",
+            "description": "This playbook finds related containers based upon their indicator values. It formats that data into an easy-to-digest report with links for the analyst in a dynamically generated prompt. Once the analyst decides to merge the containers, the process_container_merge function copies the data over from the child containers and closes them out. Finally, any event_ids found in the containers are updated with their new status and links to the parent case.",
+            "hash": "ef739e742d483cbf7a3a8c314e86eba2ef71610c",
+            "joint": {
+                "cells": [
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "5c1b3680-f286-4d85-80d8-9d9573fd978f",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "f7936d11-e36c-4d76-b060-6f7b264f679f",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "6e9be547-0365-4ebe-9d60-3dfc268af6e9",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 76
+                    },
+                    {
+                        "0": "E",
+                        "1": "N",
+                        "2": "D",
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".title": {
+                                "text": "END"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_end.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def on_finish(container, summary):\n    phantom.debug('on_finish() called')\n    # This function is called after all actions are completed.\n    # summary of all the action and/or all details of actions\n    # can be collected here.\n\n    # summary_json = phantom.get_summary()\n    # if 'result' in summary_json:\n        # for action_result in summary_json['result']:\n            # if 'action_run_id' in action_result:\n                # action_results = phantom.get_action_results(action_run_id=action_result['action_run_id'], result_data=False, flatten=False)\n                # phantom.debug(action_results)\n\n    return",
+                        "callback_code": "# read-only block view not available",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "update event",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "1177432e-6738-4ac6-b6b0-069b3e929210",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "# read-only block view not available",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 481,
+                        "line_start": 468,
+                        "name": "",
+                        "notes": "",
+                        "number": 0,
+                        "order": 11,
+                        "outPorts": [],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 100,
+                            "y": 540
+                        },
+                        "previous_function": "",
+                        "previous_name": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 54,
+                            "width": 80
+                        },
+                        "status": "",
+                        "title": "END",
+                        "type": "coa.StartEnd",
+                        "warn": false,
+                        "z": 180
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "14b9fea7-35ce-47c3-a3cd-a39211734a10",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "2e9ccd79-fdfc-4202-8f8b-10c5385d34b8",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "f7936d11-e36c-4d76-b060-6f7b264f679f",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 241
+                    },
+                    {
+                        "0": "S",
+                        "1": "T",
+                        "2": "A",
+                        "3": "R",
+                        "4": "T",
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "ref-x": 33,
+                                "ref-y": 8,
+                                "text": "START"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "ref-x": 13,
+                                "xlink:href": "/inc/coa/img/block_icon_start.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'cf_phantom_riskanalysis_pack_find_related_containers_1' block\n    cf_phantom_riskanalysis_pack_find_related_containers_1(container=container)\n\n    return",
+                        "callback_code": "# read-only block view not available",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "02afd466-0b24-4d73-9c4a-0b206ddf6958",
+                        "inPorts": [],
+                        "join_code": "# read-only block view not available",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 16,
+                        "line_start": 8,
+                        "name": "",
+                        "notes": "",
+                        "number": 0,
+                        "order": 1,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -260,
+                            "y": 100
+                        },
+                        "previous_function": "",
+                        "previous_name": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 54,
+                            "width": 80
+                        },
+                        "status": "",
+                        "title": "START",
+                        "type": "coa.StartEnd",
+                        "warn": false,
+                        "z": 285
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "57cdc6df-644f-4a0d-b746-f10898a20414",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "02afd466-0b24-4d73-9c4a-0b206ddf6958",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "7538fdae-0a6e-49c8-b8c2-4994c34a2578",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 294
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "6da02a61-052b-4aee-83e3-858511826f72",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "7538fdae-0a6e-49c8-b8c2-4994c34a2578",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "aa86cd56-7be8-49d7-8522-84ecf8cc18f0",
+                            "port": "in",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 348
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "be4583bc-e5c3-41ce-b2e7-e957f1ce933f",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "aa86cd56-7be8-49d7-8522-84ecf8cc18f0",
+                            "port": "out-1",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "0b763126-3fcc-4e29-8fae-8fb9e3a682a5",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 349
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "2a13bcca-5f5f-4a57-902b-3f7c36f56acb",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "6e9be547-0365-4ebe-9d60-3dfc268af6e9",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "8d064e68-5774-4fda-b1e3-c4d90914b195",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 372
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "39decf2d-6293-404b-b16a-81b7d14e19bb",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "5365c263-9544-41ba-9d90-27ebea4cce16",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "d93f3058-b146-4449-ae44-631c8b96be59",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 387
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "90d1c3fa-e4d3-4d26-84fc-a2518e7f7cff",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "d93f3058-b146-4449-ae44-631c8b96be59",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "1177432e-6738-4ac6-b6b0-069b3e929210",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 388
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "b81343a4-3a3b-41b3-96a8-7d0d9699fe58",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "8d064e68-5774-4fda-b1e3-c4d90914b195",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "5365c263-9544-41ba-9d90-27ebea4cce16",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 423
+                    },
+                    {
+                        ".scmName/text": "phantom_riskanalysis_pack",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {},
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".customFunction": {
+                                "text": "find_related_containers"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".scmName": {
+                                "text": "phantom_riskanalys..."
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            ".title-info": {
+                                "text": ""
+                            },
+                            "g.branch image": {
+                                "opacity": 1
+                            },
+                            "g.code image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_code_dark_on.svg"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_error.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def cf_phantom_riskanalysis_pack_find_related_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_phantom_riskanalysis_pack_find_related_containers_1() called')\n    \n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n    literal_values_0 = [\n        [\n            \"*\",\n            \"closed\",\n            3,\n        ],\n    ]\n\n    parameters = []\n\n    literal_values_0_0 = [item[0] for item in literal_values_0]\n\n    for item0 in container_property_0:\n        for item1 in literal_values_0:\n            parameters.append({\n                'container': item0[0],\n                'value_list': literal_values_0_0,\n                'filter_out_status': item1[1],\n                'minimum_match_count': item1[2],\n            })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"phantom_riskanalysis_pack/find_related_containers\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='phantom_riskanalysis_pack/find_related_containers', parameters=parameters, name='cf_phantom_riskanalysis_pack_find_related_containers_1', callback=containers_exist)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 314,
+                        "callsback": true,
+                        "cfDisplayPath": "phantom_riskanalysis_pack/find_related_containers",
+                        "cfInputs": {
+                            "container": {
+                                "collectionType": "container_property",
+                                "dataPath": "container:id",
+                                "paramName": "item0[0]",
+                                "type": "item"
+                            },
+                            "filter_out_status": {
+                                "collectionType": "literal_values",
+                                "dataPath": "closed",
+                                "paramName": "item1[1]",
+                                "type": "item"
+                            },
+                            "minimum_match_count": {
+                                "collectionType": "literal_values",
+                                "dataPath": "3",
+                                "paramName": "item1[2]",
+                                "type": "item"
+                            },
+                            "value_list": {
+                                "collectionType": "literal_values",
+                                "dataPath": "*",
+                                "paramName": "literal_values_0_0",
+                                "type": "list"
+                            }
+                        },
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "container-3": "container:id",
+                        "currentVersion": true,
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 31,
+                        "customFunction": "phantom_riskanalysis_pack/find_related_containers",
+                        "customFunctionId": null,
+                        "custom_callback": "",
+                        "custom_code": "def cf_phantom_riskanalysis_pack_find_related_containers_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_phantom_riskanalysis_pack_find_related_containers_1() called')\n    \n    container_property_0 = [\n        [\n            container.get(\"id\"),\n        ],\n    ]\n    literal_values_0 = [\n        [\n            \"*\",\n            \"closed\",\n            6,\n        ],\n    ]\n\n    parameters = []\n\n    literal_values_0_0 = [item[0] for item in literal_values_0]\n\n    for item0 in container_property_0:\n        for item1 in literal_values_0:\n            parameters.append({\n                'container': item0[0],\n                'value_list': literal_values_0_0,\n                'filter_out_status': item1[1],\n                'minimum_match_count': item1[2],\n            })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"phantom_riskanalysis_pack/find_related_containers\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='phantom_riskanalysis_pack/find_related_containers', parameters=parameters, name='cf_phantom_riskanalysis_pack_find_related_containers_1', callback=cf_phantom_riskanalysis_pack_find_related_containers_1_callback)\n\n    return",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "Get a list of all events on the platform NOT status \"closed\" that have at least the minimum_match_count in common with this event. The \"*\" allows you to check against all data paths instead of just one.",
+                        "draftMode": false,
+                        "existingCF": true,
+                        "filter_out_status-2": "closed",
+                        "functionBlock": "custom function",
+                        "has_custom": true,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "7538fdae-0a6e-49c8-b8c2-4994c34a2578",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 323,
+                        "line_start": 282,
+                        "message": "Configuring now",
+                        "minimum_match_count-1": "3",
+                        "name": "find_related_containers",
+                        "notes": "Get a list of all events on the platform NOT status \"closed\" that have at least the minimum_match_count in common with this event. The \"*\" allows you to check against all data paths instead of just one.",
+                        "number": 1,
+                        "order": 6,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -20,
+                            "y": 80
+                        },
+                        "previous_function": "",
+                        "previous_name": "cf_phantom_riskanalysis_pack_find_related_containers_1",
+                        "selectedCustomFunction": {
+                            "description": "Takes a provided list of indicator values to search for and finds all related containers. It will produce a list of the related container details.",
+                            "draftMode": false,
+                            "id": 335,
+                            "inputs": [
+                                {
+                                    "_pretty_custom_function": "find_related_containers",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 335,
+                                    "description": "An indicator value to search on, such as a file hash or IP address. To search on all indicator values in the container, use \"*\".",
+                                    "id": 990,
+                                    "input_type": "list",
+                                    "name": "value_list",
+                                    "placeholder": "*"
+                                },
+                                {
+                                    "_pretty_custom_function": "find_related_containers",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 335,
+                                    "description": "The minimum number of similar indicator records that a container must have to be considered \"related.\" An invalid input will default to 1 with a debug message",
+                                    "id": 991,
+                                    "input_type": "item",
+                                    "name": "minimum_match_count",
+                                    "placeholder": "1-100"
+                                },
+                                {
+                                    "_pretty_custom_function": "find_related_containers",
+                                    "contains_type": [],
+                                    "custom_function": 335,
+                                    "description": "Filters out any containers with this status",
+                                    "id": 992,
+                                    "input_type": "item",
+                                    "name": "filter_out_status",
+                                    "placeholder": "closed"
+                                },
+                                {
+                                    "_pretty_custom_function": "find_related_containers",
+                                    "contains_type": [
+                                        "phantom container id"
+                                    ],
+                                    "custom_function": 335,
+                                    "description": "The container to run indicator analysis against. Supports container object or container_id. This container will also be excluded from the results for related_containers.",
+                                    "id": 993,
+                                    "input_type": "item",
+                                    "name": "container",
+                                    "placeholder": "container:id"
+                                }
+                            ],
+                            "name": "find_related_containers",
+                            "outputs": [
+                                {
+                                    "_pretty_custom_function": "find_related_containers",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 335,
+                                    "data_path": "*.container_id",
+                                    "description": "The unique id of the related container",
+                                    "id": 884
+                                },
+                                {
+                                    "_pretty_custom_function": "find_related_containers",
+                                    "contains_type": [],
+                                    "custom_function": 335,
+                                    "data_path": "*.container_indicator_match_count",
+                                    "description": "The number of indicators matched to the related container",
+                                    "id": 885
+                                },
+                                {
+                                    "_pretty_custom_function": "find_related_containers",
+                                    "contains_type": [],
+                                    "custom_function": 335,
+                                    "data_path": "*.container_status",
+                                    "description": "The status of the related container e.g. new, open, closed",
+                                    "id": 886
+                                },
+                                {
+                                    "_pretty_custom_function": "find_related_containers",
+                                    "contains_type": [],
+                                    "custom_function": 335,
+                                    "data_path": "*.container_type",
+                                    "description": "The type of the related container, e.g. default or case",
+                                    "id": 887
+                                },
+                                {
+                                    "_pretty_custom_function": "find_related_containers",
+                                    "contains_type": [],
+                                    "custom_function": 335,
+                                    "data_path": "*.container_name",
+                                    "description": "The name of the related container",
+                                    "id": 888
+                                },
+                                {
+                                    "_pretty_custom_function": "find_related_containers",
+                                    "contains_type": [],
+                                    "custom_function": 335,
+                                    "data_path": "*.in_case",
+                                    "description": "True or False if the related container is already included in a case",
+                                    "id": 889
+                                },
+                                {
+                                    "_pretty_custom_function": "find_related_containers",
+                                    "contains_type": [],
+                                    "custom_function": 335,
+                                    "data_path": "*.indicator_id",
+                                    "description": "",
+                                    "id": 890
+                                }
+                            ],
+                            "playbooks": {
+                                "draft_playbooks": [],
+                                "draft_version_id": null,
+                                "playbooks": [
+                                    {
+                                        "active": false,
+                                        "display_path": "phantom_riskanalysis_pack/[utility] Related Container Analysis",
+                                        "draft_mode": false,
+                                        "id": 676,
+                                        "name": "[utility] Related Container Analysis",
+                                        "viewable": true
+                                    },
+                                    {
+                                        "active": false,
+                                        "display_path": "phantom_riskanalysis_pack/Risk Notable - Verdict",
+                                        "draft_mode": false,
+                                        "id": 1059,
+                                        "name": "Risk Notable - Verdict",
+                                        "viewable": true
+                                    }
+                                ]
+                            },
+                            "scmId": 3,
+                            "scmName": "phantom_riskanalysis_pack"
+                        },
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "repo",
+                        "status": "",
+                        "title": "custom function",
+                        "type": "coa.CustomFunctionBlock",
+                        "userGeneratedCode": "\n\n",
+                        "value_list-0": "*",
+                        "warn": false,
+                        "z": 430
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#637282",
+                                "transform": "rotate(45 30 70)"
+                            },
+                            ".inPorts>.port-0>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".number": {
+                                "text": 1
+                            },
+                            ".outPorts>.port-0": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                },
+                                "ref-x": 83,
+                                "ref-y": 40
+                            },
+                            ".outPorts>.port-0>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def containers_exist(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('containers_exist() called')\n\n    # check for 'if' condition 1\n    matched = phantom.decision(\n        container=container,\n        action_results=results,\n        conditions=[\n            [\"cf_phantom_riskanalysis_pack_find_related_containers_1:custom_function_result.data.*.container_id\", \"!=\", \"\"],\n        ])\n\n    # call connected blocks if condition 1 matched\n    if matched:\n        get_effective_user(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        return\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "find_related_containers",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "containers_exist",
+                        "description": "Check if the previous function returned any values",
+                        "hasElse": false,
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "aa86cd56-7be8-49d7-8522-84ecf8cc18f0",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 37,
+                        "line_start": 19,
+                        "name": "decision",
+                        "notes": "Check if the previous function returned any values",
+                        "number": 1,
+                        "order": 2,
+                        "outPorts": [
+                            "out-1"
+                        ],
+                        "outputs": [
+                            {
+                                "conditions": [
+                                    {
+                                        "comparison": "!=",
+                                        "data_type": "",
+                                        "param": "cf_phantom_riskanalysis_pack_find_related_containers_1:custom_function_result.data.*.container_id",
+                                        "value": ""
+                                    }
+                                ],
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 220,
+                            "y": 80
+                        },
+                        "previous_function": "",
+                        "previous_name": "containers_exist",
+                        "show_number": true,
+                        "size": {
+                            "height": 82,
+                            "width": 82
+                        },
+                        "state": "decision",
+                        "status": "",
+                        "type": "coa.Decision",
+                        "warn": "",
+                        "z": 431
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "82b1fbea-2f2c-43da-8753-30c74eaf3d67",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "0b763126-3fcc-4e29-8fae-8fb9e3a682a5",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "2e9ccd79-fdfc-4202-8f8b-10c5385d34b8",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 433
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".functionBlock": {
+                                "text": "get_effective_user"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn_grey.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def get_effective_user(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('get_effective_user() called')\n    \n    input_parameter_0 = \"\"\n\n    get_effective_user__username = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    effective_user_id = phantom.get_effective_user()\n    url = phantom.build_phantom_rest_url('ph_user', effective_user_id)\n    get_effective_user__username = phantom.requests.get(url, verify=False).json().get('username')\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='get_effective_user:username', value=json.dumps(get_effective_user__username))\n    custom_format(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "find_related_containers",
+                        "connection_type": "action",
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 10,
+                        "custom_callback": "",
+                        "custom_code": "def get_effective_user(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('get_effective_user() called')\n    \n    input_parameter_0 = \"\"\n\n    get_effective_user__username = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    effective_user_id = phantom.get_effective_user()\n    url = phantom.build_phantom_rest_url('ph_user', effective_user_id)\n    get_effective_user__username = phantom.requests.get(url, verify=False).json().get('username')\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='get_effective_user:username', value=json.dumps(get_effective_user__username))\n\n    return",
+                        "custom_join": "",
+                        "custom_name": "get_effective_user",
+                        "description": "Get the user that launched the playbook. This will return a real user or an automation user.",
+                        "functionBlock": "custom function",
+                        "has_custom": true,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "0b763126-3fcc-4e29-8fae-8fb9e3a682a5",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "legacy": true,
+                        "line_end": 64,
+                        "line_start": 40,
+                        "message": "Configuring now",
+                        "name": "custom function",
+                        "notes": "Get the user that launched the playbook. This will return a real user or an automation user.",
+                        "number": 1,
+                        "order": 3,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "outputVariables": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "username"
+                            }
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": ""
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -260,
+                            "y": 240
+                        },
+                        "previous_function": "",
+                        "previous_name": "get_effective_user",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "custom function",
+                        "status": "deprecating",
+                        "title": "custom function",
+                        "type": "coa.FunctionBlock",
+                        "userGeneratedCode": "\n    effective_user_id = phantom.get_effective_user()\n    url = phantom.build_phantom_rest_url('ph_user', effective_user_id)\n    get_effective_user__username = phantom.requests.get(url, verify=False).json().get('username')\n\n",
+                        "warn": false,
+                        "z": 434
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".functionBlock": {
+                                "text": "custom_format"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn_grey.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def custom_format(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('custom_format() called')\n    \n    custom_function_results_data_1 = phantom.collect2(container=container, datapath=['cf_phantom_riskanalysis_pack_find_related_containers_1:custom_function_result.data.*.container_id', 'cf_phantom_riskanalysis_pack_find_related_containers_1:custom_function_result.data.*.indicator_id', 'cf_phantom_riskanalysis_pack_find_related_containers_1:custom_function_result.data.*.container_name'], action_results=results)\n    custom_function_results_item_1_0 = [item[0] for item in custom_function_results_data_1]\n    custom_function_results_item_1_1 = [item[1] for item in custom_function_results_data_1]\n    custom_function_results_item_1_2 = [item[2] for item in custom_function_results_data_1]\n\n    custom_format__output = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n    # Define base format - customize as needed\n    custom_format__output = \"\"\"Please select the events to merge into this one.\nThis process will:\n - Mark the current event as the parent case. If no workbook has been added, it will use the default workbook.\n - Add events and artifacts to the parent case.\n - Copy all related event notes to the parent case.\n - Mark the other events closed with a link to the parent case\\n\\n\"\"\"\n    \n    # Build phantom url for use later \n    base_url = phantom.get_base_url()\n    url = phantom.build_phantom_rest_url('indicator')\n    \n    # Iterate through all inputs and append to base format\n    for item1,item2,item3 in zip(custom_function_results_item_1_0,custom_function_results_item_1_1,custom_function_results_item_1_2):\n        custom_format__output += \"#### [Event {0}: {1}]({2}/mission/{0}/summary/evidence)\\n\".format(item1, item3, base_url)\n        \n        # If length is greater than 10, truncate\n        if len(item2) > 10:\n            # Find_related_containers only returns an indicator id, this converts the indicator id to an actual value\n            for indicator in item2[0:10]:\n                response = phantom.requests.get(uri = url + \"/{}\".format(indicator), verify=False).json()\n                custom_format__output += \"- ```{}```\\n\".format(response.get('value'))\n            custom_format__output += \"- ***+{} additional related artifacts***\".format(len(item2) - 10)\n        else:\n            for indicator in item2:\n                response = phantom.requests.get(uri = url + \"/{}\".format(indicator), verify=False).json()\n                custom_format__output += \"- ```{}```\\n\".format(response.get('value'))\n        custom_format__output += \"\\n---\\n\\n\"\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='custom_format:output', value=json.dumps(custom_format__output))\n    merge_containers(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "find_related_containers",
+                        "connection_type": "action",
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 13,
+                        "custom_callback": "",
+                        "custom_code": "def custom_format(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('custom_format() called')\n    \n    custom_function_results_data_1 = phantom.collect2(container=container, datapath=['cf_phantom_riskanalysis_pack_find_related_containers_1:custom_function_result.data.*.container_id', 'cf_phantom_riskanalysis_pack_find_related_containers_1:custom_function_result.data.*.indicator_id', 'cf_phantom_riskanalysis_pack_find_related_containers_1:custom_function_result.data.*.container_name'], action_results=results)\n    custom_function_results_item_1_0 = [item[0] for item in custom_function_results_data_1]\n    custom_function_results_item_1_1 = [item[1] for item in custom_function_results_data_1]\n    custom_function_results_item_1_2 = [item[2] for item in custom_function_results_data_1]\n\n    custom_format__output = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n    # Define base format - customize as needed\n    custom_format__output = \"\"\"Please select the events to merge into this one.\nThis process will:\n - Mark the current event as the parent case. If no workbook has been added, it will use the default workbook.\n - Add events and artifacts to the parent case.\n - Copy all related event notes to the parent case.\n - Mark the other events closed with a link to the parent case\\n\\n\"\"\"\n    \n    # Build phantom url for use later \n    base_url = phantom.get_base_url()\n    url = phantom.build_phantom_rest_url('indicator')\n    \n    # Iterate through all inputs and append to base format\n    for item1,item2,item3 in zip(custom_function_results_item_1_0,custom_function_results_item_1_1,custom_function_results_item_1_2):\n        custom_format__output += \"#### [Event {0}: {1}]({2}/mission/{0}/summary/evidence)\\n\".format(item1, item3, base_url)\n        \n        # If length is greater than 10, truncate\n        if len(item2) > 10:\n            # Find_related_containers only returns an indicator id, this converts the indicator id to an actual value\n            for indicator in item2[0:10]:\n                response = phantom.requests.get(uri = url + \"/{}\".format(indicator), verify=False).json()\n                custom_format__output += \"- ```{}```\\n\".format(response.get('value'))\n            custom_format__output += \"- ***+{} additional related artifacts***\".format(len(item2) - 10)\n        else:\n            for indicator in item2:\n                response = phantom.requests.get(uri = url + \"/{}\".format(indicator), verify=False).json()\n                custom_format__output += \"- ```{}```\\n\".format(response.get('value'))\n        custom_format__output += \"\\n---\\n\\n\"\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='custom_format:output', value=json.dumps(custom_format__output))\n    merge_containers(container=container)\n\n    return",
+                        "custom_join": "",
+                        "custom_name": "custom_format",
+                        "description": "Produce a custom format that calculates how many related indicators there are per container. This is used to truncate the output if its over the specified amount.",
+                        "functionBlock": "custom function",
+                        "has_custom": true,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "2e9ccd79-fdfc-4202-8f8b-10c5385d34b8",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "legacy": true,
+                        "line_end": 377,
+                        "line_start": 326,
+                        "message": "Configuring now",
+                        "name": "custom function",
+                        "notes": "Produce a custom format that calculates how many related indicators there are per container. This is used to truncate the output if its over the specified amount",
+                        "number": 4,
+                        "order": 7,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "outputVariables": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "output"
+                            }
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "cf_phantom_riskanalysis_pack_find_related_containers_1:custom_function_result.data.*.container_id"
+                            },
+                            {
+                                "position": 1,
+                                "type": "",
+                                "value": "cf_phantom_riskanalysis_pack_find_related_containers_1:custom_function_result.data.*.indicator_id"
+                            },
+                            {
+                                "position": 2,
+                                "type": "",
+                                "value": "cf_phantom_riskanalysis_pack_find_related_containers_1:custom_function_result.data.*.container_name"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -20,
+                            "y": 240
+                        },
+                        "previous_function": "",
+                        "previous_name": "custom_format",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "custom function",
+                        "status": "deprecating",
+                        "title": "custom function",
+                        "type": "coa.FunctionBlock",
+                        "userGeneratedCode": "    # Define base format - customize as needed\n    custom_format__output = \"\"\"Please select the events to merge into this one.\nThis process will:\n - Mark the current event as the parent case. If no workbook has been added, it will use the default workbook.\n - Add events and artifacts to the parent case.\n - Copy all related event notes to the parent case.\n - Mark the other events closed with a link to the parent case\\n\\n\"\"\"\n    \n    # Build phantom url for use later \n    base_url = phantom.get_base_url()\n    url = phantom.build_phantom_rest_url('indicator')\n    \n    # Iterate through all inputs and append to base format\n    for item1,item2,item3 in zip(custom_function_results_item_1_0,custom_function_results_item_1_1,custom_function_results_item_1_2):\n        custom_format__output += \"#### [Event {0}: {1}]({2}/mission/{0}/summary/evidence)\\n\".format(item1, item3, base_url)\n        \n        # If length is greater than 10, truncate\n        if len(item2) > 10:\n            # Find_related_containers only returns an indicator id, this converts the indicator id to an actual value\n            for indicator in item2[0:10]:\n                response = phantom.requests.get(uri = url + \"/{}\".format(indicator), verify=False).json()\n                custom_format__output += \"- ```{}```\\n\".format(response.get('value'))\n            custom_format__output += \"- ***+{} additional related artifacts***\".format(len(item2) - 10)\n        else:\n            for indicator in item2:\n                response = phantom.requests.get(uri = url + \"/{}\".format(indicator), verify=False).json()\n                custom_format__output += \"- ```{}```\\n\".format(response.get('value'))\n        custom_format__output += \"\\n---\\n\\n\"\n\n",
+                        "warn": false,
+                        "z": 435
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "approver": "admin",
+                        "approver_display": "admin",
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".number": {
+                                "text": 1
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "# read-only block view not available",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "connected_to_start": true,
+                        "connection_name": "find_related_containers",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "def merge_containers(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('merge_containers() called')\n    \n    # set user and message variables for phantom.prompt call\n    user = json.loads(phantom.get_run_data(key='get_effective_user:username'))\n    message = \"\"\"{0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"custom_format:custom_function:output\",\n    ]\n    \n    # fetch data for dynamic response\n    container_data = phantom.collect2(container=container, datapath=['cf_phantom_riskanalysis_pack_find_related_containers_1:custom_function_result.data.*.container_id'], action_results=results)\n    container_list = [item[0] for item in container_data]\n    \n    #Dynamic Responses:\n    response_types = []\n    for item in container_list:\n        response_types.append({\n                \"prompt\": \"Merge {}?\".format(item),\n                \"options\": {\n                    \"type\": \"list\",\n                    \"choices\": [\n                        \"Yes\",\n                        \"No\",\n                    ]\n                },\n            })\n        \n    phantom.save_run_data(value=json.dumps(container_list), key=\"container_list\", auto=True)    \n    \n    phantom.prompt2(container=container, user=user, message=message, parameters=parameters, respond_in_mins=30, name=\"merge_containers\", response_types=response_types, callback=process_container_merge)\n\n    return",
+                        "custom_join": "",
+                        "custom_name": "merge_containers",
+                        "description": "Prompt the user who launched this playbook with the full report so they can select the containers to merge.  Limited to 20 events - future state will allow more. It also builds a dynamic merge which is why it has custom code.",
+                        "has_custom": true,
+                        "has_custom_block": true,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "f7936d11-e36c-4d76-b060-6f7b264f679f",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 103,
+                        "line_start": 67,
+                        "message": "Please select the containers to merge into this one. This process will mark the current container as a case, add all artifacts and notes to this container, and mark the other containers closed.\n\n| Container ID | Container Name | Indicator Match Count | Container Status |\n| --- | --- | --- | --- |\n%%\n| {0} | [{3}]({4}/mission/{0}) | {1} |  {2} |\n%%",
+                        "name": "prompt",
+                        "notes": "Prompt the user who launched this playbook with the full report so they can select the containers to merge.  Limited to 20 events - future state will allow more. It also builds a dynamic merge which is why it has custom code.",
+                        "number": 1,
+                        "order": 4,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "cf_local_find_related_containers_1:custom_function_result.data.*.container_id"
+                            },
+                            {
+                                "position": 1,
+                                "type": "",
+                                "value": "cf_local_find_related_containers_1:custom_function_result.data.*.container_name"
+                            },
+                            {
+                                "position": 2,
+                                "type": "",
+                                "value": "cf_local_find_related_containers_1:custom_function_result.data.*.container_indicator_match_count"
+                            },
+                            {
+                                "position": 3,
+                                "type": "",
+                                "value": "cf_local_find_related_containers_1:custom_function_result.data.*.container_name"
+                            },
+                            {
+                                "position": 4,
+                                "type": "",
+                                "value": "generate_base_url:custom_function:output"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -260,
+                            "y": 380
+                        },
+                        "previous_function": "",
+                        "previous_name": "merge_containers",
+                        "respond_in": "30",
+                        "response_key": "Message",
+                        "response_options": [],
+                        "response_type": "list",
+                        "responses": [
+                            {
+                                "response_key": "Custom List",
+                                "response_options": [
+                                    "test1",
+                                    "test2",
+                                    "test3"
+                                ],
+                                "response_prompt": "",
+                                "response_type": "list"
+                            }
+                        ],
+                        "show_number": false,
+                        "size": {
+                            "height": 80,
+                            "width": 80
+                        },
+                        "state": "prompt",
+                        "status": "",
+                        "type": "coa.Prompt",
+                        "warn": false,
+                        "z": 447
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".functionBlock": {
+                                "text": "process_container_merge"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn_grey.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def process_container_merge(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('process_container_merge() called')\n    \n    input_parameter_0 = \"\"\n\n    process_container_merge__event_ids = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n    process_container_merge__event_ids = []\n    results_data_1 = phantom.collect2(container=container, datapath=['merge_containers:action_result.summary.responses'], action_results=results)\n    results_item_1_0 = [item[0] for item in results_data_1]\n    \n    responses = results_item_1_0[0]\n    # Grab run_key and convert to list\n    container_list = json.loads(phantom.get_run_data(key='container_list'))\n    \n    if 'Yes' in responses or 'yes' in responses:\n        child_container_list = []\n        child_container_name_list = []\n        \n        # Gather all artifacts from parent_container\n        phantom.debug(\"Gathering all artifacts from parent container\")\n        url = phantom.build_phantom_rest_url('container', container['id'], 'artifacts')\n        request_json = phantom.requests.get(uri=url, verify=False).json()\n        parent_cef_list = []\n        if request_json['count'] > 0:\n            for data in request_json['data']:\n                parent_cef_list.append(data['cef'])\n                \n        #### Prep parent container\n        phantom.debug(\"Prepping parent container\")\n        # Get parent worbook name\n        url = phantom.build_phantom_rest_url('container', container['id'])\n        workflow_name = phantom.requests.get(uri=url, verify=False).json().get('workflow_name')\n        update_data = {'container_type': 'case'}\n        if workflow_name:\n            if not '[Parent]' in container['name']:\n                update_data['name'] = \"[Parent] {}\".format(container['name'])\n                phantom.update(container, update_data)\n            else:\n                phantom.update(container, update_data)\n        else:\n            phantom.debug(\"Prepping parent container - no workflow exists, adding default workbook\")\n            phantom.promote(container=container['id'])\n            update_data = {'name': \"[Parent] {}\".format(container['name'])}\n            phantom.update(container, update_data)\n            \n        # Check if current phase is set. If not, set the current phase to the first available phase to avoid artifact merge bug\n        if not container.get('current_phase_id'):\n            phantom.debug(\"Phase not set, settings current_phase to first phase\")\n            url = phantom.build_phantom_rest_url('workbook_phase') + \"?_filter_container={}\".format(container['id'])\n            request_json = phantom.requests.get(uri=url, verify=False).json()\n            update_data = {'current_phase_id': request_json['data'][0]['id']}\n            phantom.update(container, update_data)\n            \n        # Iterate through child containers\n        for child_container_id,response in zip(container_list, responses):\n            event_id = phantom.collect2(container=phantom.get_container(child_container_id), datapath=['artifact:*.cef.event_id'], scope='all')\n            for value in event_id:\n                if value:\n                    process_container_merge__event_ids.append(value)\n            \n            if response.lower() == 'yes':\n                phantom.debug(\"Processing Child Container ID: {}\".format(child_container_id))\n                child_container_list.append(child_container_id)\n                child_container_name = (phantom.get_container(child_container_id).get('name'))\n                child_container_name_list.append(child_container_name)\n                \n                # Update container name with parent relationship\n                if not \"[Parent:\" in child_container_name:\n                    update_data = {'name': \"[Parent: {0}] {1}\".format(container['id'], child_container_name)}\n                    phantom.update(phantom.get_container(child_container_id), update_data)\n                \n                # Gather artifacts for child container\n                phantom.debug(\"Gathering artifacts for child container {}\".format(child_container_id))\n                url = phantom.build_phantom_rest_url('container', child_container_id, 'artifacts') \n                request_json = phantom.requests.get(uri=url, verify=False).json()\n                if request_json['count'] > 0:\n                    for data in request_json['data']:\n                        # Compare child artifacts to parent artifacts. Only merge them if they are not the same\n                        for parent_cef in parent_cef_list:\n                            if parent_cef != data['cef'] and 'event_id' not in data['cef'].keys():\n                                phantom.merge(case=container['id'], artifact_id=data['id'])\n                \n                #Gather notes for child container\n                phantom.debug(\"Gathering notes for child container '{}'\".format(child_container_id))\n                for note in phantom.get_notes(container=child_container_id):\n                    if note['success'] and not note['data']['title'] in ('[Auto-Generated] Related Containers', \n                                                                         '[Auto-Generated] Parent Container', \n                                                                         '[Auto-Generated] Child Containers'):\n                        phantom.debug(\"Adding note: '{}'\".format(note['data']['title']))\n                        phantom.add_note(container=container['id'],\n                                         note_type='general',\n                                         note_format=note['data']['note_format'],\n                                         title=\"[From Event {0}] {1}\".format(note['data']['container'], note['data']['title']),\n                                         content=note['data']['content'])\n\n                # Perform final cleanup on child container\n                phantom.debug(\"Adding parent relationship note to child container '{}'\".format(child_container_id))\n                success, message, child_note_id = phantom.add_note(container=child_container_id,\n                                 note_type=\"general\",\n                                 note_format=\"markdown\",\n                                 title=\"[Auto-Generated] Parent Container\",\n                                 content=\"| Container_ID | Container_Name |\\n| --- | --- |\\n| {0} | [{1}]({2}/mission/{0}) |\".format(container['id'], container['name'], phantom.get_base_url()))\n                # Mark child note as evidence\n                data = {\n                    \"container_id\": child_container_id,\n                    \"object_id\": child_note_id,\n                    \"content_type\": \"note\"\n                }\n                url = phantom.build_phantom_rest_url('evidence')\n                response = phantom.requests.post(uri=url, json=data, verify=False).json()\n                phantom.set_status(container=child_container_id, status=\"closed\")\n                \n                # Mark child container as evidence in parent container:\n                data = {\n                    \"container_id\": container['id'],\n                    \"object_id\": child_container_id,\n                    \"content_type\": \"container\"\n                }\n                url = phantom.build_phantom_rest_url('evidence')\n                response = phantom.requests.post(uri=url, json=data, verify=False).json()\n\n        # Format note for link back to child_containers in parent_container\n        phantom.debug(\"Adding list of child containers to parent note\")\n        format_list = []\n        for child_container_id,child_container_name in zip(child_container_list,child_container_name_list):\n            format_list.append(\"| {0} | [{1}]({2}/mission/{0}) |\\n\".format(child_container_id, child_container_name, phantom.get_base_url()))\n            \n        # Fetch pevious \n        url = phantom.build_phantom_rest_url('note') + '?_filter_container=\"{}\"&_filter_title=\"[Auto-Generated] Child Containers\"'.format(container['id'])\n        response_data = phantom.requests.get(url, verify=False).json()\n        # If old notes exist proceed to overwrite, else add new note\n        note_title = \"[Auto-Generated] Child Containers\"\n        note_format = \"markdown\"\n        if response_data['count'] > 0:\n            phantom.debug(\"Existing 'Child Container' Note found\")\n            for item in response_data['data']:\n                # Check to see if this has been done before, if so append it to existing note.\n                if item.get('title') and note_title == item.get('title'):\n                    note_content = item['content'] + \"\\n\"\n                    phantom.debug(\"Updating previous 'Child Containers' Note\")\n                    for c_note in format_list:\n                        note_content += c_note\n                    data = {\"note_type\": \"general\",\n                            \"title\": note_title,\n                            \"content\": note_content,\n                            \"note_format\": note_format}\n                    url = phantom.build_phantom_rest_url('note')\n                    response_data = phantom.requests.post(url + \"/{}\".format(item['id']), json=data, verify=False).json()\n                    \n        else:\n            phantom.debug(\"Adding new note for 'Child Containers'\")\n            template = \"| Container ID | Container Name |\\n| --- | --- |\\n\"\n            for c_note in format_list:\n                template += c_note\n            success, message, process_container_merge__note_id = phantom.add_note(container=container, \n                                                                                  note_type=\"general\", \n                                                                                  title=note_title, \n                                                                                  content=template, \n                                                                                  note_format=note_format)\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='process_container_merge:event_ids', value=json.dumps(process_container_merge__event_ids))\n    cf_phantom_riskanalysis_pack_get_run_data_1(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "merge_containers",
+                        "connection_type": "action",
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 10,
+                        "custom_callback": "",
+                        "custom_code": "def process_container_merge(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('process_container_merge() called')\n    \n    input_parameter_0 = \"\"\n\n    process_container_merge__event_ids = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n    process_container_merge__event_ids = []\n    results_data_1 = phantom.collect2(container=container, datapath=['merge_containers:action_result.summary.responses'], action_results=results)\n    results_item_1_0 = [item[0] for item in results_data_1]\n    \n    responses = results_item_1_0[0]\n    # Grab run_key and convert to list\n    container_list = json.loads(phantom.get_run_data(key='container_list'))\n    \n    if 'Yes' in responses or 'yes' in responses:\n        child_container_list = []\n        child_container_name_list = []\n        \n        # Gather all artifacts from parent_container\n        phantom.debug(\"Gathering all artifacts from parent container\")\n        url = phantom.build_phantom_rest_url('container', container['id'], 'artifacts')\n        request_json = phantom.requests.get(uri=url, verify=False).json()\n        parent_cef_list = []\n        if request_json['count'] > 0:\n            for data in request_json['data']:\n                parent_cef_list.append(data['cef'])\n                \n        #### Prep parent container\n        phantom.debug(\"Prepping parent container\")\n        # Get parent worbook name\n        url = phantom.build_phantom_rest_url('container', container['id'])\n        workflow_name = phantom.requests.get(uri=url, verify=False).json().get('workflow_name')\n        update_data = {'container_type': 'case'}\n        if workflow_name:\n            if not '[Parent]' in container['name']:\n                update_data['name'] = \"[Parent] {}\".format(container['name'])\n                phantom.update(container, update_data)\n            else:\n                phantom.update(container, update_data)\n        else:\n            phantom.debug(\"Prepping parent container - no workflow exists, adding default workbook\")\n            phantom.promote(container=container['id'])\n            update_data = {'name': \"[Parent] {}\".format(container['name'])}\n            phantom.update(container, update_data)\n            \n        # Check if current phase is set. If not, set the current phase to the first available phase to avoid artifact merge bug\n        if not container.get('current_phase_id'):\n            phantom.debug(\"Phase not set, settings current_phase to first phase\")\n            url = phantom.build_phantom_rest_url('workbook_phase') + \"?_filter_container={}\".format(container['id'])\n            request_json = phantom.requests.get(uri=url, verify=False).json()\n            update_data = {'current_phase_id': request_json['data'][0]['id']}\n            phantom.update(container, update_data)\n            \n        # Iterate through child containers\n        for child_container_id,response in zip(container_list, responses):\n            event_id = phantom.collect2(container=phantom.get_container(child_container_id), datapath=['artifact:*.cef.event_id'], scope='all')\n            for value in event_id:\n                if value:\n                    process_container_merge__event_ids.append(value)\n            \n            if response.lower() == 'yes':\n                phantom.debug(\"Processing Child Container ID: {}\".format(child_container_id))\n                child_container_list.append(child_container_id)\n                child_container_name = (phantom.get_container(child_container_id).get('name'))\n                child_container_name_list.append(child_container_name)\n                \n                # Update container name with parent relationship\n                if not \"[Parent:\" in child_container_name:\n                    update_data = {'name': \"[Parent: {0}] {1}\".format(container['id'], child_container_name)}\n                    phantom.update(phantom.get_container(child_container_id), update_data)\n                \n                # Gather artifacts for child container\n                phantom.debug(\"Gathering artifacts for child container {}\".format(child_container_id))\n                url = phantom.build_phantom_rest_url('container', child_container_id, 'artifacts') \n                request_json = phantom.requests.get(uri=url, verify=False).json()\n                if request_json['count'] > 0:\n                    for data in request_json['data']:\n                        # Compare child artifacts to parent artifacts. Only merge them if they are not the same\n                        for parent_cef in parent_cef_list:\n                            if parent_cef != data['cef'] and 'event_id' not in data['cef'].keys():\n                                phantom.merge(case=container['id'], artifact_id=data['id'])\n                \n                #Gather notes for child container\n                phantom.debug(\"Gathering notes for child container '{}'\".format(child_container_id))\n                for note in phantom.get_notes(container=child_container_id):\n                    if note['success'] and not note['data']['title'] in ('[Auto-Generated] Related Containers', \n                                                                         '[Auto-Generated] Parent Container', \n                                                                         '[Auto-Generated] Child Containers'):\n                        phantom.debug(\"Adding note: '{}'\".format(note['data']['title']))\n                        phantom.add_note(container=container['id'],\n                                         note_type='general',\n                                         note_format=note['data']['note_format'],\n                                         title=\"[From Event {0}] {1}\".format(note['data']['container'], note['data']['title']),\n                                         content=note['data']['content'])\n\n                # Perform final cleanup on child container\n                phantom.debug(\"Adding parent relationship note to child container '{}'\".format(child_container_id))\n                success, message, child_note_id = phantom.add_note(container=child_container_id,\n                                 note_type=\"general\",\n                                 note_format=\"markdown\",\n                                 title=\"[Auto-Generated] Parent Container\",\n                                 content=\"| Container_ID | Container_Name |\\n| --- | --- |\\n| {0} | [{1}]({2}/mission/{0}) |\".format(container['id'], container['name'], phantom.get_base_url()))\n                # Mark child note as evidence\n                data = {\n                    \"container_id\": child_container_id,\n                    \"object_id\": child_note_id,\n                    \"content_type\": \"note\"\n                }\n                url = phantom.build_phantom_rest_url('evidence')\n                response = phantom.requests.post(uri=url, json=data, verify=False).json()\n                phantom.set_status(container=child_container_id, status=\"closed\")\n                \n                # Mark child container as evidence in parent container:\n                data = {\n                    \"container_id\": container['id'],\n                    \"object_id\": child_container_id,\n                    \"content_type\": \"container\"\n                }\n                url = phantom.build_phantom_rest_url('evidence')\n                response = phantom.requests.post(uri=url, json=data, verify=False).json()\n\n        # Format note for link back to child_containers in parent_container\n        phantom.debug(\"Adding list of child containers to parent note\")\n        format_list = []\n        for child_container_id,child_container_name in zip(child_container_list,child_container_name_list):\n            format_list.append(\"| {0} | [{1}]({2}/mission/{0}) |\\n\".format(child_container_id, child_container_name, phantom.get_base_url()))\n            \n        # Fetch pevious \n        url = phantom.build_phantom_rest_url('note') + '?_filter_container=\"{}\"&_filter_title=\"[Auto-Generated] Child Containers\"'.format(container['id'])\n        response_data = phantom.requests.get(url, verify=False).json()\n        # If old notes exist proceed to overwrite, else add new note\n        note_title = \"[Auto-Generated] Child Containers\"\n        note_format = \"markdown\"\n        if response_data['count'] > 0:\n            phantom.debug(\"Existing 'Child Container' Note found\")\n            for item in response_data['data']:\n                # Check to see if this has been done before, if so append it to existing note.\n                if item.get('title') and note_title == item.get('title'):\n                    note_content = item['content'] + \"\\n\"\n                    phantom.debug(\"Updating previous 'Child Containers' Note\")\n                    for c_note in format_list:\n                        note_content += c_note\n                    data = {\"note_type\": \"general\",\n                            \"title\": note_title,\n                            \"content\": note_content,\n                            \"note_format\": note_format}\n                    url = phantom.build_phantom_rest_url('note')\n                    response_data = phantom.requests.post(url + \"/{}\".format(item['id']), json=data, verify=False).json()\n                    \n        else:\n            phantom.debug(\"Adding new note for 'Child Containers'\")\n            template = \"| Container ID | Container Name |\\n| --- | --- |\\n\"\n            for c_note in format_list:\n                template += c_note\n            success, message, process_container_merge__note_id = phantom.add_note(container=container, \n                                                                                  note_type=\"general\", \n                                                                                  title=note_title, \n                                                                                  content=template, \n                                                                                  note_format=note_format)\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='process_container_merge:event_ids', value=json.dumps(process_container_merge__event_ids))\n    cf_phantom_riskanalysis_pack_get_run_data_1(container=container)\n\n    return",
+                        "custom_join": "",
+                        "custom_name": "process_container_merge",
+                        "description": "Custom process for merging containers. Each section on what it does for the merge process is documented. Modify at your own risk.",
+                        "functionBlock": "custom function",
+                        "has_custom": true,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "6e9be547-0365-4ebe-9d60-3dfc268af6e9",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 258,
+                        "legacy": true,
+                        "line_end": 279,
+                        "line_start": 106,
+                        "message": "Configuring now",
+                        "name": "custom function",
+                        "notes": "Custom process for merging containers. Each section on what it does for the merge process is documented. Modify at your own risk.",
+                        "number": 3,
+                        "order": 5,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "outputVariables": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "event_ids"
+                            }
+                        ],
+                        "parameters": [
+                            {
+                                "position": 1,
+                                "type": "",
+                                "value": ""
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -140,
+                            "y": 380
+                        },
+                        "previous_function": "",
+                        "previous_name": "process_container_merge",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "custom function",
+                        "status": "deprecating",
+                        "title": "custom function",
+                        "type": "coa.FunctionBlock",
+                        "userGeneratedCode": "    process_container_merge__event_ids = []\n    results_data_1 = phantom.collect2(container=container, datapath=['merge_containers:action_result.summary.responses'], action_results=results)\n    results_item_1_0 = [item[0] for item in results_data_1]\n    \n    responses = results_item_1_0[0]\n    # Grab run_key and convert to list\n    container_list = json.loads(phantom.get_run_data(key='container_list'))\n    \n    if 'Yes' in responses or 'yes' in responses:\n        child_container_list = []\n        child_container_name_list = []\n        \n        # Gather all artifacts from parent_container\n        phantom.debug(\"Gathering all artifacts from parent container\")\n        url = phantom.build_phantom_rest_url('container', container['id'], 'artifacts')\n        request_json = phantom.requests.get(uri=url, verify=False).json()\n        parent_cef_list = []\n        if request_json['count'] > 0:\n            for data in request_json['data']:\n                parent_cef_list.append(data['cef'])\n                \n        #### Prep parent container\n        phantom.debug(\"Prepping parent container\")\n        # Get parent worbook name\n        url = phantom.build_phantom_rest_url('container', container['id'])\n        workflow_name = phantom.requests.get(uri=url, verify=False).json().get('workflow_name')\n        update_data = {'container_type': 'case'}\n        if workflow_name:\n            if not '[Parent]' in container['name']:\n                update_data['name'] = \"[Parent] {}\".format(container['name'])\n                phantom.update(container, update_data)\n            else:\n                phantom.update(container, update_data)\n        else:\n            phantom.debug(\"Prepping parent container - no workflow exists, adding default workbook\")\n            phantom.promote(container=container['id'])\n            update_data = {'name': \"[Parent] {}\".format(container['name'])}\n            phantom.update(container, update_data)\n            \n        # Check if current phase is set. If not, set the current phase to the first available phase to avoid artifact merge bug\n        if not container.get('current_phase_id'):\n            phantom.debug(\"Phase not set, settings current_phase to first phase\")\n            url = phantom.build_phantom_rest_url('workbook_phase') + \"?_filter_container={}\".format(container['id'])\n            request_json = phantom.requests.get(uri=url, verify=False).json()\n            update_data = {'current_phase_id': request_json['data'][0]['id']}\n            phantom.update(container, update_data)\n            \n        # Iterate through child containers\n        for child_container_id,response in zip(container_list, responses):\n            event_id = phantom.collect2(container=phantom.get_container(child_container_id), datapath=['artifact:*.cef.event_id'], scope='all')\n            for value in event_id:\n                if value:\n                    process_container_merge__event_ids.append(value)\n            \n            if response.lower() == 'yes':\n                phantom.debug(\"Processing Child Container ID: {}\".format(child_container_id))\n                child_container_list.append(child_container_id)\n                child_container_name = (phantom.get_container(child_container_id).get('name'))\n                child_container_name_list.append(child_container_name)\n                \n                # Update container name with parent relationship\n                if not \"[Parent:\" in child_container_name:\n                    update_data = {'name': \"[Parent: {0}] {1}\".format(container['id'], child_container_name)}\n                    phantom.update(phantom.get_container(child_container_id), update_data)\n                \n                # Gather artifacts for child container\n                phantom.debug(\"Gathering artifacts for child container {}\".format(child_container_id))\n                url = phantom.build_phantom_rest_url('container', child_container_id, 'artifacts') \n                request_json = phantom.requests.get(uri=url, verify=False).json()\n                if request_json['count'] > 0:\n                    for data in request_json['data']:\n                        # Compare child artifacts to parent artifacts. Only merge them if they are not the same\n                        for parent_cef in parent_cef_list:\n                            if parent_cef != data['cef'] and 'event_id' not in data['cef'].keys():\n                                phantom.merge(case=container['id'], artifact_id=data['id'])\n                \n                #Gather notes for child container\n                phantom.debug(\"Gathering notes for child container '{}'\".format(child_container_id))\n                for note in phantom.get_notes(container=child_container_id):\n                    if note['success'] and not note['data']['title'] in ('[Auto-Generated] Related Containers', \n                                                                         '[Auto-Generated] Parent Container', \n                                                                         '[Auto-Generated] Child Containers'):\n                        phantom.debug(\"Adding note: '{}'\".format(note['data']['title']))\n                        phantom.add_note(container=container['id'],\n                                         note_type='general',\n                                         note_format=note['data']['note_format'],\n                                         title=\"[From Event {0}] {1}\".format(note['data']['container'], note['data']['title']),\n                                         content=note['data']['content'])\n\n                # Perform final cleanup on child container\n                phantom.debug(\"Adding parent relationship note to child container '{}'\".format(child_container_id))\n                success, message, child_note_id = phantom.add_note(container=child_container_id,\n                                 note_type=\"general\",\n                                 note_format=\"markdown\",\n                                 title=\"[Auto-Generated] Parent Container\",\n                                 content=\"| Container_ID | Container_Name |\\n| --- | --- |\\n| {0} | [{1}]({2}/mission/{0}) |\".format(container['id'], container['name'], phantom.get_base_url()))\n                # Mark child note as evidence\n                data = {\n                    \"container_id\": child_container_id,\n                    \"object_id\": child_note_id,\n                    \"content_type\": \"note\"\n                }\n                url = phantom.build_phantom_rest_url('evidence')\n                response = phantom.requests.post(uri=url, json=data, verify=False).json()\n                phantom.set_status(container=child_container_id, status=\"closed\")\n                \n                # Mark child container as evidence in parent container:\n                data = {\n                    \"container_id\": container['id'],\n                    \"object_id\": child_container_id,\n                    \"content_type\": \"container\"\n                }\n                url = phantom.build_phantom_rest_url('evidence')\n                response = phantom.requests.post(uri=url, json=data, verify=False).json()\n\n        # Format note for link back to child_containers in parent_container\n        phantom.debug(\"Adding list of child containers to parent note\")\n        format_list = []\n        for child_container_id,child_container_name in zip(child_container_list,child_container_name_list):\n            format_list.append(\"| {0} | [{1}]({2}/mission/{0}) |\\n\".format(child_container_id, child_container_name, phantom.get_base_url()))\n            \n        # Fetch pevious \n        url = phantom.build_phantom_rest_url('note') + '?_filter_container=\"{}\"&_filter_title=\"[Auto-Generated] Child Containers\"'.format(container['id'])\n        response_data = phantom.requests.get(url, verify=False).json()\n        # If old notes exist proceed to overwrite, else add new note\n        note_title = \"[Auto-Generated] Child Containers\"\n        note_format = \"markdown\"\n        if response_data['count'] > 0:\n            phantom.debug(\"Existing 'Child Container' Note found\")\n            for item in response_data['data']:\n                # Check to see if this has been done before, if so append it to existing note.\n                if item.get('title') and note_title == item.get('title'):\n                    note_content = item['content'] + \"\\n\"\n                    phantom.debug(\"Updating previous 'Child Containers' Note\")\n                    for c_note in format_list:\n                        note_content += c_note\n                    data = {\"note_type\": \"general\",\n                            \"title\": note_title,\n                            \"content\": note_content,\n                            \"note_format\": note_format}\n                    url = phantom.build_phantom_rest_url('note')\n                    response_data = phantom.requests.post(url + \"/{}\".format(item['id']), json=data, verify=False).json()\n                    \n        else:\n            phantom.debug(\"Adding new note for 'Child Containers'\")\n            template = \"| Container ID | Container Name |\\n| --- | --- |\\n\"\n            for c_note in format_list:\n                template += c_note\n            success, message, process_container_merge__note_id = phantom.add_note(container=container, \n                                                                                  note_type=\"general\", \n                                                                                  title=note_title, \n                                                                                  content=template, \n                                                                                  note_format=note_format)\n\n",
+                        "warn": false,
+                        "z": 451
+                    },
+                    {
+                        ".scmName/text": "phantom_riskanalysis_pack",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {},
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".customFunction": {
+                                "text": "get_run_data"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".scmName": {
+                                "text": "phantom_riskanalys..."
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            ".title-info": {
+                                "text": ""
+                            },
+                            "g.branch image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def cf_phantom_riskanalysis_pack_get_run_data_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('cf_phantom_riskanalysis_pack_get_run_data_1() called')\n    \n    literal_values_0 = [\n        [\n            \"process_container_merge:event_ids\",\n            \"True\",\n        ],\n    ]\n\n    parameters = []\n\n    for item0 in literal_values_0:\n        parameters.append({\n            'key': item0[0],\n            'flatten_lists': item0[1],\n        })\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################    \n\n    # call custom function \"phantom_riskanalysis_pack/get_run_data\", returns the custom_function_run_id\n    phantom.custom_function(custom_function='phantom_riskanalysis_pack/get_run_data', parameters=parameters, name='cf_phantom_riskanalysis_pack_get_run_data_1', callback=es_format)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "cfDisplayPath": "phantom_riskanalysis_pack/get_run_data",
+                        "cfInputs": {
+                            "flatten_lists": {
+                                "collectionType": "literal_values",
+                                "dataPath": "True",
+                                "paramName": "item0[1]",
+                                "type": "item"
+                            },
+                            "key": {
+                                "collectionType": "literal_values",
+                                "dataPath": "process_container_merge:event_ids",
+                                "paramName": "item0[0]",
+                                "type": "item"
+                            }
+                        },
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "merge_containers",
+                        "connection_type": "action",
+                        "currentVersion": true,
+                        "customCodeEndLineOffset": 7,
+                        "customCodeStartLine": 20,
+                        "customFunction": "phantom_riskanalysis_pack/get_run_data",
+                        "customFunctionId": null,
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "Grab the Notable Event Ids saved key from the previous block and output them in a friendly data path",
+                        "draftMode": false,
+                        "existingCF": true,
+                        "flatten_lists-1": "True",
+                        "functionBlock": "custom function",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "8d064e68-5774-4fda-b1e3-c4d90914b195",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "key-0": "process_container_merge:event_ids",
+                        "line_end": 443,
+                        "line_start": 411,
+                        "message": "Configuring now",
+                        "name": "get_run_data",
+                        "notes": "Grab the Notable Event Ids saved key from the previous block and output them in a friendly data path",
+                        "number": 1,
+                        "order": 9,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 100,
+                            "y": 380
+                        },
+                        "previous_function": "",
+                        "previous_name": "cf_phantom_riskanalysis_pack_get_run_data_1",
+                        "selectedCustomFunction": {
+                            "description": "Takes a key name and splits the output for easier access for actions downstream",
+                            "draftMode": false,
+                            "id": 431,
+                            "inputs": [
+                                {
+                                    "_pretty_custom_function": "get_run_data",
+                                    "contains_type": [
+                                        "*"
+                                    ],
+                                    "custom_function": 431,
+                                    "description": "A text string that represents the name of the key saved for a save_run_data() call",
+                                    "id": 1480,
+                                    "input_type": "item",
+                                    "name": "key",
+                                    "placeholder": "my_key"
+                                },
+                                {
+                                    "_pretty_custom_function": "get_run_data",
+                                    "contains_type": [],
+                                    "custom_function": 431,
+                                    "description": "",
+                                    "id": 1481,
+                                    "input_type": "item",
+                                    "name": "flatten_lists",
+                                    "placeholder": "True or False"
+                                }
+                            ],
+                            "name": "get_run_data",
+                            "outputs": [
+                                {
+                                    "_pretty_custom_function": "get_run_data",
+                                    "contains_type": [],
+                                    "custom_function": 431,
+                                    "data_path": "*.output",
+                                    "description": "",
+                                    "id": 1145
+                                }
+                            ],
+                            "playbooks": {
+                                "draft_playbooks": [],
+                                "draft_version_id": null,
+                                "playbooks": [
+                                    {
+                                        "active": false,
+                                        "display_path": "phantom_riskanalysis_pack/Risk Notable - Contain Users",
+                                        "draft_mode": false,
+                                        "id": 1045,
+                                        "name": "Risk Notable - Contain Users",
+                                        "viewable": true
+                                    },
+                                    {
+                                        "active": false,
+                                        "display_path": "local/Get Run Data",
+                                        "draft_mode": false,
+                                        "id": 663,
+                                        "name": "Get Run Data",
+                                        "viewable": true
+                                    },
+                                    {
+                                        "active": false,
+                                        "display_path": "phantom_riskanalysis_pack/Risk Notable - Contain All",
+                                        "draft_mode": false,
+                                        "id": 1115,
+                                        "name": "Risk Notable - Contain All",
+                                        "viewable": true
+                                    },
+                                    {
+                                        "active": false,
+                                        "display_path": "phantom_riskanalysis_pack/[utility] Identify Related Containers and Merge",
+                                        "draft_mode": false,
+                                        "id": 1202,
+                                        "name": "[utility] Identify Related Containers and Merge",
+                                        "viewable": true
+                                    }
+                                ]
+                            },
+                            "scmId": 3,
+                            "scmName": "phantom_riskanalysis_pack"
+                        },
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "repo",
+                        "status": "",
+                        "title": "custom function",
+                        "type": "coa.CustomFunctionBlock",
+                        "userGeneratedCode": "    # Write your custom code here...",
+                        "warn": false,
+                        "z": 455
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".format": {
+                                "text": "es_format"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out-1": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out-1>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "format"
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def es_format(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('es_format() called')\n    \n    template = \"\"\"Event merged into parent case: {0}\n\nName: {1}\n\nURL: {2}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"container:id\",\n        \"container:name\",\n        \"container:url\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"es_format\")\n\n    update_event_1(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "get_run_data",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "es_format",
+                        "description": "Produce final note for posting to ES",
+                        "format": "format",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "5365c263-9544-41ba-9d90-27ebea4cce16",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 468,
+                        "line_start": 446,
+                        "message": "Configuring now",
+                        "name": "format",
+                        "notes": "Produce final note for posting to ES",
+                        "number": 1,
+                        "order": 10,
+                        "outPorts": [
+                            "out-1"
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "container:id"
+                            },
+                            {
+                                "position": 1,
+                                "type": "",
+                                "value": "container:name"
+                            },
+                            {
+                                "position": 2,
+                                "type": "",
+                                "value": "container:url"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 340,
+                            "y": 380
+                        },
+                        "previous_function": "",
+                        "previous_name": "es_format",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "format",
+                        "status": "",
+                        "template": "Event merged into parent case: {0}\n\nName: {1}\n\nURL: {2}",
+                        "title": "format",
+                        "type": "coa.Format",
+                        "warn": false,
+                        "z": 456
+                    },
+                    {
+                        "action": "update event",
+                        "action_type": "generic",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "comment": "es_format:formatted_data",
+                            "event_ids": "cf_phantom_riskanalysis_pack_get_run_data_1:custom_function_result.data.*.output",
+                            "integer_status": "",
+                            "owner": "",
+                            "status": "closed",
+                            "urgency": "",
+                            "wait_for_confirmation": "False"
+                        },
+                        "angle": 0,
+                        "app": "Splunk",
+                        "appid": "91883aa8-9c81-470b-97a1-5d8f7995f560",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "update event",
+                                "actions": [
+                                    "test connectivity",
+                                    "get host events",
+                                    "on poll",
+                                    "run query",
+                                    "update event",
+                                    "post data"
+                                ],
+                                "active": true,
+                                "app_name": "Splunk",
+                                "app_version": "2.0.22",
+                                "appid": "91883aa8-9c81-470b-97a1-5d8f7995f560",
+                                "asset_name": "splunk",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "comment": "es_format:formatted_data",
+                                    "event_ids": "cf_phantom_riskanalysis_pack_get_run_data_1:custom_function_result.data.*.output",
+                                    "integer_status": "",
+                                    "owner": "",
+                                    "status": "closed",
+                                    "urgency": "",
+                                    "wait_for_confirmation": "False"
+                                },
+                                "has_app": true,
+                                "id": 7,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "splunk",
+                                "output": [
+                                    {
+                                        "column_name": "Status",
+                                        "column_order": 0,
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success",
+                                            "failed"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.comment",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "test comment"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "splunk notable event id"
+                                        ],
+                                        "data_path": "action_result.parameter.event_ids",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "1542751027.136723+0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.integer_status",
+                                        "data_type": "numeric"
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.owner",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.status",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.urgency",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.wait_for_confirmation",
+                                        "data_type": "boolean"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.failure_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "1 event updated successfully"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.success",
+                                        "data_type": "boolean",
+                                        "example_values": [
+                                            false,
+                                            true
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.success_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.updated_event_id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2CF264EE-6016-4F6A-BCC3-4B7251E113F7@@notable@@035142b19c09ab645c6bbfb847e866f4"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Message",
+                                        "column_order": 1,
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Updated event id: 2CF264EE-6016-4F6A-BCC3-4B7251E113F7@@notable@@035142b19c09ab645c6bbfb847e866f4"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "comment": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "New comment for the event",
+                                        "key": "comment",
+                                        "order": 5,
+                                        "required": false
+                                    },
+                                    "event_ids": {
+                                        "contains": [
+                                            "splunk notable event id"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Event ID to update",
+                                        "key": "event_ids",
+                                        "order": 0,
+                                        "primary": true,
+                                        "required": true
+                                    },
+                                    "integer_status": {
+                                        "data_type": "numeric",
+                                        "default": null,
+                                        "description": "Integer representing custom status value",
+                                        "key": "integer_status",
+                                        "order": 3,
+                                        "required": false
+                                    },
+                                    "owner": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "New owner for the event",
+                                        "key": "owner",
+                                        "order": 1,
+                                        "required": false
+                                    },
+                                    "status": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "New status for the event",
+                                        "key": "status",
+                                        "order": 2,
+                                        "required": false,
+                                        "value_list": [
+                                            "unassigned",
+                                            "new",
+                                            "in progress",
+                                            "pending",
+                                            "resolved",
+                                            "closed"
+                                        ]
+                                    },
+                                    "urgency": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "New urgency for the event",
+                                        "key": "urgency",
+                                        "order": 4,
+                                        "required": false,
+                                        "value_list": [
+                                            "",
+                                            "informational",
+                                            "low",
+                                            "medium",
+                                            "high",
+                                            "critical"
+                                        ]
+                                    },
+                                    "wait_for_confirmation": {
+                                        "data_type": "boolean",
+                                        "default": false,
+                                        "description": "Validate event_ids",
+                                        "key": "wait_for_confirmation",
+                                        "order": 6,
+                                        "required": false
+                                    }
+                                },
+                                "product_name": "Splunk Enterprise",
+                                "product_vendor": "Splunk Inc.",
+                                "targets": "7",
+                                "type": "siem"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "update event"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Generic"
+                            },
+                            "g.approver image": {
+                                "opacity": 1
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_generic.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            },
+                            "g.timer image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def update_event_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('update_event_1() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'update_event_1' call\n    custom_function_results_data_1 = phantom.collect2(container=container, datapath=['cf_phantom_riskanalysis_pack_get_run_data_1:custom_function_result.data.*.output'], action_results=results)\n    formatted_data_1 = phantom.get_format_data(name='es_format')\n\n    parameters = []\n    \n    # build parameters list for 'update_event_1' call\n    for custom_function_results_item_1 in custom_function_results_data_1:\n        if custom_function_results_item_1[0]:\n            parameters.append({\n                'owner': \"\",\n                'status': \"closed\",\n                'comment': formatted_data_1,\n                'urgency': \"\",\n                'event_ids': custom_function_results_item_1[0],\n                'integer_status': \"\",\n                'wait_for_confirmation': False,\n            })\n\n    phantom.act(action=\"update event\", parameters=parameters, assets=['splunk'], name=\"update_event_1\")\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "get_run_data",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "Update all event ids from containers that were merged with their latest status",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "d93f3058-b146-4449-ae44-631c8b96be59",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 408,
+                        "line_start": 380,
+                        "message": "Configuring now",
+                        "name": "update event",
+                        "notes": "Update all event ids from containers that were merged with their latest status",
+                        "number": 1,
+                        "order": 8,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -140,
+                            "y": 520
+                        },
+                        "previous_function": "",
+                        "previous_name": "update_event_1",
+                        "required_params": {
+                            "event_ids": true
+                        },
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "",
+                        "title": "Generic",
+                        "type": "coa.Action",
+                        "warn": false,
+                        "z": 457
+                    }
+                ]
+            },
+            "notes": "Future state:\n- Add pagination for dynamic prompt to support more than 20 events"
+        },
+        "python_version": "3",
+        "schema": 4,
+        "version": "4.10.2.47587"
+    },
+    "create_time": "2021-03-05T18:25:04.903036+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}

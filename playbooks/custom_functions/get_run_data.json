@@ -1,0 +1,33 @@
+{
+    "create_time": "2021-03-03T19:41:59.025563+00:00",
+    "custom_function_id": "82c0023a1cabd5d5addf2ae26bc1adeef3fb0ead",
+    "description": "Takes a key name and splits the output for easier access for actions downstream",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "*"
+            ],
+            "description": "A text string that represents the name of the key saved for a save_run_data() call",
+            "input_type": "item",
+            "name": "key",
+            "placeholder": "my_key"
+        },
+        {
+            "contains_type": [],
+            "description": "",
+            "input_type": "item",
+            "name": "flatten_lists",
+            "placeholder": "True or False"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [],
+            "data_path": "*.output",
+            "description": ""
+        }
+    ],
+    "platform_version": "4.10.2.47587",
+    "python_version": "3"
+}
