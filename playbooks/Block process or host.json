@@ -1,0 +1,2778 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Proof of Value",
+    "coa": {
+        "data": {
+            "clean": true,
+            "code_block": "",
+            "description": "",
+            "joint": {
+                "cells": [
+                    {
+                        "0": "E",
+                        "1": "N",
+                        "2": "D",
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".title": {
+                                "text": "END"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_end.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def on_finish(container, summary):\n    phantom.debug('on_finish() called')\n    # This function is called after all actions are completed.\n    # summary of all the action and/or all details of actions\n    # can be collected here.\n\n    # summary_json = phantom.get_summary()\n    # if 'result' in summary_json:\n        # for action_result in summary_json['result']:\n            # if 'action_run_id' in action_result:\n                # action_results = phantom.get_action_results(action_run_id=action_result['action_run_id'], result_data=False, flatten=False)\n                # phantom.debug(action_results)\n\n    return",
+                        "callback_code": "# read-only block view not available",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "quarantine device",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "0717d077-e7c1-434d-930c-236c26b272b6",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "# read-only block view not available",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 98,
+                        "line_start": 85,
+                        "name": "",
+                        "notes": "",
+                        "number": 0,
+                        "order": 5,
+                        "outPorts": [],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 1260,
+                            "y": -80
+                        },
+                        "previous_function": "",
+                        "previous_name": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 54,
+                            "width": 80
+                        },
+                        "status": "",
+                        "title": "END",
+                        "type": "coa.StartEnd",
+                        "warn": false,
+                        "z": 3
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "4d597bf2-914e-4f32-b4e1-2c97de55204c",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "80e95781-35da-46b1-b90d-9d831c9b3198",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "69419cda-fec1-4f63-a330-a290d9504f91",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 241
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "9e25b569-d8bc-4532-b48e-343217eb3ddb",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "69419cda-fec1-4f63-a330-a290d9504f91",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "e1acb881-7069-4e1f-aad0-2e43cfd46522",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 243
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "b5c41bc1-214c-44b0-87e1-fc32e182852a",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "e1acb881-7069-4e1f-aad0-2e43cfd46522",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "9f893afd-ea22-4243-83cb-358e46cc866e",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 247
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "ca9ed2d9-0159-41cc-b6bc-9176eb3804ab",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "9f893afd-ea22-4243-83cb-358e46cc866e",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "0717d077-e7c1-434d-930c-236c26b272b6",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 249
+                    },
+                    {
+                        "0": "S",
+                        "1": "T",
+                        "2": "A",
+                        "3": "R",
+                        "4": "T",
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "ref-x": 33,
+                                "ref-y": 8,
+                                "text": "START"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "ref-x": 13,
+                                "xlink:href": "/inc/coa/img/block_icon_start.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'block_hash_3' block\n    block_hash_3(container=container)\n\n    return",
+                        "callback_code": "# read-only block view not available",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "80e95781-35da-46b1-b90d-9d831c9b3198",
+                        "inPorts": [],
+                        "join_code": "# read-only block view not available",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 15,
+                        "line_start": 7,
+                        "name": "",
+                        "notes": "",
+                        "number": 0,
+                        "order": 1,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 300,
+                            "y": -80
+                        },
+                        "previous_function": "",
+                        "previous_name": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 54,
+                            "width": 80
+                        },
+                        "status": "",
+                        "title": "START",
+                        "type": "coa.StartEnd",
+                        "warn": false,
+                        "z": 250
+                    },
+                    {
+                        "action": "hunt file",
+                        "action_type": "investigate",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "hash": "block_hash_3:action_result.parameter.hash",
+                            "range": "0-10",
+                            "type": ""
+                        },
+                        "angle": 0,
+                        "app": "Carbon Black Response",
+                        "appid": "56e81e6b-8022-4613-82ba-a779debac564",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "hunt file",
+                                "actions": [
+                                    "get license",
+                                    "on poll",
+                                    "list connections",
+                                    "unblock hash",
+                                    "block hash",
+                                    "get file info",
+                                    "reset session",
+                                    "memory dump",
+                                    "execute program",
+                                    "run command",
+                                    "put file",
+                                    "get file",
+                                    "terminate process",
+                                    "list processes",
+                                    "get system info",
+                                    "sync events",
+                                    "unquarantine device",
+                                    "quarantine device",
+                                    "list endpoints",
+                                    "list alerts",
+                                    "run query",
+                                    "create alert",
+                                    "hunt file",
+                                    "test connectivity"
+                                ],
+                                "active": true,
+                                "app_name": "Carbon Black Response",
+                                "app_version": "1.2.100",
+                                "appid": "56e81e6b-8022-4613-82ba-a779debac564",
+                                "asset_name": "carbon black",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "hash": "block_hash_3:action_result.parameter.hash",
+                                    "range": "0-10",
+                                    "type": ""
+                                },
+                                "has_app": true,
+                                "id": 27,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "carbonblack",
+                                "output": [
+                                    {
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "hash",
+                                            "md5"
+                                        ],
+                                        "data_path": "action_result.parameter.hash",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "4fb491ac8d46aaf22ba8bc5c73dabef7",
+                                            "13ded573464ba7f43fe640479b309e09",
+                                            "9bf50324444c46997c2492d505b47f2d",
+                                            "5FB30FE90736C7FC77DE637021B1CE7C"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.range",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0-10",
+                                            "0-2",
+                                            "5-8"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "carbon black query type"
+                                        ],
+                                        "data_path": "action_result.parameter.type",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "process",
+                                            "binary"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.elapsed",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0.1120398044586182,
+                                            0.04952096939086914,
+                                            0.1234798431396484,
+                                            0.05507302284240723,
+                                            0.05384993553161621
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.alliance_score_virustotal.*.name",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.alliance_score_virustotal.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.company_name_facet.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Microsoft Corporation"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.company_name_facet.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.company_name_facet.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "100.0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.company_name_facet.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.digsig_publisher_facet.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Microsoft Corporation"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.digsig_publisher_facet.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.digsig_publisher_facet.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "100.0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.digsig_publisher_facet.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.digsig_result.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Signed"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.digsig_result.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.digsig_result.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "100.0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.digsig_result.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.digsig_sign_time.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-10-01T00:00:00Z",
+                                            "2015-01-01T00:00:00Z",
+                                            "2013-11-01T00:00:00Z"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.digsig_sign_time.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1,
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.file_version_facet.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "16.0.10827.20181",
+                                            "4.7.0205.0",
+                                            "6.1.7600.16385 (win7_rtm.090713-1255)"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.file_version_facet.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.file_version_facet.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "100.0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.file_version_facet.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.group.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "default group"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.group.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.group.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "100.0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.group.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.host_count.*.name",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.host_count.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1,
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.hostname.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "CB-TEST-02",
+                                            "WIN7-CLIENT1",
+                                            "ACCOUNTING-PC"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.hostname.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.hostname.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "100.0",
+                                            "16.7"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.hostname.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "file path",
+                                            "file name"
+                                        ],
+                                        "data_path": "action_result.data.*.binary.facets.observed_filename_facet.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "c:\\program files\\common files\\microsoft shared\\clicktorun\\updates\\16.0.10827.20181\\officeclicktorun.exe",
+                                            "c:\\program files\\microsoft security client\\nissrv.exe",
+                                            "C:\\Windows\\system32\\ping.exe"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.observed_filename_facet.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.observed_filename_facet.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "100.0",
+                                            "50.0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.observed_filename_facet.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.product_name_facet.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Microsoft Office",
+                                            "Microsoft Malware Protection"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.product_name_facet.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.product_name_facet.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "100.0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.product_name_facet.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.server_added_timestamp.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-10-19T00:00:00Z",
+                                            "2018-09-29T00:00:00Z",
+                                            "2018-10-02T00:00:00Z"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.facets.server_added_timestamp.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1,
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "md5"
+                                        ],
+                                        "data_path": "action_result.data.*.binary.highlights.*.ids",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "13DED573464BA7F43FE640479B309E09",
+                                            "9BF50324444C46997C2492D505B47F2D",
+                                            "5FB30FE90736C7FC77DE637021B1CE7C"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.highlights.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "PREPREPRE13DED573464BA7F43FE640479B309E09POSTPOSTPOST",
+                                            "PREPREPRE9BF50324444C46997C2492D505B47F2DPOSTPOSTPOST",
+                                            "PREPREPRE5FB30FE90736C7FC77DE637021B1CE7CPOSTPOSTPOST"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "md5"
+                                        ],
+                                        "data_path": "action_result.data.*.binary.results.*.alliance_data_srstrust",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "5fb30fe90736c7fc77de637021b1ce7c"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "url"
+                                        ],
+                                        "data_path": "action_result.data.*.binary.results.*.alliance_link_srstrust",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "https://services.bit9.com/Services/extinfo.aspx?ak=b8b4e631d4884ad1c56f50e4a5ee9279&sg=0313e1735f6cec221b1d686bd4de23ee&md5=5fb30fe90736c7fc77de637021b1ce7c"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.alliance_score_srstrust",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            -100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.alliance_updated_srstrust",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-02-07T02:37:28Z"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.cb_version",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            610,
+                                            510,
+                                            511
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.company_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Microsoft Corporation"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.copied_mod_len",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            9683736,
+                                            366512,
+                                            16896
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.digsig_issuer",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Microsoft Code Signing PCA"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.digsig_prog_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Microsoft Office",
+                                            "Microsoft Corp."
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.digsig_publisher",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Microsoft Corporation"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.digsig_result",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Signed"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.digsig_result_code",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.digsig_sign_time",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-10-14T20:23:00Z",
+                                            "2015-01-30T19:14:00Z",
+                                            "2009-07-14T10:17:00Z"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.digsig_subject",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Microsoft Corporation"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.endpoint",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "CB-TEST-02|27",
+                                            "WIN7-CLIENT1|15",
+                                            "DC1|19"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.event_partition_id",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100972684312576,
+                                            100955696070656
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.facet_id",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            883737,
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.file_desc",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Microsoft Office Click-to-Run (SxS)",
+                                            "Microsoft Network Realtime Inspection Service",
+                                            "TCP/IP Ping Command"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.file_version",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "16.0.10827.20181",
+                                            "4.7.0205.0",
+                                            "6.1.7600.16385 (win7_rtm.090713-1255)"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.group",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Default Group"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.host_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1,
+                                            6
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "file name"
+                                        ],
+                                        "data_path": "action_result.data.*.binary.results.*.internal_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "OfficeClickToRun.exe",
+                                            "NisSrv.exe",
+                                            "ping.exe"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.is_64bit",
+                                        "data_type": "boolean",
+                                        "example_values": [
+                                            false,
+                                            true
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.is_executable_image",
+                                        "data_type": "boolean",
+                                        "example_values": [
+                                            false,
+                                            true
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.last_seen",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-10-28T10:06:02.456Z",
+                                            "2018-10-28T10:06:42.455Z",
+                                            "2018-10-26T00:01:41.224Z"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.legal_copyright",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Microsoft Corporation.  All rights reserved."
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "md5"
+                                        ],
+                                        "data_path": "action_result.data.*.binary.results.*.md5",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "13DED573464BA7F43FE640479B309E09",
+                                            "9BF50324444C46997C2492D505B47F2D",
+                                            "5FB30FE90736C7FC77DE637021B1CE7C"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "file path",
+                                            "file name"
+                                        ],
+                                        "data_path": "action_result.data.*.binary.results.*.observed_filename",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "c:\\program files\\common files\\microsoft shared\\clicktorun\\updates\\16.0.10827.20181\\officeclicktorun.exe",
+                                            "c:\\program files\\microsoft security client\\nissrv.exe",
+                                            "c:\\windows\\system32\\ping.exe"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.orig_mod_len",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            9683736,
+                                            366512,
+                                            16896
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "file name"
+                                        ],
+                                        "data_path": "action_result.data.*.binary.results.*.original_filename",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "OfficeClickToRun.exe",
+                                            "NisSrv.exe",
+                                            "ping.exe.mui"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.os_type",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Windows"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.product_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Microsoft Office",
+                                            "Microsoft Malware Protection"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.product_version",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "16.0.10827.20181",
+                                            "4.7.0205.0",
+                                            "6.1.7600.16385"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.server_added_timestamp",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-10-19T17:04:47.906Z",
+                                            "2015-07-01T02:12:21.783Z",
+                                            "2015-05-15T07:23:54.846Z"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Signed",
+                                        "column_order": 1,
+                                        "data_path": "action_result.data.*.binary.results.*.signed",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Signed"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.timestamp",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-10-19T17:04:47.906Z",
+                                            "2015-07-01T02:12:21.783Z",
+                                            "2015-05-15T07:23:54.846Z"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.watchlists.*.value",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2015-07-01T02:20:02.062Z",
+                                            "2015-05-15T07:30:02.843Z"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.results.*.watchlists.*.wid",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "5"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.start",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0,
+                                            5
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.terms",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "md5:13ded573464ba7f43fe640479b309e09",
+                                            "md5:9bf50324444c46997c2492d505b47f2d",
+                                            "md5:5FB30FE90736C7FC77DE637021B1CE7C"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.binary.total_results",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.all_segments",
+                                        "data_type": "boolean",
+                                        "example_values": [
+                                            true,
+                                            false
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.comprehensive_search",
+                                        "data_type": "boolean",
+                                        "example_values": [
+                                            true,
+                                            false
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.elapsed",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0.2200779914855957
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.day_of_week.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.day_of_week.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1566
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.group.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "default group"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.group.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.group.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "100.0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.group.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            10128
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.host_type.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "domain_controller"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.host_type.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.host_type.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "100.0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.host_type.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            10123
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.hostname.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "dc2"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.hostname.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.hostname.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "51.2"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.hostname.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            5185
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.hour_of_day.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.hour_of_day.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            411
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "file name"
+                                        ],
+                                        "data_path": "action_result.data.*.process.facets.parent_name.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "svchost.exe"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.parent_name.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.parent_name.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "98.5"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.parent_name.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            9971
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "file path",
+                                            "file name"
+                                        ],
+                                        "data_path": "action_result.data.*.process.facets.path_full.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "c:\\windows\\syswow64\\wbem\\wmiprvse.exe"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.path_full.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.path_full.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "98.5"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.path_full.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            9971
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "md5"
+                                        ],
+                                        "data_path": "action_result.data.*.process.facets.process_md5.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "4fb491ac8d46aaf22ba8bc5c73dabef7"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.process_md5.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.process_md5.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "98.5"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.process_md5.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            9971
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "file name"
+                                        ],
+                                        "data_path": "action_result.data.*.process.facets.process_name.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "wmiprvse.exe"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.process_name.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.process_name.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "98.5"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.process_name.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            9971
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.start.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-02-24T00:00:00Z"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.start.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            324
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.username_full.*.name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "LOCAL SERVICE"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.username_full.*.percent",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.username_full.*.ratio",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "98.4"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.facets.username_full.*.value",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            9966
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.incomplete_results",
+                                        "data_type": "boolean",
+                                        "example_values": [
+                                            true,
+                                            false
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "md5"
+                                        ],
+                                        "data_path": "action_result.data.*.process.results.*.alliance_data_srstrust",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "4fb491ac8d46aaf22ba8bc5c73dabef7"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "url"
+                                        ],
+                                        "data_path": "action_result.data.*.process.results.*.alliance_link_srstrust",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "https://services.bit9.com/Services/extinfo.aspx?ak=b8b4e631d4884ad1c56f50e4a5ee9279&sg=0313e1735f6cec221b1d686bd4de23ee&md5=4fb491ac8d46aaf22ba8bc5c73dabef7"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.alliance_score_srstrust",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            -100
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.alliance_updated_srstrust",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-02-07T02:37:28Z"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.childproc_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "file path"
+                                        ],
+                                        "data_path": "action_result.data.*.process.results.*.cmdline",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "C:\\Windows\\sysWOW64\\wbem\\wmiprvse.exe -Embedding"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.comms_ip",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            168886572
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.crossproc_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            2
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.emet_config",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            ""
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.emet_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.filemod_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.filtering_known_dlls",
+                                        "data_type": "boolean",
+                                        "example_values": [
+                                            true,
+                                            false
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.group",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "default group"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.host_type",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "workstation"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "host name"
+                                        ],
+                                        "data_path": "action_result.data.*.process.results.*.hostname",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "win7-client1"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "carbon black process id"
+                                        ],
+                                        "data_path": "action_result.data.*.process.results.*.id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0000000f-0000-0688-01d3-27738c9b4243"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.interface_ip",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            168886572
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.last_server_update",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-03-22T09:21:32.332Z"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.last_update",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2017-09-07T00:52:15.82Z"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.modload_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            43
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.netconn_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.os_type",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "windows"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.parent_id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0000000f-0000-0258-01d1-ec51b545a19b"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.parent_md5",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "000000000000000000000000000000"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "file name"
+                                        ],
+                                        "data_path": "action_result.data.*.process.results.*.parent_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "svchost.exe"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.parent_pid",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            600
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.parent_unique_id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0000000f-0000-0258-01d1-ec51b545a19b-000000000001"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "file path",
+                                            "file name"
+                                        ],
+                                        "data_path": "action_result.data.*.process.results.*.path",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "c:\\windows\\syswow64\\wbem\\wmiprvse.exe"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "md5"
+                                        ],
+                                        "data_path": "action_result.data.*.process.results.*.process_md5",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "4fb491ac8d46aaf22ba8bc5c73dabef7"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "process name",
+                                            "file name"
+                                        ],
+                                        "data_path": "action_result.data.*.process.results.*.process_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "wmiprvse.exe"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "pid"
+                                        ],
+                                        "data_path": "action_result.data.*.process.results.*.process_pid",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1672
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.processblock_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.regmod_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.segment_id",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "carbon black sensor id"
+                                        ],
+                                        "data_path": "action_result.data.*.process.results.*.sensor_id",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            15
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.start",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2017-09-07T00:52:15.758Z"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.terminated",
+                                        "data_type": "boolean",
+                                        "example_values": [
+                                            true,
+                                            false
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.results.*.unique_id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0000000f-0000-0688-01d3-27738c9b4243-000000000001"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "user name"
+                                        ],
+                                        "data_path": "action_result.data.*.process.results.*.username",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "SYSTEM"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.start",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            0
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.terms",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "md5:4fb491ac8d46aaf22ba8bc5c73dabef7"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.process.total_results",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            32404
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.device_count",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            32404,
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Displaying 10 'process' results of total 32404",
+                                            "Displaying 1 'binary' results of total 1",
+                                            "Displaying 0 'binary' results of total 1"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "hash": {
+                                        "contains": [
+                                            "hash",
+                                            "md5"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "MD5 of the binary or process to hunt",
+                                        "key": "hash",
+                                        "order": 0,
+                                        "primary": true,
+                                        "required": true
+                                    },
+                                    "range": {
+                                        "data_type": "string",
+                                        "default": "0-10",
+                                        "description": "Range of items to return, for e.g. 0-10",
+                                        "key": "range",
+                                        "order": 2,
+                                        "required": false
+                                    },
+                                    "type": {
+                                        "contains": [
+                                            "carbon black query type"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Type of search",
+                                        "key": "type",
+                                        "order": 1,
+                                        "required": false,
+                                        "value_list": [
+                                            "binary",
+                                            "process"
+                                        ]
+                                    }
+                                },
+                                "product_name": "Carbon Black",
+                                "product_vendor": "Bit9",
+                                "targets": "27",
+                                "type": "endpoint"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "hunt file"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Investigate"
+                            },
+                            "g.approver image": {
+                                "opacity": 1
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_investigate.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            },
+                            "g.timer image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def hunt_file_3(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('hunt_file_3() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'hunt_file_3' call\n    results_data_1 = phantom.collect2(container=container, datapath=['block_hash_3:action_result.parameter.hash', 'block_hash_3:action_result.parameter.context.artifact_id'], action_results=results)\n\n    parameters = []\n    \n    # build parameters list for 'hunt_file_3' call\n    for results_item_1 in results_data_1:\n        if results_item_1[0]:\n            parameters.append({\n                'hash': results_item_1[0],\n                'type': \"\",\n                'range': \"0-10\",\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': results_item_1[1]},\n            })\n\n    phantom.act(action=\"hunt file\", parameters=parameters, assets=['carbonblack'], callback=quarantine_device_3, name=\"hunt_file_3\", parent_action=action)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "block hash",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "e1acb881-7069-4e1f-aad0-2e43cfd46522",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 62,
+                        "line_start": 37,
+                        "message": "Configuring now",
+                        "name": "hunt file",
+                        "notes": "",
+                        "number": 3,
+                        "order": 3,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 720,
+                            "y": -100
+                        },
+                        "previous_function": "",
+                        "previous_name": "hunt_file_3",
+                        "required_params": {
+                            "hash": true
+                        },
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "",
+                        "title": "Investigate",
+                        "type": "coa.Action",
+                        "warn": "",
+                        "z": 257
+                    },
+                    {
+                        "action": "quarantine device",
+                        "action_type": "contain",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "ip_hostname": "hunt_file_3:action_result.data.*.process.results.*.hostname"
+                        },
+                        "angle": 0,
+                        "app": "Carbon Black Response",
+                        "appid": "56e81e6b-8022-4613-82ba-a779debac564",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "quarantine device",
+                                "actions": [
+                                    "get license",
+                                    "on poll",
+                                    "list connections",
+                                    "unblock hash",
+                                    "block hash",
+                                    "get file info",
+                                    "reset session",
+                                    "memory dump",
+                                    "execute program",
+                                    "run command",
+                                    "put file",
+                                    "get file",
+                                    "terminate process",
+                                    "list processes",
+                                    "get system info",
+                                    "sync events",
+                                    "unquarantine device",
+                                    "quarantine device",
+                                    "list endpoints",
+                                    "list alerts",
+                                    "run query",
+                                    "create alert",
+                                    "hunt file",
+                                    "test connectivity"
+                                ],
+                                "active": true,
+                                "app_name": "Carbon Black Response",
+                                "app_version": "1.2.100",
+                                "appid": "56e81e6b-8022-4613-82ba-a779debac564",
+                                "asset_name": "carbon black",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "ip_hostname": "hunt_file_3:action_result.data.*.process.results.*.hostname"
+                                },
+                                "has_app": true,
+                                "id": 27,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "carbonblack",
+                                "output": [
+                                    {
+                                        "column_name": "Status",
+                                        "column_order": 1,
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Name/IP",
+                                        "column_order": 0,
+                                        "contains": [
+                                            "host name",
+                                            "ip"
+                                        ],
+                                        "data_path": "action_result.parameter.ip_hostname",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "cb-lab"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.summary",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Message",
+                                        "column_order": 1,
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Quarantine action succeeded. It might take some time for endpoint to get isolated."
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "ip_hostname": {
+                                        "contains": [
+                                            "host name",
+                                            "ip"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Hostname/IP of endpoint to quarantine",
+                                        "key": "ip_hostname",
+                                        "order": 0,
+                                        "primary": true,
+                                        "required": true
+                                    }
+                                },
+                                "product_name": "Carbon Black",
+                                "product_vendor": "Bit9",
+                                "targets": "27",
+                                "type": "endpoint"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "quarantine device"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Contain"
+                            },
+                            "g.approver image": {
+                                "opacity": 1
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "block"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_contain.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            },
+                            "g.timer image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def quarantine_device_3(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('quarantine_device_3() called')\n        \n    #phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))\n    \n    # collect data for 'quarantine_device_3' call\n    results_data_1 = phantom.collect2(container=container, datapath=['hunt_file_3:action_result.data.*.process.results.*.hostname', 'hunt_file_3:action_result.parameter.context.artifact_id'], action_results=results)\n\n    parameters = []\n    \n    # build parameters list for 'quarantine_device_3' call\n    for results_item_1 in results_data_1:\n        if results_item_1[0]:\n            parameters.append({\n                'ip_hostname': results_item_1[0],\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': results_item_1[1]},\n            })\n\n    phantom.act(action=\"quarantine device\", parameters=parameters, assets=['carbonblack'], name=\"quarantine_device_3\", parent_action=action)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "hunt file",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "9f893afd-ea22-4243-83cb-358e46cc866e",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 85,
+                        "line_start": 62,
+                        "message": "Configuring now",
+                        "name": "quarantine device",
+                        "notes": "",
+                        "number": 3,
+                        "order": 4,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 980,
+                            "y": -100
+                        },
+                        "previous_function": "",
+                        "previous_name": "quarantine_device_3",
+                        "required_params": {
+                            "ip_hostname": true
+                        },
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "",
+                        "title": "Contain",
+                        "type": "coa.Action",
+                        "warn": "",
+                        "z": 258
+                    },
+                    {
+                        "action": "block hash",
+                        "action_type": "contain",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "comment": "",
+                            "hash": "artifact:*.cef.fileHash"
+                        },
+                        "angle": 0,
+                        "app": "Carbon Black Response",
+                        "appid": "56e81e6b-8022-4613-82ba-a779debac564",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "block hash",
+                                "actions": [
+                                    "get license",
+                                    "on poll",
+                                    "list connections",
+                                    "unblock hash",
+                                    "block hash",
+                                    "get file info",
+                                    "reset session",
+                                    "memory dump",
+                                    "execute program",
+                                    "run command",
+                                    "put file",
+                                    "get file",
+                                    "terminate process",
+                                    "list processes",
+                                    "get system info",
+                                    "sync events",
+                                    "unquarantine device",
+                                    "quarantine device",
+                                    "list endpoints",
+                                    "list alerts",
+                                    "run query",
+                                    "create alert",
+                                    "hunt file",
+                                    "test connectivity"
+                                ],
+                                "active": true,
+                                "app_name": "Carbon Black Response",
+                                "app_version": "1.2.100",
+                                "appid": "56e81e6b-8022-4613-82ba-a779debac564",
+                                "asset_name": "carbon black",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "comment": "",
+                                    "hash": "artifact:*.cef.fileHash"
+                                },
+                                "has_app": true,
+                                "id": 27,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "carbonblack",
+                                "output": [
+                                    {
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.comment",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Sample comment"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Hash",
+                                        "column_order": 0,
+                                        "contains": [
+                                            "md5",
+                                            "hash"
+                                        ],
+                                        "data_path": "action_result.parameter.hash",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "180469AE0B239E31DB4C65F02FD70BC1"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.summary",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Message",
+                                        "column_order": 1,
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Block hash action succeeded. It might take some time for blacklisting to take effect."
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "comment": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Comment",
+                                        "key": "comment",
+                                        "order": 1,
+                                        "required": false
+                                    },
+                                    "hash": {
+                                        "contains": [
+                                            "md5",
+                                            "hash"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "MD5 of file to ban/block",
+                                        "key": "hash",
+                                        "order": 0,
+                                        "primary": true,
+                                        "required": true
+                                    }
+                                },
+                                "product_name": "Carbon Black",
+                                "product_vendor": "Bit9",
+                                "targets": "27",
+                                "type": "endpoint"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "block hash"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Contain"
+                            },
+                            "g.approver image": {
+                                "opacity": 1
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_contain.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            },
+                            "g.timer image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def block_hash_3(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('block_hash_3() called')\n\n    # collect data for 'block_hash_3' call\n    container_data = phantom.collect2(container=container, datapath=['artifact:*.cef.fileHash', 'artifact:*.id'])\n\n    parameters = []\n    \n    # build parameters list for 'block_hash_3' call\n    for container_item in container_data:\n        if container_item[0]:\n            parameters.append({\n                'hash': container_item[0],\n                'comment': \"\",\n                # context (artifact id) is added to associate results with the artifact\n                'context': {'artifact_id': container_item[1]},\n            })\n\n    phantom.act(action=\"block hash\", parameters=parameters, assets=['carbonblack'], callback=hunt_file_3, name=\"block_hash_3\")\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "delay": 0,
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "69419cda-fec1-4f63-a330-a290d9504f91",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 37,
+                        "line_start": 15,
+                        "message": "Configuring now",
+                        "name": "block hash",
+                        "notes": "",
+                        "number": 3,
+                        "order": 2,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 460,
+                            "y": -100
+                        },
+                        "previous_function": "",
+                        "previous_name": "block_hash_3",
+                        "required_params": {
+                            "hash": true
+                        },
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "",
+                        "title": "Contain",
+                        "type": "coa.Action",
+                        "warn": "",
+                        "z": 259
+                    }
+                ]
+            },
+            "notes": ""
+        },
+        "python_version": "2.7",
+        "schema": 4,
+        "version": "4.9.39220"
+    },
+    "create_time": "2021-01-24T03:42:46.590664+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}

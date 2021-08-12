@@ -1,0 +1,3250 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Proof of Value",
+    "coa": {
+        "data": {
+            "clean": true,
+            "code_block": "",
+            "description": "This playbook should be run as a sub-playbook at the end of automation to report its findings. It is an example of how Phantom can be used to generate tickets.",
+            "hash": "1d7f33d7666adf7c47bcbe6b276a5613f57b1e5d",
+            "joint": {
+                "cells": [
+                    {
+                        "0": "E",
+                        "1": "N",
+                        "2": "D",
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".title": {
+                                "text": "END"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_end.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def on_finish(container, summary):\n    phantom.debug('on_finish() called')\n    # This function is called after all actions are completed.\n    # summary of all the action and/or all details of actions\n    # can be collected here.\n\n    # summary_json = phantom.get_summary()\n    # if 'result' in summary_json:\n        # for action_result in summary_json['result']:\n            # if 'action_run_id' in action_result:\n                # action_results = phantom.get_action_results(action_run_id=action_result['action_run_id'], result_data=False, flatten=False)\n                # phantom.debug(action_results)\n\n    return",
+                        "callback_code": "# read-only block view not available",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "create ServiceNow ticket",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "6a061c8a-b6c6-4dde-acb6-e3fdc509c9ca",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "# read-only block view not available",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 187,
+                        "line_start": 174,
+                        "name": "",
+                        "notes": "",
+                        "number": 0,
+                        "order": 10,
+                        "outPorts": [],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 1100,
+                            "y": 460
+                        },
+                        "previous_function": "",
+                        "previous_name": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 54,
+                            "width": 80
+                        },
+                        "status": "",
+                        "title": "END",
+                        "type": "coa.StartEnd",
+                        "warn": false,
+                        "z": 2
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "b6aaf32b-4a44-416e-8b9d-71387e77c0a2",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "66eda21a-a59e-4755-966b-903864466472",
+                            "port": "out-1",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "47f869e8-ee01-4cf0-acda-7c4ed283ce6a",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 6
+                    },
+                    {
+                        "0": "S",
+                        "1": "T",
+                        "2": "A",
+                        "3": "R",
+                        "4": "T",
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "ref-x": 33,
+                                "ref-y": 8,
+                                "text": "START"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.icon image": {
+                                "ref-x": 13,
+                                "xlink:href": "/inc/coa/img/block_icon_start.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            }
+                        },
+                        "block_code": "def on_start(container):\n    phantom.debug('on_start() called')\n    \n    # call 'getTicketingOutputs' block\n    getTicketingOutputs(container=container)\n\n    return",
+                        "callback_code": "# read-only block view not available",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "baaac521-16b0-46ed-928c-7229e69e48bd",
+                        "inPorts": [],
+                        "join_code": "# read-only block view not available",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 16,
+                        "line_start": 8,
+                        "name": "",
+                        "notes": "",
+                        "number": 0,
+                        "order": 1,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -400,
+                            "y": 220
+                        },
+                        "previous_function": "",
+                        "previous_name": "",
+                        "show_number": true,
+                        "size": {
+                            "height": 54,
+                            "width": 80
+                        },
+                        "status": "",
+                        "title": "START",
+                        "type": "coa.StartEnd",
+                        "warn": false,
+                        "z": 17
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "7b29a42f-be5c-4c89-a8cc-ef015b0c2a21",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "24fe194c-46ac-4a95-8b34-7e3ca2209438",
+                            "port": "out-1",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "5ff6446c-8158-4d78-8a5a-8574e2416bc7",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 28
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "3e2557bb-7d18-43e8-b620-8099d769ca94",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "24fe194c-46ac-4a95-8b34-7e3ca2209438",
+                            "port": "out-2",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(2) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "66eda21a-a59e-4755-966b-903864466472",
+                            "port": "in",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 30
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".functionBlock": {
+                                "text": "checkServiceNowFields"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn_grey.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def checkServiceNowFields(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('checkServiceNowFields() called')\n    \n    input_parameter_0 = \"\"\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    phantom.debug('ServiceNow')\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n    create_ServiceNow_ticket(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "customCodeEndLineOffset": 5,
+                        "customCodeStartLine": 8,
+                        "custom_callback": "",
+                        "custom_code": "def checkServiceNowFields(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('custom_function_1() called')\n    input_parameter_0 = \"\"\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    phantom.debug('ServiceNow')\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    return",
+                        "custom_join": "",
+                        "custom_name": "checkServiceNowFields",
+                        "description": "",
+                        "functionBlock": "custom function",
+                        "has_custom": true,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "47f869e8-ee01-4cf0-acda-7c4ed283ce6a",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "legacy": true,
+                        "line_end": 51,
+                        "line_start": 33,
+                        "message": "Configuring now",
+                        "name": "custom function",
+                        "notes": "Make sure we have what we need to create service Now ticket",
+                        "number": 1,
+                        "order": 3,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "outputVariables": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": ""
+                            }
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": ""
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 120,
+                            "y": 440
+                        },
+                        "previous_function": "",
+                        "previous_name": "checkServiceNowFields",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "custom function",
+                        "status": "deprecating",
+                        "title": "custom function",
+                        "type": "coa.FunctionBlock",
+                        "userGeneratedCode": "\n    # Write your custom code here...\n    phantom.debug('ServiceNow')",
+                        "warn": false,
+                        "z": 42
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "c0fcbdd6-b121-4ef2-8b37-5442d8da40b9",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "47f869e8-ee01-4cf0-acda-7c4ed283ce6a",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "755ab81b-51b4-417f-ba6f-6610f220a4fb",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 49
+                    },
+                    {
+                        "action": "create ticket",
+                        "action_type": "generic",
+                        "active": false,
+                        "active_keys": {},
+                        "active_values": {
+                            "description": "Phantom Handled The EC2 Issue",
+                            "fields": "",
+                            "short_description": "container:name",
+                            "table": "incident",
+                            "vault_id": ""
+                        },
+                        "angle": 0,
+                        "app": "ServiceNow",
+                        "appid": "a590c3bc-ca41-4a0e-b063-8066ca868794",
+                        "approver": "",
+                        "assets": [
+                            {
+                                "action": "create ticket",
+                                "actions": [
+                                    "test connectivity",
+                                    "add work note",
+                                    "add comment",
+                                    "describe service catalog",
+                                    "request catalog item",
+                                    "describe catalog item",
+                                    "list services",
+                                    "list categories",
+                                    "list service catalogs",
+                                    "list tickets",
+                                    "create ticket",
+                                    "get ticket",
+                                    "update ticket",
+                                    "get variables",
+                                    "run query",
+                                    "on poll"
+                                ],
+                                "active": true,
+                                "app_name": "ServiceNow",
+                                "app_version": "2.0.12",
+                                "appid": "a590c3bc-ca41-4a0e-b063-8066ca868794",
+                                "asset_name": "servicenow",
+                                "config_type": "asset",
+                                "count": 0,
+                                "fields": {
+                                    "description": "Phantom Handled The EC2 Issue",
+                                    "fields": "",
+                                    "short_description": "container:name",
+                                    "table": "incident",
+                                    "vault_id": ""
+                                },
+                                "has_app": true,
+                                "id": 10,
+                                "loaded": false,
+                                "missing": false,
+                                "name": "servicenow",
+                                "output": [
+                                    {
+                                        "data_path": "action_result.status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "success",
+                                            "failed"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.description",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Investigative actions to check for the presence of phapp_servicenow"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.fields",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "{\"made_sla\":true,\"severity\":3,\"description\":\"This is testing description\"}"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.parameter.short_description",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "phapp_servicenow, Multiple action need to be taken"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "servicenow table"
+                                        ],
+                                        "data_path": "action_result.parameter.table",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "incident"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "vault id"
+                                        ],
+                                        "data_path": "action_result.parameter.vault_id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "8d0b13046973703f5783977c41a76ac31b4bf8ad"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.service_offering",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.u_short_description",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.model",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.stockroom",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.model.link",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "https://dev78070.service-now.com/api/now/table/cmdb_model/phantomqa"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.model.value",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "phantomqa"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.ci",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.due",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.cost",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.due_in",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.vendor",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.retired",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.assigned",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.lease_id",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.owned_by",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.quantity",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "1"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.residual",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.asset_tag",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.po_number",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.skip_sync",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "false"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.substatus",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.checked_in",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.department",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.gl_account",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.managed_by",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.old_status",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.order_date",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.beneficiary",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.checked_out",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.cost_center",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.depreciation",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.display_name",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.install_date",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.request_line",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.resale_price",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.reserved_for",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.supported_by",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.delivery_date",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.justification",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.old_substatus",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.pre_allocated",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "false"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.purchase_date",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.residual_date",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.salvage_value",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.serial_number",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.support_group",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.install_status",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "1"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.invoice_number",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.model_category",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.disposal_reason",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.retirement_date",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.expenditure_type",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.depreciation_date",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.acquisition_method",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.depreciated_amount",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.warranty_expiration",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.hash",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "254395830ef2e6c1ef61063b2cc734a008c645dc8455c498633eecef85324158"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.rights",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.location.link",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "https://dev78070.service-now.com/api/now/table/cmn_location/25b3d04b0a0a0bb300176b546c22db27"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.location.value",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "25b3d04b0a0a0bb300176b546c22db27"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.license_key",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.merged_into",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.model_category.link",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "https://dev78070.service-now.com/api/now/table/cmdb_model_category/35bf2d4137101000deeabfc8bcbe5dbd"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.model_category.value",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "35bf2d4137101000deeabfc8bcbe5dbd"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.is_merged_license",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "false"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.assigned_condition",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.entitlement_condition",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.active",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "true"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.activity_due",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.additional_assignee_list",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.approval",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "not requested"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.approval_history",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.approval_set",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.assigned_to",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.assigned_to.link",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "https://devtest2704.service-now.com/api/now/table/sys_user/d8f57f140b20220050192f15d6673a98"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.assigned_to.value",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "d8f57f140b20220050192f15d6673a98"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.assignment_group",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.average_image_color",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.chunk_size_bytes",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "734003"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.compressed",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.content_type",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "contains": [
+                                            "url"
+                                        ],
+                                        "data_path": "action_result.data.*.attachment_details.*.download_link",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "contains": [
+                                            "file name"
+                                        ],
+                                        "data_path": "action_result.data.*.attachment_details.*.file_name",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.image_height",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.image_width",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.size_bytes",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.size_compressed",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.state",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "available"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.sys_created_by",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.sys_created_on",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.sys_id",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.sys_mod_count",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.sys_tags",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.sys_updated_by",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.sys_updated_on",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.table_name",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.attachment_details.*.table_sys_id",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.business_duration",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.business_service",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.business_stc",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.calendar_duration",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.calendar_stc",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.caller_id",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.category",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "inquiry"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.caused_by",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.child_incidents",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.close_code",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.close_notes",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Closed On",
+                                        "column_order": 7,
+                                        "data_path": "action_result.data.*.closed_at",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.closed_by",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.cmdb_ci",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.comments",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.comments_and_work_notes",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.company",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.contact_type",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.correlation_display",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.correlation_id",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.delivery_plan",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.delivery_task",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Description",
+                                        "column_order": 1,
+                                        "data_path": "action_result.data.*.description",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Investigative actions to check for the presence of phapp_servicenow\n\nAdded by Splunk for container id: 495"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.due_date",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.escalation",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.expected_start",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.follow_up",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.group_list",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.hold_reason",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.impact",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "3"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.incident_state",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "1"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.knowledge",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "false"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.location",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.made_sla",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "true"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.notify",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "1"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Ticket Number",
+                                        "column_order": 0,
+                                        "contains": [
+                                            "servicenow ticket number"
+                                        ],
+                                        "data_path": "action_result.data.*.number",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "INC0000001"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Opened On",
+                                        "column_order": 6,
+                                        "data_path": "action_result.data.*.opened_at",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-11-22 09:57:05"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "url"
+                                        ],
+                                        "data_path": "action_result.data.*.opened_by.link",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "https://devtest.service-now.com/api/now/table/sys_user/6816f79cc0a8016401c5a33be04be441"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "md5"
+                                        ],
+                                        "data_path": "action_result.data.*.opened_by.value",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "6816f79cc0a8016401c5a33be04be441"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.order",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.parent",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.parent_incident",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Priority",
+                                        "column_order": 5,
+                                        "data_path": "action_result.data.*.priority",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "5"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.problem_id",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.reassignment_count",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.reopen_count",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.reopened_by",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.reopened_time",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.resolved_at",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.resolved_by",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.rfc",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "column_name": "Severity",
+                                        "column_order": 4,
+                                        "data_path": "action_result.data.*.severity",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "3"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "Short Description",
+                                        "column_order": 2,
+                                        "data_path": "action_result.data.*.short_description",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "phapp_servicenow, Multiple action need to be taken"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.sla_due",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.state",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "1"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.subcategory",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.sys_class_name",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "incident"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.sys_created_by",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "admin"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.sys_created_on",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-11-22 09:57:05"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "url"
+                                        ],
+                                        "data_path": "action_result.data.*.sys_domain.link",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "https://devtest.service-now.com/api/now/table/sys_user_group/global"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.sys_domain.value",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "global"
+                                        ]
+                                    },
+                                    {
+                                        "contains": [
+                                            "domain"
+                                        ],
+                                        "data_path": "action_result.data.*.sys_domain_path",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "/"
+                                        ]
+                                    },
+                                    {
+                                        "column_name": "ID",
+                                        "column_order": 3,
+                                        "contains": [
+                                            "servicenow ticket sysid",
+                                            "md5"
+                                        ],
+                                        "data_path": "action_result.data.*.sys_id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "e19eff67db716300134cd100cf961915"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.sys_mod_count",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "0"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.sys_tags",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.sys_updated_by",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "admin"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.sys_updated_on",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "2018-11-22 09:57:05"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.time_worked",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.upon_approval",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "proceed"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.upon_reject",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "cancel"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.urgency",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "3"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.user_input",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.watch_list",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.work_end",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.work_notes",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.work_notes_list",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.data.*.work_start",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.attachment_added",
+                                        "data_type": "boolean"
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.attachment_error",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "File not found in Vault"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.summary.attachment_id",
+                                        "data_type": "string"
+                                    },
+                                    {
+                                        "contains": [
+                                            "servicenow ticket sysid",
+                                            "md5"
+                                        ],
+                                        "data_path": "action_result.summary.created_ticket_id",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "e19eff67db716300134cd100cf961915"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "action_result.message",
+                                        "data_type": "string",
+                                        "example_values": [
+                                            "Created ticket id: e19eff67db716300134cd100cf961915"
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    },
+                                    {
+                                        "data_path": "summary.total_objects_successful",
+                                        "data_type": "numeric",
+                                        "example_values": [
+                                            1
+                                        ]
+                                    }
+                                ],
+                                "parameters": {
+                                    "description": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Ticket description",
+                                        "key": "description",
+                                        "order": 1,
+                                        "required": false
+                                    },
+                                    "fields": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "JSON containing field values",
+                                        "key": "fields",
+                                        "order": 3,
+                                        "required": false
+                                    },
+                                    "short_description": {
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Ticket short description",
+                                        "key": "short_description",
+                                        "order": 0,
+                                        "required": false
+                                    },
+                                    "table": {
+                                        "contains": [
+                                            "servicenow table"
+                                        ],
+                                        "data_type": "string",
+                                        "default": "incident",
+                                        "description": "Table to add to",
+                                        "key": "table",
+                                        "order": 2,
+                                        "primary": true,
+                                        "required": false
+                                    },
+                                    "vault_id": {
+                                        "contains": [
+                                            "vault id"
+                                        ],
+                                        "data_type": "string",
+                                        "default": null,
+                                        "description": "Vault ID of file to attach to ticket",
+                                        "key": "vault_id",
+                                        "order": 4,
+                                        "primary": true,
+                                        "required": false
+                                    }
+                                },
+                                "product_name": "ServiceNow",
+                                "product_vendor": "ServiceNow",
+                                "targets": "10",
+                                "type": "ticketing"
+                            }
+                        ],
+                        "attrs": {
+                            ".action": {
+                                "text": "create ServiceNow ticket"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "Generic"
+                            },
+                            "g.approver image": {
+                                "opacity": 1
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.icon image": {
+                                "xlink:href": "/inc/coa/img/block_icon_generic.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            },
+                            "g.timer image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def create_ServiceNow_ticket(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('create_ServiceNow_ticket() called')\n\n    name_value = container.get('name', None)\n\n    # collect data for 'create_ServiceNow_ticket' call\n\n    parameters = []\n    \n    # build parameters list for 'create_ServiceNow_ticket' call\n    parameters.append({\n        'table': \"incident\",\n        'fields': \"\",\n        'vault_id': \"\",\n        'description': \"Phantom Handled The EC2 Issue\",\n        'short_description': name_value,\n    })\n\n    phantom.act(action=\"create ticket\", parameters=parameters, assets=['servicenow'], callback=ServiceNow_Status_Message, name=\"create_ServiceNow_ticket\")\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": true,
+                        "color": "",
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "create ServiceNow ticket",
+                        "delay": 0,
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "755ab81b-51b4-417f-ba6f-6610f220a4fb",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 100,
+                        "line_start": 78,
+                        "message": "Configuring now",
+                        "name": "create ticket",
+                        "notes": "Creates the Service Now Ticket",
+                        "number": 2,
+                        "order": 6,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 340,
+                            "y": 440
+                        },
+                        "previous_function": "",
+                        "previous_name": "create_ServiceNow_ticket",
+                        "required_params": {},
+                        "reviewer": "",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "app_action_assets",
+                        "status": "",
+                        "title": "Generic",
+                        "type": "coa.Action",
+                        "warn": false,
+                        "z": 63
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "6922142e-47a7-40b7-ac15-dd635ca97ac1",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "755ab81b-51b4-417f-ba6f-6610f220a4fb",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "51052678-105a-45ec-a5c3-b6f210c6fe5c",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 74
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "c6eb80f1-86d4-4104-82e3-9bf84a938781",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "51052678-105a-45ec-a5c3-b6f210c6fe5c",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "454253a6-9c74-4a82-969b-6600b5e7abed",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 76
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "api": "add comment",
+                        "attrs": {
+                            ".api": {
+                                "text": "add comment"
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "API"
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def add_comment_5(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('add_comment_5() called')\n\n    formatted_data_1 = phantom.get_format_data(name='ServiceNow_Status_Message')\n\n    phantom.comment(container=container, comment=formatted_data_1)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "color": "",
+                        "configured": [
+                            {
+                                "addCommentComment": "ServiceNow_Status_Message:formatted_data",
+                                "key": "add-comment"
+                            }
+                        ],
+                        "connected_to_start": true,
+                        "connection_name": "create ServiceNow ticket",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "454253a6-9c74-4a82-969b-6600b5e7abed",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 125,
+                        "line_start": 116,
+                        "message": "Configuring now",
+                        "name": "add comment",
+                        "notes": "",
+                        "number": 5,
+                        "order": 8,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 780,
+                            "y": 440
+                        },
+                        "previous_function": "",
+                        "previous_name": "add_comment_5",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "api",
+                        "status": "",
+                        "title": "API",
+                        "type": "coa.API",
+                        "warn": false,
+                        "z": 77
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "9cad315c-6d40-4137-8b98-9c64215618ee",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "454253a6-9c74-4a82-969b-6600b5e7abed",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "6a061c8a-b6c6-4dde-acb6-e3fdc509c9ca",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 91
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "ca57210a-939e-4758-a4af-7f43694656ae",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "5ff6446c-8158-4d78-8a5a-8574e2416bc7",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "6a061c8a-b6c6-4dde-acb6-e3fdc509c9ca",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 93
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".format": {
+                                "text": "ServiceNow Status Mess..."
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out-1": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out-1>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "format"
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def ServiceNow_Status_Message(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('ServiceNow_Status_Message() called')\n    \n    template = \"\"\"ServiceNow Ticket Creation status : {0}\"\"\"\n\n    # parameter list for template variable replacement\n    parameters = [\n        \"create_ServiceNow_ticket:action_result.status\",\n    ]\n\n    phantom.format(container=container, template=template, parameters=parameters, name=\"ServiceNow_Status_Message\")\n\n    add_comment_5(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "create ServiceNow ticket",
+                        "connection_type": "action",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "ServiceNow Status Message",
+                        "description": "",
+                        "format": "format",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "51052678-105a-45ec-a5c3-b6f210c6fe5c",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 116,
+                        "line_start": 100,
+                        "message": "Configuring now",
+                        "name": "format",
+                        "notes": "Create Status Message for Comment Block",
+                        "number": 1,
+                        "order": 7,
+                        "outPorts": [
+                            "out-1"
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "create_ServiceNow_ticket:action_result.status"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 560,
+                            "y": 440
+                        },
+                        "previous_function": "",
+                        "previous_name": "ServiceNow_Status_Message",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "format",
+                        "status": "",
+                        "template": "ServiceNow Ticket Creation status : {0}",
+                        "title": "format",
+                        "type": "coa.Format",
+                        "warn": false,
+                        "z": 99
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "c431e625-8d01-4f26-b0b1-d6e1e3fcc75d",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "baaac521-16b0-46ed-928c-7229e69e48bd",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "b837c318-8d3d-4e44-bea9-82d6993d9d28",
+                            "selector": ".port-body[type=\"input\"]"
+                        },
+                        "type": "link",
+                        "z": 101
+                    },
+                    {
+                        "attrs": {
+                            ".connection": {
+                                "stroke": "#818D99",
+                                "stroke-width": 2
+                            },
+                            ".marker-target": {
+                                "d": "M 10 0 L 0 5 L 10 10 z",
+                                "fill": "#818D99",
+                                "stroke": "#818D99"
+                            }
+                        },
+                        "connector": {
+                            "args": {
+                                "radius": 5
+                            },
+                            "name": "rounded"
+                        },
+                        "endDirections": [
+                            "left"
+                        ],
+                        "id": "6b1e25bd-3111-47b3-a617-5203173a772e",
+                        "router": {
+                            "name": "metro"
+                        },
+                        "source": {
+                            "id": "b837c318-8d3d-4e44-bea9-82d6993d9d28",
+                            "selector": "> g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "startDirections": [
+                            "right"
+                        ],
+                        "target": {
+                            "id": "24fe194c-46ac-4a95-8b34-7e3ca2209438",
+                            "port": "in",
+                            "selector": "> g:nth-child(1) > g:nth-child(1) > g:nth-child(1) > circle:nth-child(1)"
+                        },
+                        "type": "link",
+                        "z": 113
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#637282",
+                                "transform": "rotate(45 30 70)"
+                            },
+                            ".inPorts>.port-0>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".number": {
+                                "text": 1
+                            },
+                            ".outPorts>.port-0": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                },
+                                "ref-x": 83,
+                                "ref-y": 40
+                            },
+                            ".outPorts>.port-0>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def decision_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('decision_1() called')\n\n    # check for 'if' condition 1\n    matched = phantom.decision(\n        container=container,\n        conditions=[\n            [\"getTicketingOutputs:custom_function:servicenow\", \"==\", 1],\n        ])\n\n    # call connected blocks if condition 1 matched\n    if matched:\n        checkServiceNowFields(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        return\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "hasElse": false,
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "66eda21a-a59e-4755-966b-903864466472",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 33,
+                        "line_start": 16,
+                        "name": "decision",
+                        "notes": "",
+                        "number": 1,
+                        "order": 2,
+                        "outPorts": [
+                            "out-1"
+                        ],
+                        "outputs": [
+                            {
+                                "conditions": [
+                                    {
+                                        "comparison": "==",
+                                        "data_type": "",
+                                        "param": "getTicketingOutputs:custom_function:servicenow",
+                                        "value": "1"
+                                    }
+                                ],
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 0,
+                            "y": 440
+                        },
+                        "previous_function": "",
+                        "previous_name": "decision_1",
+                        "show_number": true,
+                        "size": {
+                            "height": 82,
+                            "width": 82
+                        },
+                        "state": "decision",
+                        "status": "",
+                        "type": "coa.Decision",
+                        "warn": "",
+                        "z": 133
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".functionBlock": {
+                                "text": "getTicketingOutputs"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "custom function"
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 1
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn_grey.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def getTicketingOutputs(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('getTicketingOutputs() called')\n    \n    input_parameter_0 = \"\"\n\n    getTicketingOutputs__getTicketingOutput = None\n    getTicketingOutputs__servicenow = None\n    getTicketingOutputs__jira = None\n    getTicketingOutputs__email = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    success, message, results = phantom.get_list(list_name=\"globalconfig\", values=\"ticketing\", trace=False)\n    phantom.debug('Printing success: {0}, message: {1}, results: {2}, '.format(success, message, results))\n    \n    ticketing_app = results['matches'][0]['value'][1]\n    if not \"servicenow\" or not \"jira\" or not \"email\" in ticketing_app:\n        getTicketOutput = \"badValue\"\n        phantom.debug('TicketingApp: BadValue - Check global config custom list')\n        return\n    \n    servicenow,email,jira = 0,0,0\n    \n    if \"servicenow\" in ticketing_app:\n        getTicketingOutputs__servicenow = 1\n    \n    if \"jira\" in ticketing_app:\n        getTicketingOutputs__jira = 1\n    \n    if \"email\" in ticketing_app:\n        getTicketingOutputs__email = 1\n    \n    #phantom.debug('Ticketing App set to: {}'.format(getTicketingOutputs__getTicketingOutput)\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='getTicketingOutputs:getTicketingOutput', value=json.dumps(getTicketingOutputs__getTicketingOutput))\n    phantom.save_run_data(key='getTicketingOutputs:servicenow', value=json.dumps(getTicketingOutputs__servicenow))\n    phantom.save_run_data(key='getTicketingOutputs:jira', value=json.dumps(getTicketingOutputs__jira))\n    phantom.save_run_data(key='getTicketingOutputs:email', value=json.dumps(getTicketingOutputs__email))\n    decision_2(container=container)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "customCodeEndLineOffset": 10,
+                        "customCodeStartLine": 13,
+                        "custom_callback": "",
+                        "custom_code": "def getTicketingOutputs(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):\n    phantom.debug('getTicketingOutputs() called')\n    input_parameter_0 = \"\"\n\n    getTicketingOutputs__getTicketingOutput = None\n    getTicketingOutputs__servicenow = None\n    getTicketingOutputs__jira = None\n    getTicketingOutputs__email = None\n\n    ################################################################################\n    ## Custom Code Start\n    ################################################################################\n\n    # Write your custom code here...\n    success, message, results = phantom.get_list(list_name=\"globalconfig\", values=\"ticketing\", trace=False)\n    phantom.debug('Printing success: {0}, message: {1}, results: {2}, '.format(success, message, results))\n    \n    ticketing_app = results['matches'][0]['value'][1]\n    if not \"servicenow\" or not \"jira\" or not \"email\" in ticketing_app:\n        getTicketOutput = \"badValue\"\n        phantom.debug('TicketingApp: BadValue - Check global config custom list')\n        return\n    \n    servicenow,email,jira = 0,0,0\n    \n    if \"servicenow\" in ticketing_app:\n        getTicketingOutputs__servicenow = 1\n    \n    if \"jira\" in ticketing_app:\n        getTicketingOutputs__jira = 1\n    \n    if \"email\" in ticketing_app:\n        getTicketingOutputs__email = 1\n    \n    #phantom.debug('Ticketing App set to: {}'.format(getTicketingOutputs__getTicketingOutput)\n\n    ################################################################################\n    ## Custom Code End\n    ################################################################################\n\n    phantom.save_run_data(key='getTicketingOutputs:getTicketingOutput', value=json.dumps(getTicketingOutputs__getTicketingOutput))\n    phantom.save_run_data(key='getTicketingOutputs:servicenow', value=json.dumps(getTicketingOutputs__servicenow))\n    phantom.save_run_data(key='getTicketingOutputs:jira', value=json.dumps(getTicketingOutputs__jira))\n    phantom.save_run_data(key='getTicketingOutputs:email', value=json.dumps(getTicketingOutputs__email))\n    decision_2(container=container)\n\n    return",
+                        "custom_join": "",
+                        "custom_name": "getTicketingOutputs",
+                        "description": "",
+                        "functionBlock": "custom function",
+                        "has_custom": true,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "b837c318-8d3d-4e44-bea9-82d6993d9d28",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "legacy": true,
+                        "line_end": 174,
+                        "line_start": 125,
+                        "message": "Configuring now",
+                        "name": "custom function",
+                        "notes": "Parse the output options",
+                        "number": 6,
+                        "order": 9,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "outputVariables": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": "getTicketingOutput"
+                            },
+                            {
+                                "position": 1,
+                                "type": "",
+                                "value": "servicenow"
+                            },
+                            {
+                                "position": 2,
+                                "type": "",
+                                "value": "jira"
+                            },
+                            {
+                                "position": 3,
+                                "type": "",
+                                "value": "email"
+                            }
+                        ],
+                        "parameters": [
+                            {
+                                "position": 0,
+                                "type": "",
+                                "value": ""
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -280,
+                            "y": 200
+                        },
+                        "previous_function": "",
+                        "previous_name": "getTicketingOutputs",
+                        "show_number": true,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "custom function",
+                        "status": "deprecating",
+                        "title": "custom function",
+                        "type": "coa.FunctionBlock",
+                        "userGeneratedCode": "\n    # Write your custom code here...\n    success, message, results = phantom.get_list(list_name=\"globalconfig\", values=\"ticketing\", trace=False)\n    phantom.debug('Printing success: {0}, message: {1}, results: {2}, '.format(success, message, results))\n    \n    ticketing_app = results['matches'][0]['value'][1]\n    if not \"servicenow\" or not \"jira\" or not \"email\" in ticketing_app:\n        getTicketOutput = \"badValue\"\n        phantom.debug('TicketingApp: BadValue - Check global config custom list')\n        return\n    \n    servicenow,email,jira = 0,0,0\n    \n    if \"servicenow\" in ticketing_app:\n        getTicketingOutputs__servicenow = 1\n    \n    if \"jira\" in ticketing_app:\n        getTicketingOutputs__jira = 1\n    \n    if \"email\" in ticketing_app:\n        getTicketingOutputs__email = 1\n    \n    #phantom.debug('Ticketing App set to: {}'.format(getTicketingOutputs__getTicketingOutput)\n",
+                        "warn": false,
+                        "z": 142
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "api": "add comment",
+                        "attrs": {
+                            ".api": {
+                                "text": "Comment Misconfigured..."
+                            },
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#5C6773"
+                            },
+                            ".color-band": {
+                                "fill": "#3C444D"
+                            },
+                            ".inPorts>.port-in": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".inPorts>.port-in>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".message": {
+                                "opacity": 0,
+                                "ref-x": 5,
+                                "ref-y": 105,
+                                "text": "Configuring now"
+                            },
+                            ".outPorts>.port-out": {
+                                "ref": ".background",
+                                "ref-x": 0.5
+                            },
+                            ".outPorts>.port-out>.port-body": {
+                                "port": {
+                                    "id": "out",
+                                    "type": "out"
+                                }
+                            },
+                            ".title": {
+                                "text": "API"
+                            },
+                            "g.code image": {
+                                "opacity": 1
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1,
+                                "xlink:href": "/inc/coa/img/block_icon_note_dark_on.svg"
+                            }
+                        },
+                        "block_code": "def Comment_Misconfigured_List(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('Comment_Misconfigured_List() called')\n\n    phantom.comment(container=container, comment=\"Custom list not configured, or badly configured\")\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "color": "",
+                        "configured": [
+                            {
+                                "addCommentComment": "Custom list not configured, or badly configured",
+                                "key": "add-comment"
+                            }
+                        ],
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "Comment Misconfigured List",
+                        "description": "",
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "5ff6446c-8158-4d78-8a5a-8574e2416bc7",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 78,
+                        "line_start": 71,
+                        "message": "Configuring now",
+                        "name": "add comment",
+                        "notes": "Add comment - badly configured custom list",
+                        "number": 3,
+                        "order": 5,
+                        "outPorts": [
+                            "out"
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": 120,
+                            "y": 200
+                        },
+                        "previous_function": "",
+                        "previous_name": "Comment_Misconfigured_List",
+                        "show_number": false,
+                        "size": {
+                            "height": 100,
+                            "width": 180
+                        },
+                        "state": "api",
+                        "status": "",
+                        "title": "API",
+                        "type": "coa.API",
+                        "warn": false,
+                        "z": 143
+                    },
+                    {
+                        "active": false,
+                        "angle": 0,
+                        "attrs": {
+                            ".background": {
+                                "fill": "#000000",
+                                "stroke": "#637282",
+                                "transform": "rotate(45 30 70)"
+                            },
+                            ".inPorts>.port-0>.port-body": {
+                                "port": {
+                                    "id": "in",
+                                    "type": "in"
+                                }
+                            },
+                            ".number": {
+                                "text": 2
+                            },
+                            ".outPorts>.port-0": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                },
+                                "ref-x": 83,
+                                "ref-y": 40
+                            },
+                            ".outPorts>.port-0>.port-body": {
+                                "port": {
+                                    "id": "out-1",
+                                    "type": "out"
+                                }
+                            },
+                            ".outPorts>.port-1": {
+                                "port": {
+                                    "id": "out-2",
+                                    "type": "out"
+                                },
+                                "ref-x": 41,
+                                "ref-y": 82
+                            },
+                            ".outPorts>.port-1>.port-body": {
+                                "port": {
+                                    "id": "out-2",
+                                    "type": "out"
+                                }
+                            },
+                            "g.delete": {
+                                "display": "none"
+                            },
+                            "g.error": {
+                                "opacity": 0
+                            },
+                            "g.error image": {
+                                "xlink:href": "/inc/coa/img/block_icon_warn.svg"
+                            },
+                            "g.notes": {
+                                "display": "block"
+                            },
+                            "g.notes image": {
+                                "opacity": 1
+                            }
+                        },
+                        "block_code": "def decision_2(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):\n    phantom.debug('decision_2() called')\n\n    # check for 'if' condition 1\n    matched = phantom.decision(\n        container=container,\n        conditions=[\n            [\"getTicketingOutputs:custom_function:getTicketingOutput\", \"==\", \"badValue\"],\n        ])\n\n    # call connected blocks if condition 1 matched\n    if matched:\n        Comment_Misconfigured_List(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n        return\n\n    # call connected blocks for 'else' condition 2\n    decision_1(action=action, success=success, container=container, results=results, handle=handle, custom_function=custom_function)\n\n    return",
+                        "callback_code": "",
+                        "callback_start": 1,
+                        "callsback": false,
+                        "connected_to_start": true,
+                        "connection_name": "",
+                        "connection_type": "",
+                        "custom_callback": "",
+                        "custom_code": "",
+                        "custom_join": "",
+                        "custom_name": "",
+                        "description": "",
+                        "hasElse": true,
+                        "has_custom": false,
+                        "has_custom_block": false,
+                        "has_custom_callback": false,
+                        "has_custom_join": false,
+                        "id": "24fe194c-46ac-4a95-8b34-7e3ca2209438",
+                        "inPorts": [
+                            "in"
+                        ],
+                        "join_code": "",
+                        "join_optional": [],
+                        "join_start": 1,
+                        "line_end": 71,
+                        "line_start": 51,
+                        "name": "decision",
+                        "notes": "",
+                        "number": 2,
+                        "order": 4,
+                        "outPorts": [
+                            "out-1",
+                            "out-2"
+                        ],
+                        "outputs": [
+                            {
+                                "conditions": [
+                                    {
+                                        "comparison": "==",
+                                        "data_type": "",
+                                        "param": "getTicketingOutputs:custom_function:getTicketingOutput",
+                                        "value": "badValue"
+                                    }
+                                ],
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "comparison": "==",
+                                        "data_type": "",
+                                        "param": "",
+                                        "value": ""
+                                    }
+                                ],
+                                "display": "Else",
+                                "logic": "and",
+                                "type": "else"
+                            }
+                        ],
+                        "ports": {
+                            "groups": {
+                                "in": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "left"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "left"
+                                    }
+                                },
+                                "out": {
+                                    "attrs": {
+                                        ".port-body": {
+                                            "fill": "#fff",
+                                            "magnet": true,
+                                            "r": 10,
+                                            "stroke": "#000"
+                                        },
+                                        ".port-label": {
+                                            "fill": "#000"
+                                        }
+                                    },
+                                    "label": {
+                                        "position": {
+                                            "args": {
+                                                "y": 10
+                                            },
+                                            "name": "right"
+                                        }
+                                    },
+                                    "position": {
+                                        "name": "right"
+                                    }
+                                }
+                            }
+                        },
+                        "position": {
+                            "x": -60,
+                            "y": 200
+                        },
+                        "previous_function": "",
+                        "previous_name": "decision_2",
+                        "show_number": true,
+                        "size": {
+                            "height": 82,
+                            "width": 82
+                        },
+                        "state": "decision",
+                        "status": "",
+                        "type": "coa.Decision",
+                        "warn": "",
+                        "z": 144
+                    }
+                ]
+            },
+            "notes": "getTicketingOptions, looks up the globalconfig custom list to discover which action(s) it should take."
+        },
+        "python_version": "2.7",
+        "schema": 4,
+        "version": "4.9.39220"
+    },
+    "create_time": "2021-01-24T04:26:37.583008+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}

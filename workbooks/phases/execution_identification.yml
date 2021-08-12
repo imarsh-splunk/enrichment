@@ -1,0 +1,24 @@
+name: "Execution identification"
+id: d811b28b-90d3-4d04-bba8-f38999be8beb
+sla_type: minutes
+sla:
+description: This phase is designed to be the analysis and validataion of execution investiagations on a host system. The object is to determine if the process in question is either malware, suspicious or allowed and while it maybe determined that it could be APT or Undetermined also which are subsets of the previously mentioned.
+references:
+  - NIST Special Publication 800-61r2 3.2 Detection and Analysis
+  - "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf"
+response_task:
+  - id: 667b8d15-2564-4994-929d-bda2532341bf
+    name: accept_and_assign_event
+  - id: 40d2f4c2-d6d4-4e09-b69d-a9bf44ceba09
+    name: validate_customer_and_host_enrichment
+  - id: 9bfbaa5f-b2ab-4ff5-acaf-cdd8105d6b92
+    name: indicator_analysis
+  - id: 92afde8b-9652-4bc8-a037-e7a426adaba4
+    name: process_analysis
+  - id: 695ccef0-4191-4e6a-9afa-4f9196b2979f
+    name: determine_additional_compromised_systems
+  - id: 4bf7f4cf-f4a6-4f24-b754-e17bcac67e0c
+    name: determine_event_disposition
+version: 2
+date: '2021-02-06'
+author: Rob Gresham, Splunk

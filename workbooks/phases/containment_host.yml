@@ -1,0 +1,22 @@
+title: Containment host
+id:
+sla_type: minutes
+sla:
+description: The
+tags:
+  - PICERL
+  nist:
+    RS.RP
+references:
+  - NIST Special Publication 800-61r2 3.3 Containment, Eradication, and Recovery
+  - "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf"
+response_task:
+  - id:
+    name:
+  - id:
+    name:
+  - id:
+    name:
+version: 2
+date: '2021-02-06'
+author: Rob Gresham, Splunk

@@ -1,0 +1,26 @@
+name: Analyze email indicators
+id: 9e2d3e51-2e8f-4d49-8206-fb3e5fbf6620
+tags:
+  analytics_story:
+    - Response Plan
+  nist:
+    - RS.RP
+description: |
+  Validate email indicators existence, reputation, detonation and determine if Phish, Spam, Suspicious or Clean ?
+  Analyst should be reviewing SPF, DKIM, DMARC along with To: and Reply to: fields for non-matching data. Does the subject contain suspicious content. Is there a file or url? Does the x-origin-ip come from the same location and the sending domains? Does the email body seem too good to be true or create a sense of urgency?
+automation:
+  role:
+  sla_type: minutes
+  sla:
+  is_note_required: false
+  actions:
+    - run query
+  playbooks:
+    - scm:
+      playook:
+references:
+  - 3.2.3 Sources of Precursors and Indicators - https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf
+how_to_implement:
+date: '2020-04-21'
+version: 1
+author: ButterCup, Splunk

@@ -1,0 +1,38 @@
+name: Determine event disposition
+id: 4bf7f4cf-f4a6-4f24-b754-e17bcac67e0c
+tags:
+  - PICERL
+  - SOAR
+  analytics_story:
+    - Response Plan
+  nist:
+  - RS.RP
+  - RS.AN
+  cis20:
+  - CIS 4
+  - CIS 6
+  - CIS 8
+  - CIS 19
+description: 1. Determine whether to escalate event or close with disposition change (response, escalated, non-event, false positive) and execute `Process event disposition` playbook
+    * If non-event, add any final comments and close the task. Manually, categorize and add the appropriate attack vector and tier tag.
+    * If false-positive, then add lesson learned task and assign to Security Engineering
+    * If response, then add response workbook
+    * If escalate, then add response workbook and send email to CSIRT
+input:
+search:
+automation:
+  role:
+  sla_type: minutes
+  sla:
+  is_note_required: false
+  actions:
+    - create ticket
+    - post data
+  playbooks:
+    - scm: escu
+      playook: Process event disposition
+references:
+how_to_implement: How to determine the event disposition...
+date: '2021-02-06'
+version: 2
+author: Rob Gresham, Splunk
