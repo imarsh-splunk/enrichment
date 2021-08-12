@@ -1,0 +1,3206 @@
+---
+- name: Determine if an incident has occurred
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.429753Z'
+  id: 1
+  phase: 1
+  create_time: '2018-10-01T04:35:52.968463Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: false
+  description: ''
+- name: Determine recoverability effort
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.453027Z'
+  id: 8
+  phase: 2
+  create_time: '2018-10-01T04:35:52.972787Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: 'Suggested categories: Regular, Supplemented, Extended, Not Recoverable'
+- name: Prioritize incident
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.455565Z'
+  id: 9
+  phase: 2
+  create_time: '2018-10-01T04:35:52.973207Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: Prioritize handling the incident based on the relevant factors
+- name: Report incident
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.457905Z'
+  id: 10
+  phase: 2
+  create_time: '2018-10-01T04:35:52.973639Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 5
+  is_note_required: true
+  description: Report the incident to the the appropriate internal personnel and external
+    organizations
+- name: Contain incident
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.460190Z'
+  id: 11
+  phase: 2
+  create_time: '2018-10-01T04:35:52.974063Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 6
+  is_note_required: true
+  description: ''
+- name: Identify and mitigate all vulnerabilities
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.467223Z'
+  id: 12
+  phase: 3
+  create_time: '2018-10-01T04:35:52.975519Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Identify and mitigate all vulnerabilities that were exploited
+- name: Removal of malicious content
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.469684Z'
+  id: 13
+  phase: 3
+  create_time: '2018-10-01T04:35:52.975994Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Removed malware, inappropriate materials and other components
+- name: Verify no other hosts are affected
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.472060Z'
+  id: 14
+  phase: 3
+  create_time: '2018-10-01T04:35:52.976432Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: If more affected hosts are discovered, repeat the Detection and Analysis
+    Steps
+- name: Restore affected systems
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.478728Z'
+  id: 15
+  phase: 4
+  create_time: '2018-10-01T04:35:52.977962Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Return affected systems to an operationally ready state
+- name: Validate restoration
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.481047Z'
+  id: 16
+  phase: 4
+  create_time: '2018-10-01T04:35:52.978478Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Confirm that the affected systems are functioning normally
+- name: Report incident response execution
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.987360Z'
+  id: 20
+  phase: 6
+  create_time: '2018-10-01T04:35:52.987116Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Alert appropriate parties to incident response execution starting
+- name: Document associated events
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.987824Z'
+  id: 21
+  phase: 6
+  create_time: '2018-10-01T04:35:52.987660Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: This is the escalation. Create case and populate it with significant
+    container data
+- name: Document known attack surface and attacker information
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.988262Z'
+  id: 22
+  phase: 6
+  create_time: '2018-10-01T04:35:52.988103Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Rough triage of the situation. No complete picture but targets to analyse
+- name: Assign roles
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.988721Z'
+  id: 23
+  phase: 6
+  create_time: '2018-10-01T04:35:52.988551Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: Incident commander, Tech lead, Scribe, Intel analysts, Security analysts
+- name: Research intelligence resources
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.990286Z'
+  id: 24
+  phase: 7
+  create_time: '2018-10-01T04:35:52.990113Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Find out if this attacker is a known agent and gather associated TTP
+- name: Research proxy logs
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.990783Z'
+  id: 25
+  phase: 7
+  create_time: '2018-10-01T04:35:52.990600Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Find and document any evidence linked to attacker actions
+- name: Research firewall logs
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.991241Z'
+  id: 26
+  phase: 7
+  create_time: '2018-10-01T04:35:52.991082Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Find and document any evidence linked to attacker actions
+- name: Research OS logs
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.991687Z'
+  id: 27
+  phase: 7
+  create_time: '2018-10-01T04:35:52.991518Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: Find and document any evidence linked to attacker actions
+- name: Research network logs
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.992104Z'
+  id: 28
+  phase: 7
+  create_time: '2018-10-01T04:35:52.991946Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 5
+  is_note_required: true
+  description: Find and document any evidence linked to attacker actions
+- name: Research endpoint protection logs
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.992680Z'
+  id: 29
+  phase: 7
+  create_time: '2018-10-01T04:35:52.992417Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 6
+  is_note_required: true
+  description: Find and document any evidence linked to attacker actions
+- name: Determine infection vector
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.993104Z'
+  id: 30
+  phase: 7
+  create_time: '2018-10-01T04:35:52.992944Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 7
+  is_note_required: true
+  description: Find and document how initial infection occurred
+- name: Document all attack targets
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.993594Z'
+  id: 31
+  phase: 7
+  create_time: '2018-10-01T04:35:52.993370Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 8
+  is_note_required: true
+  description: Find and document full attack surface
+- name: Document all attacker sources and TTP
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.994276Z'
+  id: 32
+  phase: 7
+  create_time: '2018-10-01T04:35:52.993985Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 9
+  is_note_required: true
+  description: Document all discovered attack source and TTP
+- name: Document infected devices
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.994955Z'
+  id: 33
+  phase: 7
+  create_time: '2018-10-01T04:35:52.994657Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 10
+  is_note_required: true
+  description: Document all devices known determined to have been modified by attacker
+- name: Determine full impact of attack
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.995643Z'
+  id: 34
+  phase: 7
+  create_time: '2018-10-01T04:35:52.995348Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 11
+  is_note_required: true
+  description: Functional and informational impact
+- name: Analyse malware samples
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.996331Z'
+  id: 35
+  phase: 7
+  create_time: '2018-10-01T04:35:52.996038Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 12
+  is_note_required: true
+  description: Analyse discovered malware and document IOCs
+- name: Acquire, preserve, secure and document evidence
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.998442Z'
+  id: 36
+  phase: 8
+  create_time: '2018-10-01T04:35:52.998268Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Before modifying systems housing evidence of attack, document it
+- name: Report devices and applications to be contained to proper channels
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.998878Z'
+  id: 37
+  phase: 8
+  create_time: '2018-10-01T04:35:52.998713Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: ''
+- name: Contain incident
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:52.999364Z'
+  id: 38
+  phase: 8
+  create_time: '2018-10-01T04:35:52.999204Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: ''
+- name: Identify and mitigate all vulnerabilities that were exploited
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.000888Z'
+  id: 39
+  phase: 9
+  create_time: '2018-10-01T04:35:53.000715Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: ''
+- name: Remove malware, inappropriate materials and other components
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.001320Z'
+  id: 40
+  phase: 9
+  create_time: '2018-10-01T04:35:53.001161Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: ''
+- name: Repeat analysis and containment on any newly discovered infected hosts
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.001745Z'
+  id: 41
+  phase: 9
+  create_time: '2018-10-01T04:35:53.001575Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: ''
+- name: Return affected systems to an operationally ready state
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.003401Z'
+  id: 42
+  phase: 10
+  create_time: '2018-10-01T04:35:53.003230Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Restore network connectivity and system access
+- name: Confirm that the affected systems are functioning normally
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.003840Z'
+  id: 43
+  phase: 10
+  create_time: '2018-10-01T04:35:53.003680Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Work with system owners to validate successful recovery
+- name: If necessary, implement additional monitoring to look for future related activity
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.004351Z'
+  id: 44
+  phase: 10
+  create_time: '2018-10-01T04:35:53.004135Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Be ready to identify a similar attack with proper monitoring
+- name: Schedule after action review meeting
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.006266Z'
+  id: 45
+  phase: 11
+  create_time: '2018-10-01T04:35:53.005956Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: ''
+- name: Generate incident response action report
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.006990Z'
+  id: 46
+  phase: 11
+  create_time: '2018-10-01T04:35:53.006692Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Both executive report and detailed final report
+- name: Report incident response execution complete
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.007710Z'
+  id: 47
+  phase: 11
+  create_time: '2018-10-01T04:35:53.007403Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Alert appropriate parties to incident response execution complete
+- name: Identify accountable system owners
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: track_active_directory_admin_users
+    actions:
+    - run query
+    - list oncalls
+    - get oncall
+    - get system attributes
+    - get user attributes
+    - get users
+    - ask question
+  modified_time: '2018-10-01T04:35:53.014062Z'
+  id: 48
+  phase: 12
+  create_time: '2018-10-01T04:35:53.013882Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Query configuration management databases, ask teammates, and query
+    on-call personnel directories to find the right people for notification and response.
+- name: Notify accountable system owners
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: email_notification_for_malware
+    actions:
+    - send email
+    - send message
+    - create task
+  modified_time: '2018-10-01T04:35:53.014573Z'
+  id: 49
+  phase: 12
+  create_time: '2018-10-01T04:35:53.014411Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Determine what is needed from each team member and notify them as soon
+    as possible. Consider speed, confidentiality, integrity, and availability when
+    choosing a communication channel. The right choice may be an in-person meeting,
+    email, chat, text, phone call, or Phantom Notification.
+- name: Setup collaboration channels
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: user_approved_ticket_creation
+    actions:
+    - create event
+    - create investigation
+    - create alert
+    - create ticket
+  modified_time: '2018-10-01T04:35:53.015225Z'
+  id: 50
+  phase: 12
+  create_time: '2018-10-01T04:35:53.015064Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Establish shared access to the appropriate Phantom Mission Control
+    that is tracking the data breach. If necessary establish an additional channel
+    for communications such as a chat room, email chain, ticketing system, or VictorOps
+    Incident.
+- name: Identify likely means of exfiltration
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: symantec_ioc_data_enhancement
+    - scm: community
+      playbook: email_notification_for_malware
+    - scm: community
+      playbook: ssh_endpoint_investigate
+    actions:
+    - run query
+    - run command
+    - detonate file
+    - detonate url
+    - file reputation
+    - get file
+    - get file info
+  modified_time: '2018-10-01T04:35:53.016989Z'
+  id: 51
+  phase: 13
+  create_time: '2018-10-01T04:35:53.016812Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Evaluate likely means of exfiltration using the information from the
+    initial detection and any other associated investigation the team can conduct.
+    Use https://attack.mitre.org/wiki/Persistence and other open source intelligence
+    to check for common exfiltration mechanisms. Consider the sophistication of the
+    adversary, the data that is likely to be targeted, the systems that may have been
+    breached, and any other knowledge from further investigation. Query the logs of
+    any available systems around the time of the incident for context and additional
+    leads. If possible analyze and/or reverse engineer any executables or scripts
+    discovered in the investigation. Try to determine exfiltration mechanisms, protocols,
+    ports, IP addresses, hostnames, URL's, and other indicators.
+- name: Determine mitigations and remediations
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: alert_escalation_for_attacked_executives
+    - scm: community
+      playbook: alert_deescalation_for_test_machines
+    actions:
+    - run query
+    - get data
+  modified_time: '2018-10-01T04:35:53.017585Z'
+  id: 52
+  phase: 13
+  create_time: '2018-10-01T04:35:53.017391Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Taking into account the confidentiality and availability considerations
+    of the systems involved, determine which mitigations and remediations are appropriate.
+- name: Stop exfiltration
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: user_prompt_and_block_domain
+    actions:
+    - block domain
+    - block ip
+    - block url
+    - block application
+    - quarantine device
+    - shutdown system
+    - delete file
+    - block hash
+  modified_time: '2018-10-01T04:35:53.018111Z'
+  id: 53
+  phase: 13
+  create_time: '2018-10-01T04:35:53.017949Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Use host-based or network controls to interrupt exfiltration. Scope
+    the response according to the severity of the event.
+- name: Identify likely means of persistence
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: ssh_endpoint_investigate
+    actions:
+    - run query
+    - execute program
+    - detonate file
+  modified_time: '2018-10-01T04:35:53.020015Z'
+  id: 54
+  phase: 14
+  create_time: '2018-10-01T04:35:53.019839Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Trace exfiltration as far as possible back toward a root cause. Look
+    for patterns of activity from scheduled tasks, system restarts, polling of external
+    systems, and other common means of persistence. Sysinternals AutoRuns and other
+    similar tools can check wide varieties of persistence mechanisms.
+- name: Remove identified persistence mechanisms
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: user_prompt_and_block_domain
+    actions:
+    - block file path
+    - block hash
+    - block ip
+    - block domain
+  modified_time: '2018-10-01T04:35:53.020556Z'
+  id: 55
+  phase: 14
+  create_time: '2018-10-01T04:35:53.020395Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Block adversary persistence at the host and/or network level.
+- name: Measure the size and scope
+  suggestions:
+    actions:
+    - run query
+    - get data
+  modified_time: '2018-10-01T04:35:53.022317Z'
+  id: 56
+  phase: 15
+  create_time: '2018-10-01T04:35:53.022143Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Measure the impact of the breach by amount of data, importance of data,
+    potential follow-on impacts, and other appropriate criteria.
+- name: Identify appropriate stakeholders
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.024131Z'
+  id: 57
+  phase: 16
+  create_time: '2018-10-01T04:35:53.023957Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Identify who should receive which information. This may include the
+    regulatory compliance team, all internal employees, customers, partners, appropriate
+    government officials, the public, system vendors, open source communities, and
+    others.
+- name: Send reports
+  suggestions:
+    actions:
+    - send email
+    - submit report
+  modified_time: '2018-10-01T04:35:53.024699Z'
+  id: 58
+  phase: 16
+  create_time: '2018-10-01T04:35:53.024524Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Send the appropriate amount of information to identified parties. If
+    it would be beneficial give them a way to respond.
+- name: Prevent future breaches
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: reinfected_endpoint_check
+    actions:
+    - deploy patch
+    - block hash
+    - block application
+  modified_time: '2018-10-01T04:35:53.026319Z'
+  id: 59
+  phase: 17
+  create_time: '2018-10-01T04:35:53.026146Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Use information from this case to investigate further, apply patches,
+    prevent behaviors, change systems, and otherwise prevent similar situations from
+    occurring again. Setup automated checks for reinfection using similar indicators
+    or TTP's.
+- name: Define team members
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: track_active_directory_admin_users
+    actions:
+    - list oncalls
+    - get users
+    - ask question
+    - send email
+  modified_time: '2018-10-01T04:35:53.031816Z'
+  id: 60
+  phase: 18
+  create_time: '2018-10-01T04:35:53.031621Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Determine which team members will play which role in the response and
+    establish communications channels with all involved.
+- name: Check analysis tools
+  suggestions:
+    actions:
+    - check status
+    - list patches
+    - run query
+  modified_time: '2018-10-01T04:35:53.032323Z'
+  id: 61
+  phase: 18
+  create_time: '2018-10-01T04:35:53.032164Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Test connectivity, check patch level, and run example queries on all
+    analysis tools.
+- name: Acquire architecture map
+  suggestions:
+    actions:
+    - send email
+    - ask question
+    - list device groups
+  modified_time: '2018-10-01T04:35:53.032790Z'
+  id: 62
+  phase: 18
+  create_time: '2018-10-01T04:35:53.032619Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Find or build an up-to-date map of the network.
+- name: Acquire asset inventory
+  suggestions:
+    actions:
+    - list devices
+  modified_time: '2018-10-01T04:35:53.033290Z'
+  id: 63
+  phase: 18
+  create_time: '2018-10-01T04:35:53.033099Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: Find or build an up-to-date inventory of all devices.
+- name: Continuous monitoring
+  suggestions:
+    actions:
+    - run query
+    - send email
+    - create ticket
+  modified_time: '2018-10-01T04:35:53.034019Z'
+  id: 64
+  phase: 18
+  create_time: '2018-10-01T04:35:53.033729Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 5
+  is_note_required: true
+  description: Monitor threat trends and system activity.
+- name: Mitigate or remediate vulnerabilities
+  suggestions:
+    actions:
+    - deploy patch
+    - run script
+    - update device
+  modified_time: '2019-06-05T22:58:07.530759Z'
+  id: 106
+  phase: 29
+  create_time: '2019-06-05T22:58:07.530173Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: If any vulnerabilities were used in this compromise, find a way to
+    mitigate or remediate them. This could be a system update, a change in software,
+    disabling a certain feature, a change in policy, or another action.
+- name: Detect the infection
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: ssh_endpoint_investigate
+    actions:
+    - run query
+    - scan endpoint
+    - scan network
+  modified_time: '2018-10-01T04:35:53.035848Z'
+  id: 65
+  phase: 19
+  create_time: '2018-10-01T04:35:53.035670Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Detect abnormalities and potential infections using endpoint and network
+    intrusion detection systems, application logs, authentication logs, system load
+    monitoring, notification from external sources, and other methods. Seek a repeatable
+    detection that is as reliable as possible, as future steps will call for checking
+    and re-checking to monitor progress.
+- name: Identify the infection
+  suggestions:
+    actions:
+    - list vulnerabilities
+    - file reputation
+    - ip reputation
+    - domain reputation
+  modified_time: '2018-10-01T04:35:53.036352Z'
+  id: 66
+  phase: 19
+  create_time: '2018-10-01T04:35:53.036191Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Compare the known symptoms to all available threat intelligence and
+    try to identify the threat as specifically as possible.
+- name: Assess the perimeter of the infection
+  suggestions:
+    actions:
+    - run query
+  modified_time: '2018-10-01T04:35:53.036825Z'
+  id: 67
+  phase: 19
+  create_time: '2018-10-01T04:35:53.036661Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Check systems in different parts of the organization to define the
+    perimeter of the infection and assess the potential business impact.
+- name: Disconnect infected areas from the Internet
+  suggestions:
+    actions:
+    - quarantine device
+    - vlan host
+    - block application
+  modified_time: '2018-10-01T04:35:53.038809Z'
+  id: 68
+  phase: 20
+  create_time: '2018-10-01T04:35:53.038626Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Stop C2 and further propagation by disconnecting affected areas from
+    the Internet.
+- name: Isolate infected area from all networks
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.039332Z'
+  id: 69
+  phase: 20
+  create_time: '2018-10-01T04:35:53.039173Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Enforce more strict network segmentation to prevent further internal
+    spreading. Consider disconnecting mobile devices and laptops to minimize the propagation
+    surface.
+- name: Monitor business-critical network connections that cannot be disconnected
+  suggestions:
+    actions:
+    - get pcap
+  modified_time: '2018-10-01T04:35:53.039829Z'
+  id: 70
+  phase: 20
+  create_time: '2018-10-01T04:35:53.039668Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: For those applications that cannot be disconnected due to continuity
+    needs, increase monitoring and analyze traffic for malicious activity.
+- name: Neutralize propagation vectors
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: wannacry_remediate
+    - scm: community
+      playbook: vmworld_wannacry_response
+    - scm: community
+      playbook: vmworld_c2_response
+    actions:
+    - deploy patch
+    - post data
+    - configure ssh
+    - send email
+    - block sender
+  modified_time: '2018-10-01T04:35:53.040339Z'
+  id: 71
+  phase: 20
+  create_time: '2018-10-01T04:35:53.040176Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: Deploy patches, change configurations, sinkhole domains, re-image systems,
+    stop services, or take other appropriate actions to prevent further propagation
+    using all known vectors. Notify users of changes that will affect them and/or
+    request their assistance for manual neutralization steps.
+- name: Monitor progress
+  suggestions:
+    actions:
+    - run query
+  modified_time: '2018-10-01T04:35:53.040921Z'
+  id: 72
+  phase: 20
+  create_time: '2018-10-01T04:35:53.040762Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 5
+  is_note_required: true
+  description: Re-check neutralized systems and repeat or improve processes to cover
+    important systems as quickly as possible.
+- name: Identify
+  suggestions:
+    actions:
+    - send email
+    - get data
+  modified_time: '2018-10-01T04:35:53.042532Z'
+  id: 73
+  phase: 21
+  create_time: '2018-10-01T04:35:53.042360Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Consider vendor fixes, antivirus updates, external support options,
+    and custom solutions. Use these to define a disinfection process and validate
+    it with a reputable source if possible.
+- name: Test
+  suggestions:
+    actions:
+    - deploy patch
+    - run script
+    - run command
+  modified_time: '2018-10-01T04:35:53.043017Z'
+  id: 74
+  phase: 21
+  create_time: '2018-10-01T04:35:53.042856Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Test the disinfection process on a system that is as close to production
+    configuration as possible and verify that it works while not damaging any service.
+- name: Deploy
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: macos_root_password_mitigate
+    - scm: community
+      playbook: wannacry_remediate
+    actions:
+    - deploy patch
+    - run script
+    - run command
+  modified_time: '2018-10-01T04:35:53.043476Z'
+  id: 75
+  phase: 21
+  create_time: '2018-10-01T04:35:53.043315Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Deploy the process and scale it up if possible.
+- name: Confirm
+  suggestions:
+    actions:
+    - run query
+  modified_time: '2018-10-01T04:35:53.044215Z'
+  id: 76
+  phase: 21
+  create_time: '2018-10-01T04:35:53.043906Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: Confirm that the malware did not block remediations and find a workaround
+    if it did.
+- name: Verify Containment and Remediation
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: reinfected_endpoint_check
+    actions:
+    - run query
+  modified_time: '2018-10-01T04:35:53.046277Z'
+  id: 77
+  phase: 22
+  create_time: '2018-10-01T04:35:53.046105Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Review current progress towards remediation by re-checking systems.
+- name: Reopen propagation network mechanism
+  suggestions:
+    actions:
+    - unquarantine device
+    - vlan host
+    - unblock sender
+  modified_time: '2018-10-01T04:35:53.046797Z'
+  id: 78
+  phase: 22
+  create_time: '2018-10-01T04:35:53.046625Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Turn off network enforcement for a segment of the network and monitor
+    for new attempts to reinfect.
+- name: Reconnect isolated sub-areas to each other
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.047407Z'
+  id: 79
+  phase: 22
+  create_time: '2018-10-01T04:35:53.047241Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Turn off inter-area network enforcement and monitor.
+- name: Reconnect mobile devices
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.047946Z'
+  id: 80
+  phase: 22
+  create_time: '2018-10-01T04:35:53.047787Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: Reconnect mobile devices and laptops to monitor for persistence and
+    check coverage across all device categories.
+- name: Reconnect isolated areas to main enterprise network
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: reinfected_endpoint_check
+  modified_time: '2018-10-01T04:35:53.048452Z'
+  id: 81
+  phase: 22
+  create_time: '2018-10-01T04:35:53.048295Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 5
+  is_note_required: true
+  description: Disable network enforcement between cleaned areas and the rest of the
+    network while monitoring for reinfection.
+- name: Reconnect to the Internet
+  suggestions:
+    actions:
+    - unblock domain
+  modified_time: '2018-10-01T04:35:53.048987Z'
+  id: 82
+  phase: 22
+  create_time: '2018-10-01T04:35:53.048829Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 6
+  is_note_required: true
+  description: Reconnect to the Internet and monitor.
+- name: Build crisis report
+  suggestions:
+    actions:
+    - get report
+    - get results
+    - send email
+  modified_time: '2018-10-01T04:35:53.050796Z'
+  id: 83
+  phase: 23
+  create_time: '2018-10-01T04:35:53.050613Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Notify affected parties with as much detail as is appropriate. Consider
+    the initial cause of the infection, actions and timelines of important events,
+    what went right, what went wrong, and the incident cost.
+- name: Improve processes
+  suggestions: {}
+  modified_time: '2018-10-01T04:35:53.051299Z'
+  id: 84
+  phase: 23
+  create_time: '2018-10-01T04:35:53.051138Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Capitalize on the experience by improving the processes that were used,
+    creating new processes where needed, and automating that which is generalizable
+    and repeatable.
+- name: Research types of systems that are affected
+  suggestions:
+    actions:
+    - get vulnerability
+    - list vulnerabilities
+  modified_time: '2018-10-01T04:35:53.056725Z'
+  id: 85
+  phase: 24
+  create_time: '2018-10-01T04:35:53.056534Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Research the known hardware or software systems and versions that are
+    affected. If possible use a vulnerability database or software composition analysis
+    solution to walk the dependency chain and evaluate the scope of the vulnerability.
+- name: Research how the vulnerability works
+  suggestions:
+    actions:
+    - get data
+    - run query
+    - get vulnerability
+  modified_time: '2018-10-01T04:35:53.057220Z'
+  id: 86
+  phase: 24
+  create_time: '2018-10-01T04:35:53.057056Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Research the mechanism by which the system is vulnerable and the conditions
+    in which the system is vulnerable. Often there are certain configurations, software
+    packages, system states, operating modes, and other characteristics that make
+    a vulnerability exploitable and affect the impact if exploited. Assess the difficulty
+    to exploit and the reliability of the exploit.
+- name: Remove persistent system access
+  suggestions:
+    actions:
+    - block hash
+    - run command
+    - run script
+    - restart system
+    - block file path
+    - block application
+    - revert vm
+  modified_time: '2019-06-05T22:58:07.529554Z'
+  id: 105
+  phase: 29
+  create_time: '2019-06-05T22:58:07.529341Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: If persistent access mechanisms were detected, remove them by uninstalling
+    software, unhooking libraries, reimaging systems, disabling compromised credentials,
+    or implementing other remediations. If this action will cause a service outage,
+    it may be prudent to notify the affected teams or organizations.
+- name: Find potentially affected systems
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: macos_ard_enumeration
+    - scm: community
+      playbook: ssh_endpoint_investigate
+    actions:
+    - run query
+    - get system attributes
+    - get system info
+    - run command
+    - execute program
+    - run script
+    - get scan data
+    - detonate url
+    - scan endpoint
+    - scan network
+    - scan url
+  modified_time: '2018-10-01T04:35:53.058915Z'
+  id: 87
+  phase: 25
+  create_time: '2018-10-01T04:35:53.058744Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Check the internal environment and dependencies of the organization
+    for the software or hardware that is vulnerable.
+- name: Determine exploitability
+  suggestions:
+    actions:
+    - run query
+    - run command
+    - run script
+    - scan endpoint
+  modified_time: '2018-10-01T04:35:53.059450Z'
+  id: 88
+  phase: 25
+  create_time: '2018-10-01T04:35:53.059291Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Check for exploitable conditions. If appropriate attempt to implement
+    the vulnerability or use a safe proof of concept to verify exploitability.
+- name: Investigate possible exploitation
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: ssh_endpoint_investigate
+    actions:
+    - run query
+    - get log
+    - extract ioc
+  modified_time: '2018-10-01T04:35:53.059955Z'
+  id: 89
+  phase: 25
+  create_time: '2018-10-01T04:35:53.059797Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Investigate whether or not vulnerable systems were in fact exploited.
+    Use the particular behavior of the exploit and likely post-exploitation techniques
+    to narrow down the search for exploited systems.
+- name: Evaluate patches, workarounds, and service outages
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: alert_escalation_for_attacked_executives
+    - scm: community
+      playbook: alert_deescalation_for_test_machines
+  modified_time: '2018-10-01T04:35:53.061588Z'
+  id: 90
+  phase: 26
+  create_time: '2018-10-01T04:35:53.061417Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Consider how mitigations, remediations, and forced system shutdowns
+    will impact the situation.
+- name: Remediate
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: wannacry_remediate
+    actions:
+    - deploy patch
+    - run command
+    - run script
+    - execute program
+  modified_time: '2018-10-01T04:35:53.063265Z'
+  id: 91
+  phase: 27
+  create_time: '2018-10-01T04:35:53.063093Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Apply patches, upgrades, configuration changes, or state changes that
+    will remediate the vulnerability.
+- name: Mitigate
+  suggestions:
+    actions:
+    - add firewall rule
+    - block hash
+    - blacklist domain
+    - reboot system
+  modified_time: '2018-10-01T04:35:53.063771Z'
+  id: 92
+  phase: 27
+  create_time: '2018-10-01T04:35:53.063600Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Apply workarounds, temporary fixes, additional hardening, new security
+    tools, new detections, and other mitigations to reduce risk.
+- name: Document accepted risks
+  suggestions:
+    actions:
+    - send email
+    - send message
+    - create ticket
+  modified_time: '2018-10-01T04:35:53.064249Z'
+  id: 93
+  phase: 27
+  create_time: '2018-10-01T04:35:53.064089Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Document remaining risk and notify stakeholders.
+- name: Contact account owner
+  suggestions:
+    actions:
+    - get user
+    - send email
+    - send message
+    - ask question
+  modified_time: '2019-06-05T22:58:07.521145Z'
+  id: 94
+  phase: 28
+  create_time: '2019-06-05T22:58:07.520788Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: If situational awareness concerns allow it, contact the legitimate
+    owner of the account to gather additional insight, rule out false positives, and
+    provide guidance on how to cooperate.
+- name: Determine the scope of the compromise
+  suggestions:
+    actions:
+    - run query
+    - get user info
+    - get user attributes
+    - list sessions
+  modified_time: '2019-06-05T22:58:07.522641Z'
+  id: 95
+  phase: 28
+  create_time: '2019-06-05T22:58:07.522374Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Determine the resources and capabilities available to the compromised
+    account. Consider other types of accounts that can also be accessed based on the
+    initial compromise. Is this account an Administrative account? What systems has
+    the account logged into?
+- name: Analyze usage of access
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: ssh_endpoint_investigate
+    actions:
+    - run query
+    - list processes
+    - list connections
+    - get command history
+  modified_time: '2019-06-05T22:58:07.523255Z'
+  id: 96
+  phase: 28
+  create_time: '2019-06-05T22:58:07.523040Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Query monitoring systems to determine which of the potential resources
+    and capabilities were actually used by the adversary. Look for patterns in targeted
+    resources and capabilities. Was the compromised account used to install or download
+    something? Were credentials to other accounts collected and used?
+- name: Estimate impact
+  suggestions:
+    actions:
+    - run query
+    - hunt hash
+    - hunt malware
+  modified_time: '2019-06-05T22:58:07.523778Z'
+  id: 97
+  phase: 28
+  create_time: '2019-06-05T22:58:07.523595Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: Estimate the business impact to appropriately allocate priority and
+    resources.
+- name: Track stolen credentials
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: excessive_account_lockouts_enrichment_and_response
+    actions:
+    - run query
+  modified_time: '2019-06-05T22:58:07.524384Z'
+  id: 98
+  phase: 28
+  create_time: '2019-06-05T22:58:07.524151Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 5
+  is_note_required: true
+  description: If compromised credentials were used, try to determine where else they
+    may grant access.
+- name: Investigate external communications
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: simple_network_enrichment
+    - scm: community
+      playbook: ssh_endpoint_investigate
+    actions:
+    - run query
+    - list connections
+    - hunt domain
+  modified_time: '2019-06-05T22:58:07.525000Z'
+  id: 99
+  phase: 28
+  create_time: '2019-06-05T22:58:07.524799Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 6
+  is_note_required: true
+  description: Look for exfiltration and/or command and control activity. Inspect
+    network traffic with abnormal content, focusing on traffic to external hosts and
+    internal systems that are not normally connected to the system under investigation.
+- name: Determine initial access mechanism
+  suggestions:
+    actions:
+    - run query
+  modified_time: '2019-06-05T22:58:07.525539Z'
+  id: 100
+  phase: 28
+  create_time: '2019-06-05T22:58:07.525342Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 7
+  is_note_required: true
+  description: Attempt to trace activity back to the point of initial access. Consider
+    phishing, watering hole attacks, public-facing exploits, supply chain compromises,
+    and other common attack mechanisms.
+- name: Detect persistent system access
+  suggestions:
+    actions:
+    - run query
+    - run script
+    - list packages
+    - get command history
+  modified_time: '2019-06-05T22:58:07.526078Z'
+  id: 101
+  phase: 28
+  create_time: '2019-06-05T22:58:07.525877Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 8
+  is_note_required: true
+  description: Look for attempts to establish persistent access to one or more systems.
+    The persistence technique could include an email forwarding rule for an email
+    account, a scheduled task on an endpoint, a newly added login method for a business
+    application, or a wide array of others. One non-exhaustive list of persistence
+    techniques is in the MITRE ATT&CK framework (https://attack.mitre.org/tactics/TA0003/)
+    and another for Windows endpoints in particular is within the SysInternals Autoruns
+    tool.
+- name: Enumerate other similarly vulnerable accounts
+  suggestions:
+    actions:
+    - run query
+    - list endpoints
+  modified_time: '2019-06-05T22:58:07.526682Z'
+  id: 102
+  phase: 28
+  create_time: '2019-06-05T22:58:07.526462Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 9
+  is_note_required: true
+  description: If an initial attack vector or other activity pattern is found, use
+    it to look for other similarly compromised accounts.
+- name: Notify stakeholders
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: email_notification_for_malware
+    actions:
+    - send email
+    - send message
+    - get oncall user
+    - create ticket
+  modified_time: '2019-06-05T22:58:07.527220Z'
+  id: 103
+  phase: 28
+  create_time: '2019-06-05T22:58:07.527032Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 10
+  is_note_required: true
+  description: Notify incident response leadership, system owners, and other stakeholders
+    in accordance with established incident notification and escalation procedures.
+- name: Disable account
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: compromised_email_containment
+    - scm: community
+      playbook: excessive_account_lockouts_enrichment_and_response
+    - scm: community
+      playbook: macos_root_password_mitigate
+    actions:
+    - reset password
+    - disable user
+    - add firewall rule
+    - shutdown system
+  modified_time: '2019-06-05T22:58:07.529004Z'
+  id: 104
+  phase: 29
+  create_time: '2019-06-05T22:58:07.528811Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: If the business risk is deemed acceptable, disable the account or reset
+    credentials to prevent further malicious usage.
+- name: Implement additional monitoring
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.483423Z'
+  id: 17
+  phase: 4
+  create_time: '2018-10-01T04:35:52.978935Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: If necessary, implement additional monitoring to look for future activity
+- name: Create a follow up report
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.490662Z'
+  id: 18
+  phase: 5
+  create_time: '2018-10-01T04:35:52.980443Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: ''
+- name: Notify necessary parties
+  suggestions:
+    actions:
+    - send email
+    - send message
+  modified_time: '2019-06-05T22:58:07.534360Z'
+  id: 107
+  phase: 30
+  create_time: '2019-06-05T22:58:07.533980Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Determine if a regulatory risk calls for a notification to an internal
+    or external compliance organization. Also consider an informational notice to
+    users to prevent similar compromises through improved security hygiene.
+- name: Tune prevention systems
+  suggestions:
+    playbooks: []
+    actions:
+    - scan network
+    - deploy patch
+    - create ticket
+  modified_time: '2019-06-05T22:58:07.535325Z'
+  id: 108
+  phase: 30
+  create_time: '2019-06-05T22:58:07.534985Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Depending on the mechanism of access and the systems affected, there
+    may be a clear next step to prevent similar compromises. This may involve deployment
+    of strong multi-factor authentication, improved automated response, stronger application
+    of least privilege, user training, and/or a wide array of other defensive measures.
+    Consider using CIS Cybersecurity Best Practices (https://www.cisecurity.org/cybersecurity-best-practices/)
+    or a similar framework to assess improvements in prevention.
+- name: Tune detection systems
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: track_active_directory_admin_users
+    actions:
+    - run query
+  modified_time: '2019-06-05T22:58:07.536199Z'
+  id: 109
+  phase: 30
+  create_time: '2019-06-05T22:58:07.535888Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Any of the steps taken within the Detection and Analysis phase may
+    be candidates for automated or regularly scheduled detections to find similar
+    activity. Focus on the most generalizable patterns that will catch high-impact
+    compromises as early as possible.
+- name: Enrich URLs
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: simple_network_enrichment
+    - scm: community
+      playbook: symantec_proxysg_unblock_request
+    actions:
+    - url reputation
+    - detonate url
+    - lookup url
+    - run query
+    - ask question
+  modified_time: '2019-06-05T22:58:07.548501Z'
+  id: 110
+  phase: 31
+  create_time: '2019-06-05T22:58:07.548190Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Gather reputation and behavioral information about a suspicious URL.
+    Automated actions may include querying threat intelligence databases, dynamic
+    profiling of the URL and the associated redirects, or checking the categorization
+    of a URL in a proxy or other safe browsing tool. Manual actions may include checking
+    for typosquatting/brandjacking, evaluating the appropriateness of the URL given
+    the context in which it was detected, or manually investigating the site from
+    a sandboxed environment. Additionally it might be appropriate to simply ask the
+    user if they can explain why the URL was accessed. Outputs from this task could
+    be used to pivot to investigation of underlying or associated domain names, other
+    URLs, TLS certificates, IP addresses, or specific behaviors associated with the
+    website such as Javascript execution patterns or downloaded files.
+- name: Enrich domain names
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: simple_network_enrichment
+    - scm: community
+      playbook: symantec_ioc_data_enhancement
+    actions:
+    - domain reputation
+    - domain dns history
+    - geolocate domain
+    - lookup domain
+    - whois domain
+    - whois history
+    - query domain
+  modified_time: '2019-06-05T22:58:07.549236Z'
+  id: 111
+  phase: 31
+  create_time: '2019-06-05T22:58:07.548984Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: 'Domain names can be involved in investigations of phishing, watering
+    hole attacks, malware command and control, exfiltration, and many other malicious
+    behaviors. Some of the key questions to answer about a domain are: Who controls
+    the domain? Who registered the domain? What is the purpose of the domain? What
+    services are hosted on the domain? What traffic would you expect to see to and
+    from the domain? How popular is the domain? Does the domain host dynamic content
+    such as cloud services? What sub-domains or parent domains are associated with
+    the domain? Is the domain known to host malicious content? Where in the world
+    is the domain hosted? How recently was the domain registered? What is the DNS
+    history of the domain? Is the domain meant to look similar to another more legitimate
+    domain? Does the domain name appear to have been randomly generated? The results
+    of these queries can produce related IP addresses, file hashes, downloaded files,
+    URLs, TLS certificates, and behaviors which are useful elsewhere in this investigation.'
+- name: Enrich IP addresses
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: ip_investigate_and_report
+    - scm: community
+      playbook: simple_network_enrichment
+    actions:
+    - ip reputation
+    - lookup ip
+    - reverse ip
+    - ip dns history
+    - whois ip
+    - query ip
+    - geolocate ip
+  modified_time: '2019-06-05T22:58:07.549902Z'
+  id: 112
+  phase: 31
+  create_time: '2019-06-05T22:58:07.549639Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Enrichment of IP addresses should be similar to domain names in many
+    ways, but typically IP addresses will change more frequently. Frequent changes
+    can be legitimate behavior caused by load balancers or content delivery networks,
+    or it may be malicious behavior due to fast flux DNS changes, so additional context
+    about the network traffic is needed. Also consider that traffic going straight
+    to an IP address without doing a DNS query may be relevant to the investigation,
+    and consider querying Tor or other anonymization systems to check if the IP address
+    is a known exit node. Outputs of this task can inform URL enrichment, downloaded
+    file analysis, domain name enrichment, TLS certificate enrichment, and more advanced
+    behavioral analysis based on the services hosted at the IP address in question.
+- name: Enrich TLS certificates
+  suggestions:
+    actions:
+    - query certificate
+    - lookup certificate
+  modified_time: '2019-06-05T22:58:07.550700Z'
+  id: 113
+  phase: 31
+  create_time: '2019-06-05T22:58:07.550414Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: If an investigation involves a TLS certificate it may be useful to
+    gather registrant and certificate authority information about that certificate,
+    and to query for other usages of similar infrastructure. The usage of free and
+    automated certificate authorities such as Let's Encrypt does not necessarily imply
+    that a domain is malicious, but that is a common technique used to build malicious
+    infrastructure so it should warrant further investigation. Consider comparing
+    the registrant information and certificate authority chain with the expected values
+    for the organization allegedly hosting the website in question.
+- name: Enrich MAC addresses
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: rogue_wireless_access_point_remediate
+    actions:
+    - lookup mac
+  modified_time: '2019-06-05T22:58:07.551605Z'
+  id: 114
+  phase: 31
+  create_time: '2019-06-05T22:58:07.551226Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 5
+  is_note_required: true
+  description: While MAC (media access control) addresses are less frequently involved
+    in security investigations, when they are present they can sometimes be useful
+    to cross-reference, identify, or profile a device. MAC addresses can be changed
+    and spoofed, but it is usually less common than a change in IP address or hostname.
+    In wifi investigations the MAC address can be used to identify both the access
+    point and the clients that connect to it.
+- name: Create ticket
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: user_approved_ticket_creation
+    actions:
+    - create ticket
+    - send email
+    - send message
+  modified_time: '2019-06-05T22:58:07.568780Z'
+  id: 115
+  phase: 32
+  create_time: '2019-06-05T22:58:07.568321Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Create any necessary tickets or tracking documents describing the initial
+    conditions of the suspicious email investigation. As additional information is
+    collected or actions are taken in the following tasks and phases, update the ticket
+    with links and relevant information to allow collaboration and tracking.
+- name: Contain user accounts
+  suggestions:
+    actions:
+    - disable user
+    - deactivate user
+    - logoff user
+    - ask question
+    - reset password
+    - remove access
+    - remove member
+  modified_time: '2019-06-05T22:58:07.596109Z'
+  id: 132
+  phase: 35
+  create_time: '2019-06-05T22:58:07.595762Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 5
+  is_note_required: true
+  description: If a user account compromise is suspected, it may be necessary to reset
+    the credentials, reduce the account privileges, or disable the account until further
+    investigation is completed.
+- name: Ingest email
+  suggestions:
+    actions:
+    - get email
+    - extract email
+  modified_time: '2019-06-05T22:58:07.570008Z'
+  id: 116
+  phase: 32
+  create_time: '2019-06-05T22:58:07.569607Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Identify and ingest the suspicious email into Phantom. Actual steps
+    vary depending on how the Phantom event is created and where the suspicious email
+    resides. For example, if the suspicious email is sent to a dedicated email address
+    for suspected phishing attempts, Phantom can poll that inbox directly with an
+    App such as IMAP, EWS for Exchange, EWS for Office, or GSuite for GMail. This
+    will create the event in Phantom and populate it with email headers, URL artifacts,
+    domain artifacts, file attachments, to/from addresses, the text of the raw email,
+    and other metadata. Alternatively, if the email is not already ingested directly
+    into Phantom the "get email" action may be useful to retrieve it. For example,
+    if a Splunk Notable Event based on the Email datamodel is used to detect a suspicious
+    email, Phantom may be able to run "get email" to ingest the email based on the
+    IMAP UID or other identifier. Another possible scenario is that the email of interest
+    is included as an attachment on the email received by Phantom. In this case the
+    "extract email" action may be able to ingest the email if it is in the .msg or
+    .eml format.
+- name: Extract actionable metadata and files
+  suggestions:
+    actions:
+    - extract ioc
+  modified_time: '2019-06-05T22:58:07.571041Z'
+  id: 117
+  phase: 32
+  create_time: '2019-06-05T22:58:07.570646Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Depending on how the email was ingested, additional steps may be required
+    to extract actionable metadata and files. For example, if the suspicious email
+    is attached to the Phantom event as a file, the "extract ioc" action can be used
+    to extract URLs, domain names, IP addresses, file hashes, and whole file attachments.
+    In some cases specific Playbooks or ingestion scripts may need to be written to
+    extract or reformat fields from the email. Be aware that malicious emails may
+    obfuscate links and file attachments, so it may be necessary to view the email
+    in a sandboxed email client to see it in the same context as a user would see
+    it.
+- name: Investigate URLs
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: simple_network_enrichment
+    - scm: community
+      playbook: phishme_email_investigate_and_respond
+    - scm: community
+      playbook: symantec_ioc_data_enhancement
+    - scm: community
+      playbook: phishing_investigate_and_respond
+    actions:
+    - url reputation
+    - lookup url
+    - detonate url
+    - get screenshot
+    - run query
+  modified_time: '2019-06-05T22:58:07.574637Z'
+  id: 118
+  phase: 33
+  create_time: '2019-06-05T22:58:07.574258Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Perhaps the most common email attack vector is a clickable link that
+    brings a user to a malicious website. The malicious website may collect credentials
+    or other confidential information, it may attempt to exploit the user's browser,
+    it may lead the user to download a malicious file, or it may simply gather preliminary
+    fingerprint information about the user to inform further operations. Investigate
+    all URLs contained in the suspicious email using a mix of automated and manual
+    techniques. Query threat intelligence services and other sources of reputation
+    information to see if the URLs are linked to known malicious activity. Check the
+    categorization of the URLs and their popularity using services such as Censys
+    or Alexa. Determine whether the URL is spoofing a brand using a similar spelling,
+    a unicode substitution, or an out-of-order domain name. Also consider using a
+    less passive technique that analyzes the current state of the URL, such as a sandboxed
+    URL detonation, a website scanning tool such as urlscan.io or SSL Labs, a manual
+    inspection from a sandboxed environment, or a website screenshot engine such as
+    ScreenShot Machine. Consider that targeted attacks may only reveal the malicious
+    behavior of a website if the user agent and/or the source address of the request
+    matches the target environment. The output of this task might be more linked URLs,
+    the domain names of the underlying servers responding to the request, other domain
+    names used by the website, IP addresses, or downloadable files. All of the above
+    should be passed on to further investigative tasks if needed.
+- name: Investigate file attachments
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: mcafee_phishing_attachment_investigate
+    actions:
+    - file reputation
+    - lookup hash
+    - analyze file
+    - extract ioc
+    - detonate file
+    - run query
+    - get report
+    - get file
+  modified_time: '2019-06-05T22:58:07.575615Z'
+  id: 119
+  phase: 33
+  create_time: '2019-06-05T22:58:07.575303Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Another common email attack vector is a malicious file attachment.
+    Any file could be malicious, but most attacks involve executables, scripts, or
+    documents. Investigate these files either using a whole copy of the file or the
+    file hash. Query threat intelligence and reputation databases using the hash to
+    see if the file has been seen before, to see if there is suspicious activity associated
+    with the file, and to learn more about the file's behavior. Query for previous
+    analyses or submit the file for examination in a dynamic or static tool to check
+    for potentially malicious behaviors or properties. Actions used in this task may
+    extract associated URLs, domain names, IP addresses, or secondary file hashes
+    which should be explored further in other tasks.
+- name: Investigate email addresses and headers
+  suggestions:
+    actions:
+    - email reputation
+    - reverse email
+    - lookup email
+  modified_time: '2019-06-05T22:58:07.576653Z'
+  id: 120
+  phase: 33
+  create_time: '2019-06-05T22:58:07.576274Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: The source email address and other headers contain a wide variety of
+    information about the source environment of the email and the infrastructure used
+    to send and receive it. Use a mix of automated and manual analysis to determine
+    where the email came from and whether it uses headers in a suspicious way. Query
+    threat intelligence and reputation databases using the "From", "Sender", and "Reply-to"
+    addresses, as well as any other email addresses in the other header fields. Compare
+    the display names of these fields to the actual values to see if misleading names
+    are used. Check if the servers that received the email marked it with the appropriate
+    authentication results for SPF, DKIM, and/or DMARC. If needed use Microsoft Message
+    Header Analyzer, MxToolbox, or other tools to interpret the remaining headers.
+    Outputs of this task such as domain names and IP addresses should be passed on
+    to further tasks.
+- name: Block or monitor network activity
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: zscaler_hunt_and_block_url
+    - scm: community
+      playbook: user_prompt_and_block_domain
+    actions:
+    - block url
+    - blacklist url
+    - disallow url
+    - unwhitelist url
+    - block domain
+    - blacklist domain
+    - block ip
+    - blacklist ip
+    - block network
+  modified_time: '2019-06-05T22:58:07.592904Z'
+  id: 129
+  phase: 35
+  create_time: '2019-06-05T22:58:07.592536Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Based on gathered indicators and metadata, block or increase monitoring
+    of malicious network connections associated with the suspicious email. Prevent
+    other receivers of similar phishing emails from accessing the clickable URL by
+    blocking that URL itself, the underlying domain name, and/or the underlying IP
+    addresses. If malware or unwanted software was detected, block outbound connections
+    known to be associated with that malware based on threat intelligence or dynamic
+    analysis. If the threat is severe enough, consider isolating entire portions of
+    the network.
+- name: Block or monitor file executions
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: zscaler_malicious_file_response
+    - scm: community
+      playbook: wannacry_remediate
+    - scm: community
+      playbook: protectwise_investigate_and_respond
+    actions:
+    - block hash
+    - block file path
+    - remove file
+    - delete file
+  modified_time: '2019-06-05T22:58:07.593884Z'
+  id: 130
+  phase: 35
+  create_time: '2019-06-05T22:58:07.593537Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Based on gathered indicators and metadata, block or increase monitoring
+    of endpoint activity caused by the suspicious email. This could mean blocking
+    the hash of the file attachment, blocking the hash of a file downloaded from a
+    URL in an email, blocking a malicious hash associated with the email by threat
+    intelligence, or blocking secondary executions such as dropped stages of malware
+    identified from dynamic analysis.
+- name: Lessons learned
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.492937Z'
+  id: 19
+  phase: 5
+  create_time: '2018-10-01T04:35:52.980914Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Hold a lesson learned meeting (mandatory for major incidents, optional
+    otherwise)
+- name: Investigate domains
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: simple_network_enrichment
+    - scm: community
+      playbook: symantec_ioc_data_enhancement
+    - scm: community
+      playbook: phishing_investigate_and_respond
+    actions:
+    - domain reputation
+    - domain dns history
+    - geolocate domain
+    - lookup domain
+    - query domain
+    - reverse domain
+    - reverse email domain
+    - whois domain
+  modified_time: '2019-06-05T22:58:07.577719Z'
+  id: 121
+  phase: 33
+  create_time: '2019-06-05T22:58:07.577281Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: At this point domain names from various sources should be collected
+    in the event, including email sending and receiving servers, web servers from
+    URLs in the email, domains associated to other indicators in threat intelligence
+    databases, and domains contained in the file attachment or detected by the detonation
+    of the file attachment. Check each of these against threat intelligence and reputation
+    databases, passive DNS trackers, whois services, and other information services.
+    Look for known malicious or unknown domains, focusing more on those associated
+    to clickable URLs and file attachments. Evaluate what services are running on
+    each suspicious domain using a scanning service such as Censys or Shodan. Check
+    the TLS certificate (if any), the website categorization, the popularity, and
+    any other available information. Compare this information to the expected outcome
+    given the alleged context of the email. For unknown domains, consider the domain
+    history, the hosting provider, and whether the domain name appears to have been
+    dynamically generated. IP addresses currently and previously associated with the
+    domain should be further processed elsewhere in this case.
+- name: Investigate IP addresses
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: simple_network_enrichment
+    - scm: community
+      playbook: threatquotient_investigate_and_respond
+    actions:
+    - ip reputation
+    - lookup ip
+    - whois ip
+    - ip dns history
+    - query ip
+    - get ip risk
+  modified_time: '2019-06-05T22:58:07.579385Z'
+  id: 122
+  phase: 33
+  create_time: '2019-06-05T22:58:07.578900Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 5
+  is_note_required: true
+  description: IP addresses may be involved in this investigation for several reasons.
+    Some email headers can contain IP addresses (such as X-Originating-IP), URLs can
+    contain IP addresses instead of hostnames, file attachments can contain IP addresses
+    or generate IP addresses and try to connect to them (like domain generation algorithms),
+    and IP addresses can be added to the event through association or domain name
+    resolution in other tasks within this investigation. IP addresses in URLs that
+    are not organization internal IP addresses should be considered highly suspicious.
+    Investigate all suspicious IP addresses by checking their reputation, geolocating
+    them, gathering whois information, gathering DNS history information, and gathering
+    information from other available services.
+- name: Investigate email subject and body
+  suggestions:
+    actions:
+    - ask question
+  modified_time: '2019-06-05T22:58:07.580518Z'
+  id: 123
+  phase: 33
+  create_time: '2019-06-05T22:58:07.580124Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 6
+  is_note_required: true
+  description: The subject and body of an email can be malicious without containing
+    a single URL or file attachment. The possibilities include emails that simply
+    ask the receiver to reply with confidential information, emails that contain instructions
+    to do insecure things, emails that manipulate automated systems which are parsing
+    the email, and emails that prime the receiver for other interactions. Malicious
+    emails often use current events such as tax season, a hurricane, or other publicly
+    available information to establish a sense of trust or an illusion of urgency.
+    Social engineering is perhaps the hardest technique to detect in an automated
+    fashion, often requiring manual investigation. Consider the context of the message,
+    the intended recipient, and the identity of the sender or alleged sender. It may
+    be necessary to ask the recipient user if they think the email is legitimate.
+- name: Hunt email activity
+  suggestions:
+    actions:
+    - run query
+    - run command
+    - hunt email
+    - get email
+    - get user
+  modified_time: '2019-06-05T22:58:07.583634Z'
+  id: 124
+  phase: 34
+  create_time: '2019-06-05T22:58:07.583201Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Find other similar emails sent into the organization based on the sender
+    address, sender domain, subject, embedded URLs, file attachments, or other similar
+    attributes shared across multiple emails. If possible determine which emails were
+    opened, forwarded, deleted, marked as spam, or reported as potential phishing.
+    Consider which types of users are targeted and why. Also check whether internal
+    users replied to the emails and what information was contained in the replies.
+- name: Hunt network activity
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: zscaler_hunt_and_block_url
+    - scm: community
+      playbook: ip_investigate_and_report
+    actions:
+    - hunt domain
+    - hunt ip
+    - hunt url
+    - run query
+  modified_time: '2019-06-05T22:58:07.585538Z'
+  id: 125
+  phase: 34
+  create_time: '2019-06-05T22:58:07.584264Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Based on previously collected information try to determine whether
+    or not URLs in the email were clicked, phishing websites were visited, or other
+    suspicious network connections were made from the computers of users who opened
+    the email. This could be done using many types of network monitoring, including
+    netflow, full packet capture, DNS logging, and/or endpoint monitoring.
+- name: Hunt file executions
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: zscaler_malicious_file_response
+    actions:
+    - hunt file
+    - hunt hash
+    - get file
+    - run query
+    - get process file
+    - get process detail
+    - get system info
+  modified_time: '2019-06-05T22:58:07.586777Z'
+  id: 126
+  phase: 34
+  create_time: '2019-06-05T22:58:07.586341Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: If a file attachment was included with the email, try to determine
+    which users downloaded the attachment and which users executed it or opened it
+    in some other way. Use the file hash of the attachment to search across endpoint
+    monitoring or network monitoring solutions for the transmission and/or execution
+    of the file. If executions are detected, try to determine the behavior of the
+    created process. If a potentially malicious document or other file type was opened,
+    try to determine which application opened it and whether the file exploited or
+    abused the opening application.
+- name: Hunt user activity
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: track_active_directory_admin_users
+    actions:
+    - run query
+    - get user
+    - get user importance
+    - get user attributes
+    - hunt user
+    - list user groups
+    - ask question
+  modified_time: '2019-06-05T22:58:07.588321Z'
+  id: 127
+  phase: 34
+  create_time: '2019-06-05T22:58:07.587468Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: If a phishing attempt or other user account compromise attempt is suspected,
+    investigate how the credentials or account access are being used. Enumerate resources
+    available to the account and search the access logs for those resources, looking
+    for anomalous usage patterns.
+- name: Block or monitor email activity
+  suggestions:
+    actions:
+    - delete email
+    - block sender
+    - blacklist sender
+    - blacklist email
+    - move email
+  modified_time: '2019-06-05T22:58:07.591907Z'
+  id: 128
+  phase: 35
+  create_time: '2019-06-05T22:58:07.591541Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: If specific malicious emails have been identified, delete them from
+    any mailboxes in which they still pose a threat. Similarly, if a sender address
+    or an entire sender domain is found to be malicious, block inbound email from
+    that source. Set filtering rules to block inbound email or increase monitoring
+    of email based on other detected characteristics of an email campaign or malicious
+    technique.
+- name: Contain endpoints
+  suggestions:
+    playbooks:
+    - scm: community
+      playbook: rootkit_remediate
+    actions:
+    - quarantine device
+    - tag device
+    - scan endpoint
+    - snapshot instance
+  modified_time: '2019-06-05T22:58:07.595097Z'
+  id: 131
+  phase: 35
+  create_time: '2019-06-05T22:58:07.594644Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: If an endpoint compromise is suspected, it may be necessary to quarantine
+    or otherwise contain that endpoint until further investigation and remediation
+    can be done. Consider the criticality of the system and the likelihood of a compromise.
+    In other cases simply increasing the monitoring or scanning for more information
+    may be prudent.
+- name: Analyze network activity
+  suggestions:
+    actions:
+    - detonate url
+    - scan url
+    - ip dns history
+    - run query
+  modified_time: '2019-06-05T22:58:07.599053Z'
+  id: 133
+  phase: 36
+  create_time: '2019-06-05T22:58:07.598760Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Conduct any resource-intensive analysis of network activity left over
+    from the External Investigation and Internal Hunting phases. This could mean full
+    packet capture collection and analysis, sandbox detonation of URLs, long-running
+    queries of network history and anomalous behavior, or other similar analysis tasks.
+- name: Analyze endpoint activity
+  suggestions:
+    actions:
+    - detonate file
+    - get process detail
+    - get command history
+    - get browser history
+    - get snapshot info
+  modified_time: '2019-06-05T22:58:07.599758Z'
+  id: 134
+  phase: 36
+  create_time: '2019-06-05T22:58:07.599523Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Conduct deeper analysis on remaining malware and endpoint investigation
+    tasks not finished in the External Investigation and Internal Hunting phases.
+    This could mean sandbox detonation of files, forensic analysis of associated devices
+    or memory dumps, reverse engineering of suspected malware, long-running queries
+    of endpoint activity history and anomalous behavior, or other similar analysis
+    tasks.
+- name: Update tickets
+  suggestions:
+    actions:
+    - update ticket
+  modified_time: '2019-06-05T22:58:07.601864Z'
+  id: 135
+  phase: 37
+  create_time: '2019-06-05T22:58:07.601635Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Ensure that all the necessary outputs and status updates from the previous
+    phases and tasks are documented in the appropriate system of record. Summarize
+    the current state of the investigation and any remaining tasks.
+- name: Notify system owners
+  suggestions:
+    actions:
+    - create ticket
+    - send email
+    - send message
+  modified_time: '2019-06-05T22:58:07.602437Z'
+  id: 136
+  phase: 37
+  create_time: '2019-06-05T22:58:07.602234Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: For any systems that have been changed or need to be changed, notify
+    the necessary system owners so the appropriate change management procedures can
+    be followed.
+- name: Notify regulatory compliance team
+  suggestions:
+    actions:
+    - create ticket
+    - send email
+    - send message
+  modified_time: '2019-06-05T22:58:07.602927Z'
+  id: 137
+  phase: 37
+  create_time: '2019-06-05T22:58:07.602755Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: If appropriate, notify the regulatory compliance team to support them
+    as they report this incident to the correct regulatory or accrediting organizations.
+- name: Assign additional tasks
+  suggestions:
+    actions:
+    - create ticket
+    - create alert
+    - send email
+    - send message
+  modified_time: '2019-06-05T22:58:07.603487Z'
+  id: 138
+  phase: 37
+  create_time: '2019-06-05T22:58:07.603262Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: Create tickets to track any follow-on tasks that came out of this case.
+    Example tasks may include conducting deeper endpoint investigation, re-provisioning
+    systems, re-enabling accounts, or tuning filtering systems to block future emails.
+- name: Educate users
+  suggestions:
+    actions:
+    - send email
+    - send message
+  modified_time: '2019-06-05T22:58:07.604069Z'
+  id: 139
+  phase: 37
+  create_time: '2019-06-05T22:58:07.603873Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 5
+  is_note_required: true
+  description: If appropriate, inform the broader user base about the types of suspicious
+    emails being sent to the organization to try to prevent them from clicking on
+    malicious links or opening malicious file attachments in the future.
+- name: Share threat intelligence
+  suggestions:
+    actions:
+    - post data
+    - send message
+    - send email
+  modified_time: '2019-06-05T22:58:07.604667Z'
+  id: 140
+  phase: 37
+  create_time: '2019-06-05T22:58:07.604454Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 6
+  is_note_required: true
+  description: If appropriate, communicate relevant findings to trusted third parties
+    and/or the public threat intelligence community. Ensure that outbound messages
+    do not contain confidential information. Consider sharing or confirming the usage
+    of indicators and techniques to peer organizations, security vendors, public databases,
+    or industry-specific threat intelligence sharing communities.
+- name: Accept event and assign owner
+  suggestions:
+    playbooks:
+    - scm: local
+      playbook: Accept event and assign owner
+    actions:
+    - add comment
+  modified_time: '2020-03-26T12:15:35.788666Z'
+  id: 161
+  phase: 49
+  create_time: '2020-03-12T13:47:04.384850Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Accept event and assign owner
+- name: Validate User and Host Info
+  suggestions:
+    actions:
+    - get user attributes
+    - get system attributes
+  modified_time: '2020-03-26T12:15:35.798810Z'
+  id: 163
+  phase: 49
+  create_time: '2020-03-12T14:28:19.322008Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: 'Get username, LDAP account info,  business unit, email, manager, phone
+    #, location and workstation name, ip address and OS type'
+- name: Analyze precursors and indicators
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.433106Z'
+  id: 2
+  phase: 1
+  create_time: '2018-10-01T04:35:52.969084Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: false
+  description: ''
+- name: Look for correlating information
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.435562Z'
+  id: 3
+  phase: 1
+  create_time: '2018-10-01T04:35:52.969510Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: false
+  description: ''
+- name: Perform research
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.437791Z'
+  id: 4
+  phase: 1
+  create_time: '2018-10-01T04:35:52.969941Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: false
+  description: Use search engines, knowledge bases etc.
+- name: Confirmed incident
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.440541Z'
+  id: 5
+  phase: 1
+  create_time: '2018-10-01T04:35:52.970355Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 5
+  is_note_required: false
+  description: Confirmed incident - document the investigation and gather evidence.
+    Attach all relevant information from detection steps to the case
+- name: Determine functional impact
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.447853Z'
+  id: 6
+  phase: 2
+  create_time: '2018-10-01T04:35:52.971905Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: 'Suggested categories: None, Low, Medium, High'
+- name: Determine information impact
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.450331Z'
+  id: 7
+  phase: 2
+  create_time: '2018-10-01T04:35:52.972355Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: 'Suggested Categories: None, Privacy breach, Proprietary breach, Integrity
+    loss'
+- name: Review Alarm Data
+  suggestions: {}
+  modified_time: '2019-11-21T19:03:44.174624Z'
+  id: 141
+  phase: 38
+  create_time: '2019-11-21T19:03:44.172475Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: ''
+- name: Enrich IOCs
+  suggestions: {}
+  modified_time: '2019-11-21T19:03:44.189755Z'
+  id: 142
+  phase: 39
+  create_time: '2019-11-21T19:03:44.189228Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: ''
+- name: Quarantine System
+  suggestions: {}
+  modified_time: '2019-11-21T19:03:44.196458Z'
+  id: 143
+  phase: 40
+  create_time: '2019-11-21T19:03:44.195909Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: ''
+- name: Re-image system
+  suggestions: {}
+  modified_time: '2019-11-21T19:03:44.202633Z'
+  id: 144
+  phase: 41
+  create_time: '2019-11-21T19:03:44.202269Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: ''
+- name: Submit ticket for false positive
+  suggestions: {}
+  modified_time: '2019-11-21T19:03:44.208481Z'
+  id: 145
+  phase: 42
+  create_time: '2019-11-21T19:03:44.208175Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: ''
+- name: 'Get Host and User information '
+  suggestions:
+    actions:
+    - lookup ip
+    - get system attributes
+    - get system info
+    - run command
+  modified_time: '2020-03-12T15:57:05.432376Z'
+  id: 156
+  phase: 47
+  create_time: '2019-11-22T01:16:20.678956Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Use DNS to get hostname. Then use hostname to get user info, Record
+    all users of this machine by run net user for the system
+- name: Process Domain information
+  suggestions:
+    actions:
+    - domain reputation
+  modified_time: '2020-03-12T15:57:05.438978Z'
+  id: 157
+  phase: 48
+  create_time: '2019-11-22T01:16:20.686818Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Get domain reputation (Virus Total, AlienVault, Anomali)
+- name: Process URL information
+  suggestions: {}
+  modified_time: '2020-03-12T15:57:05.441606Z'
+  id: 159
+  phase: 48
+  create_time: '2019-11-22T01:16:20.694296Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: ''
+- name: Process IP information
+  suggestions: {}
+  modified_time: '2020-03-12T15:57:05.444928Z'
+  id: 158
+  phase: 48
+  create_time: '2019-11-22T01:16:20.690520Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: ''
+- name: Determine if system is compromised
+  suggestions: {}
+  modified_time: '2020-03-12T15:57:05.448059Z'
+  id: 160
+  phase: 48
+  create_time: '2019-11-22T01:16:20.697610Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: ''
+- name: Review IOCs
+  suggestions:
+    actions:
+    - file reputation
+    - url reputation
+    - ip reputation
+    - domain reputation
+    - send email
+  modified_time: '2020-03-26T12:15:35.802135Z'
+  id: 162
+  phase: 49
+  create_time: '2020-03-12T13:47:04.392055Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Review Domain / URL , File and IP analysis notes, Email body and headers.  Determine
+    is email is a phish, spam or clean and provide a reason why you made this determination.
+    Send email to customer on determination of email status.
+- name: Hunt IOCs
+  suggestions: {}
+  modified_time: '2020-03-26T12:15:35.805110Z'
+  id: 164
+  phase: 49
+  create_time: '2020-03-12T15:03:41.586352Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: Get proxy logs and hash hits on hosts that could have clicked or executed
+    processes. Did a host get compromised?  If compromised, start host investigations
+    for those hosts.
+- name: Determine mailboxes affected
+  suggestions:
+    actions:
+    - run query
+    - block hash
+    - send email
+    - block url
+    - block domain
+  modified_time: '2020-03-26T12:15:35.812444Z'
+  id: 165
+  phase: 50
+  create_time: '2020-03-12T15:03:41.592609Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Run Exchange query for number of emails from sender and subject that
+    match this email. Send email to found users that we have found a spam or phishing
+    event. If campaign, send an email to group director and big boss IT security manager.
+    Change status to internal hold
+- name: Update Safelinks - Manual
+  suggestions: {}
+  modified_time: '2020-03-26T12:15:35.816643Z'
+  id: 166
+  phase: 50
+  create_time: '2020-03-12T15:03:41.595612Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Task to Siva for updating O365 Safelinks for domains and senders to
+    be blocked
+- name: Determine mailboxes cleaned
+  suggestions:
+    actions:
+    - run query
+    - send email
+  modified_time: '2020-03-26T12:15:35.822686Z'
+  id: 167
+  phase: 51
+  create_time: '2020-03-12T15:24:54.601931Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: After 24 hours, run Exchange query for number of emails from sender
+    and subject that match this email. Send reminder email to customers to remove
+    this email
+- name: Close Event
+  suggestions: {}
+  modified_time: '2020-03-26T12:15:35.837457Z'
+  id: 168
+  phase: 52
+  create_time: '2020-03-12T15:31:15.640895Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Close event with category, vector tag, status disposition and summary
+- name: Connection process
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.843604Z'
+  id: 169
+  phase: 53
+  create_time: '2020-03-12T15:54:07.965347Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: use sysmon & ATP data to determine network to host connection process.
+    %APPDATA% path and determine parent process compromise of either Root/Admin or
+    user
+- name: Evaluation of IOCs
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.850520Z'
+  id: 171
+  phase: 53
+  create_time: '2020-03-12T16:43:28.850113Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: Additional network connection and ports, additional files created and
+    persistence
+- name: Determine additional compromised systems
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.854604Z'
+  id: 172
+  phase: 53
+  create_time: '2020-03-12T16:43:28.854048Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: Determine if enterprise event or local event
+- name: Determine root cause
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.857627Z'
+  id: 173
+  phase: 53
+  create_time: '2020-03-12T16:43:28.857264Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: Use forensics when necessary to determine root cause, this maybe the
+    necessary need of memory or host image collection
+- name: Block processes
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.864813Z'
+  id: 174
+  phase: 55
+  create_time: '2020-03-12T16:43:28.863971Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: block the malicious process and determine if no other connectivity
+    or processes spawned and containment is successful. if enterprise or not successful,
+    quarantine system
+- name: Quarantine system
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.868587Z'
+  id: 175
+  phase: 55
+  create_time: '2020-03-12T16:43:28.868205Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: ''
+- name: Block additional Network IOCs
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.872331Z'
+  id: 176
+  phase: 55
+  create_time: '2020-03-12T16:43:28.871978Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 3
+  is_note_required: true
+  description: ''
+- name: Disable / Reset user account
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.875286Z'
+  id: 177
+  phase: 55
+  create_time: '2020-03-12T16:43:28.874956Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 4
+  is_note_required: true
+  description: ''
+- name: Determine containment is successful
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.878549Z'
+  id: 178
+  phase: 55
+  create_time: '2020-03-12T16:43:28.878126Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 5
+  is_note_required: true
+  description: ''
+- name: Re-image System
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.883253Z'
+  id: 179
+  phase: 56
+  create_time: '2020-03-12T16:43:28.882849Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: ''
+- name: Validate system re-image
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.888592Z'
+  id: 180
+  phase: 57
+  create_time: '2020-03-12T16:43:28.888075Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: ''
+- name: Validate account access and MFA enabled
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.892270Z'
+  id: 181
+  phase: 57
+  create_time: '2020-03-12T16:43:28.891658Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: ''
+- name: Root Cause Analysis
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.897841Z'
+  id: 182
+  phase: 58
+  create_time: '2020-03-12T16:43:28.897506Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: ''
+- name: Security Controls Update
+  suggestions: {}
+  modified_time: '2020-03-12T16:43:28.900447Z'
+  id: 183
+  phase: 58
+  create_time: '2020-03-12T16:43:28.899878Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 2
+  is_note_required: true
+  description: ''
+- name: Review IOC Enrichment
+  suggestions:
+    playbooks:
+    - scm: local
+      playbook: Accept event and assign owner
+    actions: []
+  modified_time: '2020-03-19T17:20:11.571145Z'
+  id: 351
+  phase: 107
+  create_time: '2020-03-19T02:12:38.491923Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Accepts request and begin processing IoCs. Analyst reviews each IoC
+    then processes each IoC running the task playbook. Analyst should review the IOC
+    out of band before running the playbook to assess it.
+- name: Export IoC
+  suggestions:
+    playbooks:
+    - scm: local
+      playbook: Export and post conclusions
+    actions: []
+  modified_time: '2020-03-19T17:20:11.576518Z'
+  id: 352
+  phase: 108
+  create_time: '2020-03-19T02:12:38.494822Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: true
+  description: Export all notes to text file packages for upload

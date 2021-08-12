@@ -1,0 +1,14 @@
+---
+- name: Determine if an incident has occurred
+  suggestions: {}
+  modified_time: '2020-03-19T02:14:25.429753Z'
+  id: 1
+  phase: 1
+  create_time: '2018-10-01T04:35:52.968463Z'
+  role: 
+  sla_type: minutes
+  sla: 
+  owner: 
+  order: 1
+  is_note_required: false
+  description: ''

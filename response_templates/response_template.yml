@@ -1,0 +1,28 @@
+---
+# Response Templates
+# OAR response templates are the starting point for building investigations and consist of phases
+# We have modularized the tasks and phases so that you can use what's been build or build your own processes
+name: Response playbook for Phishing Email case
+status: draft
+description: |-
+  There are a variety of ways in which email can be used by attackers to gain a foothold in an organization or advance an existing campaign. This workbook guides an analyst through the process of investigating and remediating several
+    of these methods. Throughout the first three phases the main objective is to determine if the email is malicious and what impact it may have if the attack is successful. The fourth and fifth phases are focused on taking action to prevent further harm to the organization and conducting more investigation and analysis to learn more about the threat. Finally, the sixth phase describes communications to other parts of the organization which may be appropriate based on what was observed in the first five phases. 
+    This workbook uses the structure of the SOEL framework (https://www.sans.org/cyber-security-summit/archives/file/summit-archive-1532986430.pdf) to organize the phases and tasks.
+is_default: false
+is_note_required: false
+author: '@splunkps'
+creation_date: 20200417
+severity: M
+tlp: AMBER
+tags:
+    - attack.initial_access
+    - attack.t1193
+    - attack.t1192
+    - phishing
+preparation:
+identification:
+containment:
+eradication:
+lessons_learned:
+workflow: |
+  1. General notes about the workbook/workflow processes and you want conducted.

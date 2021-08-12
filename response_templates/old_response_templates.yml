@@ -1,0 +1,70 @@
+---
+# Response Templates
+# OAR response templates are the starting point for building investigations and consist of
+# Phases and Tasks with suggestions on Action and Playbooks that can be executed as part of the process
+# We have modularized the tasks and phases so that you can use what's been build or build your own processes
+- status: draft
+  description: |-
+    This response template outlines processes for a detailed data breach investigation. This example is good for guiding an investigation to make sure you have done everything that you could and aligns with a documented response program worst case scenario best practice.
+  name: Data Breach
+  is_default: false
+  is_note_required: false
+- status: draft
+  description: |-
+    This case template outlines a response to a potential infection by self-replicating malware (malware that propagates itself without human interaction). While there is much overlap between the response necessary for self-replicating malware and the response to any other malware, the ability to propagate from one system to the next automatically does add the potential for faster and more thorough infection of enterprise systems. Often the infection mechanism is a particular network service or shared resource, so an appropriate response tends to be a fast configuration change to contain the impact immediately.
+
+    This case template is adapted from a modified version of the CERT Societe Generale Incident Response Methodology called Worm Infection Response. The full methodology is available at https://github.com/certsocietegenerale/IRM/blob/master/EN/IRM-1-WormInfection.pdf and is covered under the Creative Commons Attribution 3.0 Imported license available at https://github.com/certsocietegenerale/IRM/blob/master/LICENSE.md, while the CERT Societe Generale homepage is https://cert.societegenerale.com/en/.
+  name: Self-Replicating Malware
+  is_default: false
+  is_note_required: false
+- status: draft
+  description: |- 
+    This response template is to assist teams on managing vulnerabilities and help to ensure the automation process follows the established plan and is fully documemted.
+  name: Vulnerability Disclosure
+  is_default: false
+  is_note_required: false
+- status: draft
+  description: |- 
+    This case template defines a response to the potential compromise of one or more system or application accounts. Across the enterprise, user and service accounts are high-value targets that provide access to wide varieties of resources and capabilities. If an unauthorized entity gains access to an account in your organization, these phases and tasks can be used to organize the effort to investigate and respond. No two account compromises are the same, so some portions of this case template might not apply to certain types of account takeovers, and in most cases there will be additional appropriate responses going beyond those listed below. 
+
+    The general structure of this case template is based on NIST SP 800-61 Revision 2 and some of the techniques come from the Credential Access tactic in the MITRE ATT&CK framework (https://attack.mitre.org/tactics/TA0006/).
+  name: Account Compromise
+  is_default: false
+  is_note_required: false
+- status: draft
+  description: |- 
+    Gather and analyze contextual information about URLs, hostnames, top level domain names, IP addresses, TLS certificates, and MAC addresses. These network indicators can be involved in security investigations of all types, so this workbook is meant to be added as a modular component into an event or case that may have other more specific phases and tasks. For instance, when investigating an account compromise, this workbook may be used during the investigation phase to rule out false positives and inform decisions about further investigation and response.
+  name: Network Indicator Enrichment
+  is_default: false
+  is_note_required: false
+- status: draft
+  description: |- 
+    There are a variety of ways in which email can be used by attackers to gain a foothold in an organization or advance an existing campaign. This workbook guides an analyst through the process of investigating and remediating several
+    of these methods. Throughout the first three phases the main objective is to determine if the email is malicious and what impact it may have if the attack is successful. The fourth and fifth phases are focused on taking action to prevent further harm to the organization and conducting more investigation and analysis to learn more about the threat. Finally, the sixth phase describes communications to other parts of the organization which may be appropriate based on what was observed in the first five phases. 
+
+    This workbook uses the structure of the SOEL framework (https://www.sans.org/cyber-security-summit/archives/file/summit-archive-1532986430.pdf) to organize the phases and tasks.
+  name: Suspicious Email
+  is_default: false
+  is_note_required: false
+- status: draft
+  description: |- 
+    Default model for IR response and based on the SANS PICERL Model.
+
+    Preparation, Identification (D&A) , Containment, Eradication, Recovery, Lessons Learned
+    MTTD, MTTR, MTTC, MTTRv,MTTClose
+  name: Default Response Template
+  is_default: false
+  is_note_required: false
+- status: draft
+  description: |- 
+    Command and control network investigation workbook. Determines the
+    host(s) and processes that have initiated the connections.
+  name: Command and Control investigation
+  is_default: false
+  is_note_required: false
+- status: draft
+  description: |- 
+    Execution investigation
+  name: Execution Investigation
+  is_default: false
+  is_note_required: false

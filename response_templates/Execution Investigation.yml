@@ -1,0 +1,78 @@
+---
+# Comments for how to use this response template
+status: draft
+is_default: false
+name: Process Investigation
+phases:
+- name: Preparation
+  order: 1
+  tasks:
+  - order: 1
+    suggestions: {}
+    name: Initial Results Review
+    description: Review the VT results as shown below.  VT has shown malicious, so review for accuracy, then run the "Rare Process - Identification" playbook in
+      the Identification Phase below to take ownership of the case and gather more information.
+- name: Identification
+  order: 2
+  tasks:
+  - order: 1
+    suggestions:
+      playbooks:
+      - scm: local
+        playbook: Rare Process Case  - Identification
+    name: Accept Case & Gather Further Information
+    description: Run the attached playbook to gather information about the filehash in the event.  This will run Splunk queries for other related information and
+      also gather information about the workstation where the file was found using LDAP.
+  - order: 2
+    suggestions: {}
+    name: Analyze Action Results
+    description: Review the results of the above playbook and determine if the process needs to be contained/blocked and/or if the workstation has been compromised.  If
+      either of these are true, proceed to run the playbook attached to the containment phase below.
+- name: Containment
+  order: 3
+  tasks:
+  - order: 1
+    suggestions:
+      playbooks:
+      - scm: local
+        playbook: Rare Process Case - Containment
+    name: Block and Quarantine
+    description: If this process is determined to be malicious or otherwise unwanted, run the attached playbook to block this hash and quarantine all devices where
+      it was found.
+  - order: 2
+    suggestions: {}
+    name: Note any failures
+    description: Make a note below of any failures to execute the above actions through the automated playbook.
+- name: Eradication
+  order: 4
+  tasks:
+  - order: 1
+    suggestions: {}
+    name: Manual Eradication
+    description: ''
+  - order: 2
+    suggestions: {}
+    name: Ticket creation for desktop wipe/rebuild
+    description: ''
+- name: Recovery
+  order: 5
+  tasks:
+  - order: 1
+    suggestions: {}
+    name: Enact more permanent prevention controls
+    description: ''
+  - order: 2
+    suggestions: {}
+    name: Build specific detection(s)
+    description: ''
+- name: Lessons Learned
+  order: 6
+  tasks:
+  - order: 1
+    suggestions: {}
+    name: Update records
+    description: ''
+  - order: 2
+    suggestions: {}
+    name: Update procedures
+    description: ''

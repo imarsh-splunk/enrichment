@@ -1,0 +1,68 @@
+---
+# Response Templates
+# OAR response templates are the starting point for building investigations and consist of
+# Phases and Tasks with suggestions on Action and Playbooks that can be executed as part of the process
+# We have modularized the tasks and phases so that you can use what's been build or build your own processes
+name: Response playbook for Phishing Email case
+status: draft
+description: |-
+  There are a variety of ways in which email can be used by attackers to gain a foothold in an organization or advance an existing campaign. This workbook guides an analyst through the process of investigating and remediating several
+    of these methods. Throughout the first three phases the main objective is to determine if the email is malicious and what impact it may have if the attack is successful. The fourth and fifth phases are focused on taking action to prevent further harm to the organization and conducting more investigation and analysis to learn more about the threat. Finally, the sixth phase describes communications to other parts of the organization which may be appropriate based on what was observed in the first five phases. 
+    This workbook uses the structure of the SOEL framework (https://www.sans.org/cyber-security-summit/archives/file/summit-archive-1532986430.pdf) to organize the phases and tasks.
+is_default: false
+is_note_required: false
+author: '@splunkps'
+creation_date: 20200417
+severity: M
+tlp: AMBER
+tags:
+    - attack.initial_access
+    - attack.t1193
+    - attack.t1192
+    - phishing
+preparation:
+  - RA_1101_practice
+  - RA_1102_take_trainings
+  - RA_1104_make_personnel_report_suspicious_activity
+  - RA_1103_raise_personnel_awareness
+  - RA_1301_get_ability_to_find_all_users_opened_email
+  - RA_1302_get_ability_to_find_all_users_received_email
+  - RA_1303_get_ability_to_block_email_domain
+  - RA_1304_get_ability_to_block_email_sender
+  - RA_1305_get_ability_to_delete_email
+  - RA_1211_manage_border_firewall_rules
+  - RA_1213_manage_host_firewall_rules
+  - RA_1214_manage_dns_records
+  - RA_1215_manage_proxy_rules
+  - RA_1216_manage_ips_rules
+  - RA_1217_manage_ngfw_rules
+identification:
+  - RA_2302_get_original_email
+  - RA_2301_list_users_opened_email
+  - RA_2303_list_email_receivers
+  - RA_2304_make_sure_email_is_a_phishing
+  - RA_2305_extract_observables_from_email
+  - RA_2103_put_compromised_accounts_on_monitoring
+containment:
+  - RA_3202_block_ip_on_border_firewall
+  - RA_3203_block_domain_on_dns
+  - RA_3204_block_url_on_proxy
+  - RA_3205_block_domain_on_ips
+  - RA_3206_block_domain_on_ngfw
+  - RA_3207_block_ip_on_ips
+  - RA_3208_block_ip_on_ngfw
+  - RA_3209_block_url_on_ngfw
+  - RA_3301_block_domain_on_email
+  - RA_3302_block_sender_on_email
+eradication:
+  - RA_4301_delete_malicious_emails
+  - RA_4701_revoke_compromised_credentials
+  - RA_4101_report_phishing_attack_to_external_companies
+lessons_learned:
+  - RA_6101_develop_incident_report
+  - RA_6102_conduct_lessons_learned_exercise
+workflow: |
+  1. Execute Response Tasks step by step. Some of them directly connected and have automation or notes created and each step should be completed in order.
+  2. Start marking evidence, if permissable, executing containment and eradication stages concurrently with next identification steps, as soon as you will receive information about malicious hosts
+  3. If phishing led to code execution or remote access to victim host, start host exploitation response plan
+  4. Ensure to save your notes and annotate anything not automatically recorded in comments (immutable record) vs notes.  Notes should be used to record general information regarding the event and investigation.
