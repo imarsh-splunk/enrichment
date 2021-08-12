@@ -1,0 +1,63 @@
+name: "Command and control investigation"
+id: 8b1e088e-d47d-427e-8457-776f4be1d696
+sla_type: minutes
+sla: 60
+is_note_required: false
+description: This workbook provides the basics tasks to review a possible issue with a network alert from a platform. The workbook goes through additional research like finding similar host or account based notables from Splunk ES, gathering information regarding the LDAP account information, performing any indicator enrichment, if atomic indicators presented or created and guiding the analyst to conduct network to process analysis, hunt for additional compromised systems and lastly event disposition and necessary continued processing.
+response_phase:
+  - identification:
+      - id: 9bfbaa5f-b2ab-4ff5-acaf-cdd8105d6b92
+        name: command_and_control_identification
+tags:
+  - PICERL
+  - SOAR
+  - PHANTOM
+  analytics_story:
+  - AWS Network ACL Activity
+  - Collection and Staging
+  - Command and Control
+  - DHS Report TA18-074A
+  - Data Protection
+  - Disabling Security Tools
+  - 'Emotet Malware  DHS Report TA18-201A '
+  - Hidden Cobra Malware
+  - Lateral Movement
+  - Malicious PowerShell
+  - Monitor for Unauthorized Software
+  - Netsh Abuse
+  - Orangeworm Attack Group
+  - Possible Backdoor Activity Associated With MUDCARP Espionage Campaigns
+  - Prohibited Traffic Allowed or Protocol Mismatch
+  - Ransomware
+  - SamSam Ransomware
+  - Suspicious AWS Traffic
+  - Suspicious Command-Line Executions
+  - Suspicious DNS Traffic
+  - Suspicious MSHTA Activity
+  - Suspicious WMI Use
+  - Suspicious Windows Registry Activities
+  - Unusual Processes
+  - Windows Defense Evasion Tactics
+  - Windows File Extension and Association Abuse
+  - Windows Log Manipulation
+  - Windows Persistence Techniques
+  - Windows Privilege Escalation
+  - Windows Service Abuse
+  nist:
+  - RS.RP
+  - RS.AN
+  cis20:
+  - CIS 4
+  - CIS 6
+  - CIS 8
+  - CIS 19
+how_to_implement: This workbook has all the necessary process review tasks for any organization to quickly review any MITRE Command and Control related events in addition to other network assorted events.
+
+This workbook and the supporting playbooks provide a `base` model and could and should be mondified for specific events that warrant a change in tactics like ransomware for example.  This workbook should be aligned with Splunk detections on the security domain `network`.
+
+The workbook has all the necessary playbooks attached to the tasks, but not all workbooks are required to be visable and customer descresion can be use for what playbooks need to be visiable.  This is only for validation of exection of the workbooks without going to the activity pane. This workbook also has an LDAP integration to assist in gathering cusotmer and host infomration. This is not required, but recommended.
+
+If some other more suitable CMDB environment is available customers should include that data as appropriate for their operations. Because of all the additional Splunk prebuilt queries with in the automation pieces, you will need a Splunk asset created on Phantom or SOAR products. Because of all the additional Splunk prebuilt queries with in the automation pieces, you will need a Splunk asset created on Phantom or SOAR products.
+version: 2
+date: '2021-02-06'
+author: Rob Gresham, Splunk

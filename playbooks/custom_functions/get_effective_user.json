@@ -1,0 +1,22 @@
+{
+    "create_time": "2021-02-03T19:17:11.395628+00:00",
+    "custom_function_id": "66e7933f9c82cfd20ec124ba7924544a0d7c9aae",
+    "description": "Retrieve effective user in a running playbook",
+    "draft_mode": false,
+    "inputs": [],
+    "outputs": [
+        {
+            "contains_type": [
+                ""
+            ],
+            "data_path": "username",
+            "description": "username"
+        },
+        {
+            "contains_type": [],
+            "data_path": "effective_user_id",
+            "description": "user id"
+        }
+    ],
+    "platform_version": "4.9.37880"
+}

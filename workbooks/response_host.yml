@@ -1,0 +1,63 @@
+name: "Response host"
+id: fd191d72-f159-418f-bd50-190cdc75e589
+sla_type: minutes
+sla:
+is_note_required: false
+description: This workbook provides
+response_phase:
+  - containment:
+    - id: b0269e31-bd86-48d9-8a09-28eafce48238
+      name: containment_host
+  - eradication_and_recovery:
+    - id: ccb2c880-2eb7-4996-a6ff-736be4969f10
+      name: eradication_and_recovery_host
+  - lessons_learned:
+    - id: 58886291-58ed-47ea-bc44-6ed7cfad083a
+      name: lessons_learned_host
+tags:
+  - PICERL
+  - SOAR
+  - PHANTOM
+  analytics_story:
+  - AWS Network ACL Activity
+  - Collection and Staging
+  - Command and Control
+  - DHS Report TA18-074A
+  - Data Protection
+  - Disabling Security Tools
+  - 'Emotet Malware  DHS Report TA18-201A '
+  - Hidden Cobra Malware
+  - Lateral Movement
+  - Malicious PowerShell
+  - Monitor for Unauthorized Software
+  - Netsh Abuse
+  - Orangeworm Attack Group
+  - Possible Backdoor Activity Associated With MUDCARP Espionage Campaigns
+  - Prohibited Traffic Allowed or Protocol Mismatch
+  - Ransomware
+  - SamSam Ransomware
+  - Suspicious AWS Traffic
+  - Suspicious Command-Line Executions
+  - Suspicious DNS Traffic
+  - Suspicious MSHTA Activity
+  - Suspicious WMI Use
+  - Suspicious Windows Registry Activities
+  - Unusual Processes
+  - Windows Defense Evasion Tactics
+  - Windows File Extension and Association Abuse
+  - Windows Log Manipulation
+  - Windows Persistence Techniques
+  - Windows Privilege Escalation
+  - Windows Service Abuse
+  nist:
+  - RS.RP
+  - RS.AN
+  cis20:
+  - CIS 4
+  - CIS 6
+  - CIS 8
+  - CIS 19
+how_to_implement:
+version: 1
+date: '2021-02-06'
+author: Rob Gresham, Splunk

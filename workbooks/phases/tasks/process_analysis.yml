@@ -1,0 +1,60 @@
+name: Process analysis
+id: 92afde8b-9652-4bc8-a037-e7a426adaba4
+tags:
+  - picerl
+  - soar
+  nist:
+  - RS.RP
+  - RS.AN
+  cis20:
+  - CIS 4
+  - CIS 6
+  - CIS 8
+  - CIS 19
+description: 1. Validate Windows Log Source data for the process execution and follow parent process actions.
+2. Use process path or %APPDATA% path and determine parent process compromise of either Root/Admin or user.
+    * AppData is inherently user access only finding whether browser or outlook was used
+    * \AppData\Local\Microsoft\Edge\User Data\Default is for Edge and MSIE for" Internet explorer (personal email or drive by download)
+    *  \Users\user\AppData\Local\Microsoft\Outlook for Outlook (phishing)
+3. Process Info Detail
+    * Parent process id and name either from Splunk or supporting EDR tooling
+    * Recommend to use sysmon or sysinterals tools for windows environments
+    * Run Splunk search(s) for process data
+4. Network connections from the process
+    * Manually use netstat -naob to collect connections
+    * Create additional artifacts for domain, ip and urls found associated to the process (if not already there)
+5. Security context for process
+    * Use sysinternals process explorer, if you don't a tool set to accomplish this.
+    * Search Splunk for process information if collected.
+    * Collect User Id or security context to processes found in process tree
+6. Record your findings with a note that describes the who, what, where and how your determination was made.
+7. Execute playbook `Process network to process execution determination
+inputs:
+- process_name
+- dest
+search:
+automation:
+  role:
+  sla_type: minutes
+  sla:
+  is_note_required: false
+  actions:
+    - run query
+  playbooks:
+    - scm: escu
+      playook: Process host execution outcome
+references:
+  - Blue Team Handbook by Don Murdoch, Chapter 4 Host based Analysis 4.1 Indicators of Compromise page 60
+how_to_implement: Process analysis is a flow analysis of what started the root cause to end activities.  Not all the time will you find everything you need. The order of volitility will remove some artifacts for you and you will have to look at more data to make a forensically acccurate decision.  However, not every investigation can be deeply and throughly executed.  We must triage (assign degrees of urgency to) our investigations and identify the worst and act quickly and to the best of our abiliites.
+Order of volitility
+  * Cache, registers
+  * ARP cache, routing table, memory, kernel statistics, process table
+  * Temporary files
+  * Disk
+  * Monitoring data and remote logging pertaining to the computer in question
+  * Physical configurations, network topology
+  * Archival media
+When possible you want to capture forensically valuable data as soon as the event occurs.  Items like memory, hibernation states, network pcaps and some disk files will help you review content after you may have dispositioned the system.  This is not a forensic triage, but rather 1-2 triage to determine if we need to forensically evaluate the system.  Not all teams have on-site forensic abilities. This will help 60-80% find the necessary issues to determine if a deeper more through investigation is required.
+date: '2021-02-06'
+version: 2
+author: Rob Gresham, Splunk
